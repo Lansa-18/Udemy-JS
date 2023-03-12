@@ -58,29 +58,31 @@
     // CODING CHALLENGE
 
     // function to calculate the average of 3 scores.
-    const calcAverage = (para1, para2, para3) =>{
-        const avg = (para1 + para2 + para3) / 3;
-        return avg;
-    }
+    // const calcAverage = (para1, para2, para3) => (para1 + para2 + para3) / 3;
 
     // Getting the average of the Dolphin and Koalas Team
-    const avgDolphins = calcAverage(85,54,41);
-    // console.log(avgDolphins);
-    const avgKoalas = calcAverage(23,34,27);
-    // console.log(avgKoalas);
+    // const avgDolphins = calcAverage(85,54,41);
+    // const avgKoalas = calcAverage(23,34,27);
 
     // function to calculate the winner between the 2 teams
-    function checkWinner(avgDolphins, avgKoalas){
-        if (avgDolphins >= (avgKoalas*2)) {
-            console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-        } else if (avgKoalas >= (avgDolphins*2)) {
-            console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-        } else if (avgDolphins === avgKoalas) {
-            console.log(`Ends in a DRAW! ${avgDolphins} vs. ${avgKoalas}`);
-        } else {
-            console.log('Nobody Wins!');
-        }
+    // function checkWinner(avgDolphins, avgKoalas){
+    //     if (avgDolphins >= (avgKoalas*2)) {
+    //         console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+    //     } else if (avgKoalas >= (avgDolphins*2)) {
+    //         console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+    //     } else if (avgDolphins === avgKoalas) {
+    //         console.log(`Ends in a DRAW! ${avgDolphins} vs. ${avgKoalas}`);
+    //     } else {
+    //         console.log('Nobody Wins!');
+    //     }
 
-    }
+    // }
 
-    checkWinner(avgDolphins, avgKoalas);
+    // checkWinner(avgDolphins, avgKoalas);
+
+
+
+
+    // Introduction to Arrays
+    const year = new Array(1991, 1992, 1993, 1994, 1995);
+    console.log(year);
