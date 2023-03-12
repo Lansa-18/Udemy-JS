@@ -62,12 +62,24 @@
         const avg = (para1 + para2 + para3) / 3;
         return avg;
     }
+
     // const getAvg = calcAverage(44,23,71);
-    const avgDolphins = calcAverage(44,23,71);
-    const avgKoalas = calcAverage(85,54,41);
+    const avgDolphins = calcAverage(85,54,41);
+    console.log(avgDolphins);
+    const avgKoalas = calcAverage(23,34,27);
+    console.log(avgKoalas);
 
     function checkWinner(avgDolphins, avgKoalas){
-        if (condition) {
-            
+        if (avgDolphins >= (avgKoalas*2)) {
+            console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+        } else if (avgKoalas >= (avgDolphins*2)) {
+            console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+        } else if (avgDolphins === avgKoalas) {
+            console.log(`Ends in a DRAW! ${avgDolphins} vs. ${avgKoalas}`);
+        } else {
+            console.log('Nobody Wins!');
         }
+
     }
+
+    checkWinner(avgDolphins, avgKoalas);
