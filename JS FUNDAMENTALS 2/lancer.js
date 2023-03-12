@@ -23,18 +23,51 @@
     console.log(appleOrangeJuice);
 
     // function declarations are basically functions that have been called using the function keyword
-    // function calcAge1 (birthYear){
-    //     return 2023 - birthYear;
-    // }
-    // const age1 = calcAge1(2004);
-    // console.log(age1);
-
+    function calcAge1 (birthYear){
+        return 2023 - birthYear;
+    }
+    const age1 = calcAge1(2004);
 
     // function expressions are basically functions that are called without the function name it self present. All other aspect of the function are called normally and instead it is immediately stored into a variable.
     // It is also called an ANONYMOUS FUNCTION
     const calcAge2 = function (birthYear){
         return 2023 - birthYear;
     }
-
     const age2 = calcAge2(1973);
-    console.log(age2);
+
+    console.log(age1,age2);
+
+    // Main Difference between both function types is the fact that you can actually call function declarations b4 they are defined in the code.
+
+    // ARROW FUNCTIONS
+    const calcAge3 = birthYear => 2023 - birthYear;
+    const age3 = calcAge3(2010);
+    console.log(age3);
+
+    const yearUntilRetire = (birthYear, firstName) => {
+        const age = 2023 - birthYear;
+        const retireAge = 65 - age;
+        // return retireAge;
+        return `${firstName} retires in ${retireAge} years`
+    }
+
+    console.log(yearUntilRetire(2004, 'Jonas'));
+    console.log(yearUntilRetire(2004, 'Lancer'));
+
+
+    // CODING CHALLENGE
+
+    // function to calculate the average of 3 scores.
+    const calcAverage = (para1, para2, para3) =>{
+        const avg = (para1 + para2 + para3) / 3;
+        return avg;
+    }
+    // const getAvg = calcAverage(44,23,71);
+    const avgDolphins = calcAverage(44,23,71);
+    const avgKoalas = calcAverage(85,54,41);
+
+    function checkWinner(avgDolphins, avgKoalas){
+        if (condition) {
+            
+        }
+    }
