@@ -3,10 +3,12 @@
     let hasDriversLicense = false;
     const passTest = true;
 
-    if(passTest) hasDriversLicense = true;
+    // strict mode helps the browser identify errors in spelling in codes
+    if(passTest) hasDriverLicense = true;
     if(hasDriversLicense) console.log('I can drive :D');
 
-    const interface = 'Audio'
+    // it also helps identify javascript reserved keywords
+    const private = 'Audio'
 
 
 
