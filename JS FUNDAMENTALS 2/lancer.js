@@ -124,5 +124,7 @@
     console.log(friends);
 
     console.log(friends.indexOf('micheal'));
+    console.log(friends.indexOf('bob'));
+    console.log(friends.includes('micheal'));
     console.log(friends.includes('bob'));
 
