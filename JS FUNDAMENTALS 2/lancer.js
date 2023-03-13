@@ -168,4 +168,9 @@
     console.log(lancer['last' + nameKey])
 
     const interestedIn = prompt('What do you want to know about Lancer? Choose between firstName, lastName, age, job and friends.');
-    console.log(lancer[interestedIn]);
+    
+    if (lancer[interestedIn]){
+        console.log(lancer[interestedIn]);
+    } else {
+        console.log('Wrong request! What do you want to know about Lancer? Choose between firstName, lastName, age, job and friends.');
+    }
