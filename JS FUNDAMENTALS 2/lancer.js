@@ -102,8 +102,22 @@
     // console.log(ages);
 
     // ARRAY METHODS
+    // ADDING ELEMENTS
     const friends = ['tife', 'micheal', 'david'];
     const newLength = friends.push('ismail');
 
     // To get the length of an array after the push method has been used on it, just assign the expression into a variable to store that variable and then call the variable. The variable would return the length of the new array
-    console.log(newLength);
+    // console.log(newLength);
+
+    friends.unshift('John');
+    // console.log(friends);
+
+    // REMOVE ELEMENTS
+    // The pop methods removes elements at the and of the array, it returns the removed element from the array, instead of the lenth
+    const popped = friends.pop();
+    console.log(popped);
+    console.log(friends);
+
+    //  the shift method removes the first element in the array. 
+    friends.shift();
+    console.log(friends);
