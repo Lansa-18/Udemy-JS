@@ -103,48 +103,58 @@
 
     // ARRAY METHODS
     // ADDING ELEMENTS
-    const friends = ['tife', 'micheal', 'david'];
-    const newLength = friends.push('ismail');
+    // const friends = ['tife', 'micheal', 'david'];
+    // const newLength = friends.push('ismail');
 
     // To get the length of an array after the push method has been used on it, just assign the expression into a variable to store that variable and then call the variable. The variable would return the length of the new array
     // console.log(newLength);
 
-    friends.unshift('John');
+    // friends.unshift('John');
     // console.log(friends);
 
     // REMOVE ELEMENTS
     // The pop methods removes elements at the and of the array, it returns the removed element from the array, instead of the lenth
-    const popped = friends.pop();
-    console.log(popped);
-    console.log(friends);
+    // const popped = friends.pop();
+    // console.log(popped);
+    // console.log(friends);
 
     //  the shift method removes the first element in the array. 
-    const shifted = friends.shift();
-    console.log(shifted);
-    console.log(friends);
+    // const shifted = friends.shift();
+    // console.log(shifted);
+    // console.log(friends);
 
-    console.log(friends.indexOf('micheal'));
-    console.log(friends.indexOf('bob'));
-    console.log(friends.includes('micheal'));
-    console.log(friends.includes('bob'));
+    // console.log(friends.indexOf('micheal'));
+    // console.log(friends.indexOf('bob'));
+    // console.log(friends.includes('micheal'));
+    // console.log(friends.includes('bob'));
 
-    if (friends.includes('peter')){
-        console.log('You have a friend named Micheal');
-    } else {
-        console.log("You don't have a friend bearing this name");
-    }
+    // if (friends.includes('peter')){
+    //     console.log('You have a friend named Micheal');
+    // } else {
+    //     console.log("You don't have a friend bearing this name");
+    // }
 
 
     // CODING CHALLENGE 2
-    let tipValue;
-    let totalTip;
-    function calcTip (billValue) {
-        return billValue >= 50 && billValue <= 300 ? tipValue = billValue * 0.15 : tipValue = billValue * 0.2;
-    }
+    // let tipValue;
+    // let totalTip;
+    // function calcTip (billValue) {
+    //     return billValue >= 50 && billValue <= 300 ? tipValue = billValue * 0.15 : tipValue = billValue * 0.2;
+    // }
 
-    const bills = [125, 555, 44];
-    const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-    const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+    // const bills = [125, 555, 44];
+    // const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+    // const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
     
-    console.log(bills, tips, totals);
+    // console.log(bills, tips, totals);
+
+
+    // OBJECTS!!!
+    const lancer = {
+        firstName: 'Abdulkareem',
+        lastName: 'Mapelujo',
+        age: 2023 - 2004,
+        job: 'Web Developer',
+        friends: ['tife', 'micheal', 'david'],
+    }
