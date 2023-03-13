@@ -167,4 +167,5 @@
     console.log(lancer['first' + nameKey])
     console.log(lancer['last' + nameKey])
 
-    
+    const interestedIn = prompt('What do you want to know about Lancer? Choose between firstName, lastName, age, job and friends.');
+    console.log(lancer[interestedIn]);
