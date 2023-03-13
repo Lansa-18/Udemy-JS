@@ -119,5 +119,10 @@
     console.log(friends);
 
     //  the shift method removes the first element in the array. 
-    friends.shift();
+    const shifted = friends.shift();
+    console.log(shifted);
     console.log(friends);
+
+    console.log(friends.indexOf('micheal'));
+    console.log(friends.includes('bob'));
+
