@@ -136,16 +136,23 @@
 
 
     // CODING CHALLENGE 2
+    let tipValue;
+    let totalTip;
     function calcTip (billValue) {
-        let tipValue;
         let gettingTip = billValue >= 50 && billValue <= 300 ? tipValue = billValue * 0.15 : tipValue = billValue * 0.2;
+        totalTip = billValue + tipValue;
+        console.log(totalTip);
         // console.log(`The bill was ${billValue}, and the total value ${billValue + tipValue}`);
-        console.log(gettingTip);
-        return gettingTip;
+        // console.log(gettingTip);
+       return [totalTip];
     }
 
-
-    // calcTip();
-
     const bills = [125, 555, 44];
-    const tips = [calcTip(125), calcTip(555), calcTip(44)];
+    const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+    const total = [];
+
+    for (let i = 0; i < tips.length; i++) {
+        total.push(tips[i])
+    }
+
+    console.log(total);
