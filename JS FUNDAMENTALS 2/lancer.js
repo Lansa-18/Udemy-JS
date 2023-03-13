@@ -84,5 +84,19 @@
 
 
     // Introduction to Arrays
-    const year = new Array(1991, 1992, 1993, 1994, 1995);
-    console.log(year);
+    // const year = new Array(1991, 1992, 1993, 1994, 1995);
+    // console.log(year);
+
+    // Exercise1
+    const calcAge = function (birthYear) {
+        return 2023 - birthYear;
+    }
+    const year1 = [1996, 1997, 1998, 1999, 2000];
+    const age1 = calcAge(year1[0]);
+    const age2 = calcAge(year1[2]);
+    const age3 = calcAge(year1[4]);
+
+    console.log(age1, age2, age3);
+
+    const ages = [ calcAge(year1[0]),  calcAge(year1[2]),  calcAge(year1[4])];
+    console.log(ages);
