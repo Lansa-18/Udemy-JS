@@ -151,6 +151,7 @@
 
 
     // OBJECTS!!!
+    // Object Literal Syntax
     const lancer = {
         firstName: 'Abdulkareem',
         lastName: 'Mapelujo',
@@ -158,3 +159,12 @@
         job: 'Web Developer',
         friends: ['tife', 'micheal', 'david'],
     }
+
+    console.log(lancer.job);
+    console.log(lancer['lastName']);
+
+    const nameKey = 'Name';
+    console.log(lancer['first' + nameKey])
+    console.log(lancer['last' + nameKey])
+
+    
