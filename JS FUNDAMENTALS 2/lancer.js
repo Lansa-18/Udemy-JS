@@ -103,5 +103,7 @@
 
     // ARRAY METHODS
     const friends = ['tife', 'micheal', 'david'];
-    friends.push('ismail');
-    console.log(friends);
+    const newLength = friends.push('ismail');
+
+    // To get the length of an array after the push method has been used on it, just assign the expression into a variable to store that variable and then call the variable. The variable would return the length of the new array
+    console.log(newLength);
