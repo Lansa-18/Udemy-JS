@@ -128,3 +128,8 @@
     console.log(friends.includes('micheal'));
     console.log(friends.includes('bob'));
 
+    if (friends.includes('peter')){
+        console.log('You have a friend named Micheal');
+    } else {
+        console.log("You don't have a friend bearing this name");
+    }
