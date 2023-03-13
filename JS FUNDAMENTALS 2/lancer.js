@@ -133,3 +133,19 @@
     } else {
         console.log("You don't have a friend bearing this name");
     }
+
+
+    // CODING CHALLENGE 2
+    function calcTip (billValue) {
+        let tipValue;
+        let gettingTip = billValue >= 50 && billValue <= 300 ? tipValue = billValue * 0.15 : tipValue = billValue * 0.2;
+        // console.log(`The bill was ${billValue}, and the total value ${billValue + tipValue}`);
+        console.log(gettingTip);
+        return gettingTip;
+    }
+
+
+    // calcTip();
+
+    const bills = [125, 555, 44];
+    const tips = [calcTip(125), calcTip(555), calcTip(44)];
