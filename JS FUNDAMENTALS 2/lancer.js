@@ -88,15 +88,20 @@
     // console.log(year);
 
     // Exercise1
-    const calcAge = function (birthYear) {
-        return 2023 - birthYear;
-    }
-    const year1 = [1996, 1997, 1998, 1999, 2000];
-    const age1 = calcAge(year1[0]);
-    const age2 = calcAge(year1[2]);
-    const age3 = calcAge(year1[4]);
+    // const calcAge = function (birthYear) {
+    //     return 2023 - birthYear;
+    // }
+    // const year1 = [1996, 1997, 1998, 1999, 2000];
+    // const age1 = calcAge(year1[0]);
+    // const age2 = calcAge(year1[2]);
+    // const age3 = calcAge(year1[4]);
 
-    console.log(age1, age2, age3);
+    // console.log(age1, age2, age3);
 
-    const ages = [ calcAge(year1[0]),  calcAge(year1[2]),  calcAge(year1[4])];
-    console.log(ages);
+    // const ages = [ calcAge(year1[0]),  calcAge(year1[2]),  calcAge(year1[4])];
+    // console.log(ages);
+
+    // ARRAY METHODS
+    const friends = ['tife', 'micheal', 'david'];
+    friends.push('ismail');
+    console.log(friends);
