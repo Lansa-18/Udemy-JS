@@ -230,36 +230,72 @@
     
     // Coding Challenge 3
 
+    // MY SOLUTION
+
+    // const john = {
+    //     fullName: 'John Smith',
+    //     mass: 92,
+    //     height: 1.95,
+    //     calcBMI: function (){
+    //         return this.mass / (this.height ** 2);
+    //     }
+    // }
+
+    
+    // const mark = {
+    //     fullName: 'Mark Miller',
+    //     mass: 78,
+    //     height: 1.69,
+    //     calcBMI: function (){
+    //         let bmi = this.mass / (this.height **2);
+    //         return bmi;
+    //     }
+    // }
+
+    // console.log(john.calcBMI());
+    // console.log(mark.calcBMI());
+    // const greaterBmi = () =>{
+    //     if (john.calcBMI() > mark.calcBMI()){
+    //         console.log(`${john.fullName}'s BMI ${john.calcBMI()} is higher than ${mark.fullName}'s BMI ${mark.calcBMI()} `);
+    //     } else if (mark.calcBMI() > john.calcBMI()){
+    //         console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s BMI (${john.calcBMI()}) `);
+    //     } else{
+    //         console.log(`Both have equal BMIs`);
+    //     }
+    // }
+
+    // greaterBmi();
+
+    // JONAS' SOLUTION
+
     const john = {
         fullName: 'John Smith',
         mass: 92,
         height: 1.95,
         calcBMI: function (){
-            return this.mass / (this.height ** 2);
+            this.bmi = this.mass / (this.height ** 2);
+            return this.bmi
         }
     }
 
-    
     const mark = {
         fullName: 'Mark Miller',
         mass: 78,
         height: 1.69,
         calcBMI: function (){
-            let bmi = this.mass / (this.height **2);
-            return bmi;
+            this.bmi = this.mass / (this.height **2);
+            return this.bmi;
         }
     }
+    john.calcBMI();
+    mark.calcBMI();
+    console.log(mark.bmi);
+    console.log(john.bmi);
 
-    console.log(john.calcBMI());
-    console.log(mark.calcBMI());
-    const greaterBmi = () =>{
-        if (john.calcBMI() > mark.calcBMI()){
-            console.log(`${john.fullName}'s BMI ${john.calcBMI()} is higher than ${mark.fullName}'s BMI ${mark.calcBMI()} `);
-        } else if (mark.calcBMI() > john.calcBMI()){
-            console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s BMI (${john.calcBMI()}) `);
-        } else{
-            console.log(`Both have equal BMIs`);
-        }
+    if (mark.bmi > john.bmi) {
+        console.log(`${mark.fullName}'s BMI (${mark.bmi})} is higher than ${john.fullName}'s BMI (${john.bmi}) `);
+    } else if(john.bmi > mark.bmi) {
+        console.log(`${john.fullName}'s BMI (${john.bmi})} is higher than ${mark.fullName}'s BMI (${mark.bmi}) `);
+    } else{
+        console.log("Both have equal BMI's");
     }
-
-    greaterBmi();
