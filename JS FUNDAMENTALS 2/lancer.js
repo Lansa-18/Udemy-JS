@@ -152,25 +152,114 @@
 
     // OBJECTS!!!
     // Object Literal Syntax
+    // const lancer = {
+    //     firstName: 'Abdulkareem',
+    //     lastName: 'Mapelujo',
+    //     age: 2023 - 2004,
+    //     job: 'Web Developer',
+    //     friends: ['tife', 'micheal', 'david'],
+    // }
+
+    // console.log(lancer.job);
+    // console.log(lancer['lastName']);
+
+    // const nameKey = 'Name';
+    // console.log(lancer['first' + nameKey])
+    // console.log(lancer['last' + nameKey])
+
+    // const interestedIn = prompt('What do you want to know about Lancer? Choose between firstName, lastName, age, job and friends.');
+    
+    // if (lancer[interestedIn]){
+    //     console.log(lancer[interestedIn]);
+    // } else {
+    //     console.log('Wrong request! What do you want to know about Lancer? Choose between firstName, lastName, age, job and friends.');
+    // }
+
+    // // Adding new properties to object
+    // lancer.location = 'Nigeria';
+    // lancer['twitter'] = '@GentleMizt18';
+    // console.log(lancer);
+
+    // Exercise
+    // "Jonas has 3 friends, and his best friend is named Micheal"
+
+
+    
+    // OBJECT METHODS
     const lancer = {
         firstName: 'Abdulkareem',
         lastName: 'Mapelujo',
-        age: 2023 - 2004,
+        birthYear: 2004,
         job: 'Web Developer',
         friends: ['tife', 'micheal', 'david'],
+        hasDriversLicense: true,
+
+        // any function thats in an object is called a METHOD
+        // calcAge: function(birthYear){
+        //     return 2023 - birthYear;
+        // }
+
+        // when the 'this' keyword is used in an object, it's invariably equal to the name of the object.
+        // In the function expression below, 'this' refers to the object name lancer.
+        // calcAge: function(){
+        //     return 2023 - this.birthYear;
+        // }
+
+        // calcAge: function(){
+        //     this.age = 2023 - this.birthYear;
+        //     return this.age;
+        // },
+        // getSummary: function(){
+        //     // if (this.hasDriversLicense === true) {
+        //     //     console.log(`${this.firstName} is a ${this.age}-year old ${this.job}, and he has a driver's license.`);
+        //     // } else if (this.hasDriversLicense === false){
+        //     //     console.log(`${this.firstName} is a ${this.age}-year old ${this.job}, and he has no driver's license.`);
+        //     // } else {
+        //     //     console.log(`${this.firstName} refuses to supply information`);
+        //     // }
+
+        //     // ------------OR -------------------
+        //     return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense? 'a': 'no'} driver's license`
+
+        // }
     }
 
-    console.log(lancer.job);
-    console.log(lancer['lastName']);
+    // console.log(lancer.calcAge());
+    // console.log(lancer.getSummary());
 
-    const nameKey = 'Name';
-    console.log(lancer['first' + nameKey])
-    console.log(lancer['last' + nameKey])
-
-    const interestedIn = prompt('What do you want to know about Lancer? Choose between firstName, lastName, age, job and friends.');
     
-    if (lancer[interestedIn]){
-        console.log(lancer[interestedIn]);
-    } else {
-        console.log('Wrong request! What do you want to know about Lancer? Choose between firstName, lastName, age, job and friends.');
+    // Coding Challenge 3
+
+    const john = {
+        fullName: 'John Smith',
+        mass: 92,
+        height: 1.95,
+        calcBMI: function (){
+            return this.mass / (this.height ** 2);
+        }
     }
+
+    
+    const mark = {
+        fullName: 'Mark Miller',
+        mass: 78,
+        height: 1.69,
+        calcBMI: function (){
+            let bmi = this.mass / (this.height **2);
+            return bmi;
+        }
+    }
+
+    console.log(john.calcBMI());
+    console.log(mark.calcBMI());
+    const greaterBmi = () =>{
+        if (john.calcBMI() > mark.calcBMI()){
+            console.log(`${john.fullName}'s BMI ${john.calcBMI()} is higher than ${mark.fullName}'s BMI ${mark.calcBMI()} `);
+        } else if (mark.calcBMI() > john.calcBMI()){
+            console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s BMI (${john.calcBMI()}) `);
+        } else{
+            console.log(`Both have equal BMIs`);
+        }
+    }
+
+    greaterBmi();
