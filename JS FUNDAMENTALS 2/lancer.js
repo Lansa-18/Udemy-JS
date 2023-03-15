@@ -186,13 +186,13 @@
 
     
     // OBJECT METHODS
-    const lancer = {
-        firstName: 'Abdulkareem',
-        lastName: 'Mapelujo',
-        birthYear: 2004,
-        job: 'Web Developer',
-        friends: ['tife', 'micheal', 'david'],
-        hasDriversLicense: true,
+    // const lancer = {
+    //     firstName: 'Abdulkareem',
+    //     lastName: 'Mapelujo',
+    //     birthYear: 2004,
+    //     job: 'Web Developer',
+    //     friends: ['tife', 'micheal', 'david'],
+    //     hasDriversLicense: true,
 
         // any function thats in an object is called a METHOD
         // calcAge: function(birthYear){
@@ -222,7 +222,7 @@
         //     return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense? 'a': 'no'} driver's license`
 
         // }
-    }
+    // }
 
     // console.log(lancer.calcAge());
     // console.log(lancer.getSummary());
@@ -268,34 +268,103 @@
 
     // JONAS' SOLUTION
 
-    const john = {
-        fullName: 'John Smith',
-        mass: 92,
-        height: 1.95,
-        calcBMI: function (){
-            this.bmi = this.mass / (this.height ** 2);
-            return this.bmi
-        }
+    // const john = {
+    //     fullName: 'John Smith',
+    //     mass: 92,
+    //     height: 1.95,
+    //     calcBMI: function (){
+    //         this.bmi = this.mass / (this.height ** 2);
+    //         return this.bmi
+    //     }
+    // }
+
+    // const mark = {
+    //     fullName: 'Mark Miller',
+    //     mass: 78,
+    //     height: 1.69,
+    //     calcBMI: function (){
+    //         this.bmi = this.mass / (this.height **2);
+    //         return this.bmi;
+    //     }
+    // }
+    // john.calcBMI();
+    // mark.calcBMI();
+    // console.log(mark.bmi);
+    // console.log(john.bmi);
+
+    // if (mark.bmi > john.bmi) {
+    //     console.log(`${mark.fullName}'s BMI (${mark.bmi})} is higher than ${john.fullName}'s BMI (${john.bmi}) `);
+    // } else if(john.bmi > mark.bmi) {
+    //     console.log(`${john.fullName}'s BMI (${john.bmi})} is higher than ${mark.fullName}'s BMI (${mark.bmi}) `);
+    // } else{
+    //     console.log("Both have equal BMI's");
+    // }
+
+
+    // ITERATIONS THE FOR LOOP
+    // Loops are part of the control structures like the 'If statement'
+
+    // For Loops
+    // console.log('Lifting weights repitition1');
+    // console.log('Lifting weights repitition2');
+    // console.log('Lifting weights repitition3');
+    // console.log('Lifting weights repitition4');
+    // console.log('Lifting weights repitition5');
+    // console.log('Lifting weights repitition6');
+    // console.log('Lifting weights repitition7');
+    // console.log('Lifting weights repitition8');
+    // console.log('Lifting weights repitition9');
+    // console.log('Lifting weights repitition10');
+
+
+    // for loops keep running while the condition is true!
+    // for (let i = 1; i <= 10; i++) {
+    //     console.log(`Lifting weights repitition ${i} `);   
+    // }
+
+    // looping through Arrays
+  
+    const lancerr = ['lancer', 18, false, 'Web developer', 2003, [1,2,3,'name']];
+    let types = [];
+    for (let i = 0; i < lancerr.length; i++) {
+        // console.log(lancerr[i], typeof(lancerr[i]));
+
+        // one way of filling an array
+        // types[i] = typeof(lancerr[i]);
+
+        // another way of filling an array
+        types.push(typeof lancerr[i]);
     }
 
-    const mark = {
-        fullName: 'Mark Miller',
-        mass: 78,
-        height: 1.69,
-        calcBMI: function (){
-            this.bmi = this.mass / (this.height **2);
-            return this.bmi;
-        }
-    }
-    john.calcBMI();
-    mark.calcBMI();
-    console.log(mark.bmi);
-    console.log(john.bmi);
+    // const birthYears = [2001, 2002, 2003, 2004, 2005]
+    // let ages = [];
 
-    if (mark.bmi > john.bmi) {
-        console.log(`${mark.fullName}'s BMI (${mark.bmi})} is higher than ${john.fullName}'s BMI (${john.bmi}) `);
-    } else if(john.bmi > mark.bmi) {
-        console.log(`${john.fullName}'s BMI (${john.bmi})} is higher than ${mark.fullName}'s BMI (${mark.bmi}) `);
-    } else{
-        console.log("Both have equal BMI's");
+    // for (let i = 0; i < birthYears.length; i++) {
+    //     let calcdAge = 2023 - birthYears[i];
+    //     ages.push(calcdAge);
+    // }
+
+    // console.log(ages);
+
+    // Two Important statements for loops
+
+    // Continue: This is used to exit the current iteration of the loop and continue to the next one
+    // Break: This is used to completely terminate the whole loop.
+
+    // Continue and Break
+    console.log('--- ONLY STRINGS ---');
+    for (let i = 0; i < lancerr.length; i++) {
+        // using the continue keyworrd
+        // in this if statement, only the contents that has a typeOf value of 'string' would be logged
+        if (typeof lancerr[i] !== 'string') continue;
+        console.log(lancerr[i], typeof lancerr[i]);
     }
+
+    console.log('--Break Out of the loop the moment you come accross a number--');
+    for (let i = 0; i < lancerr.length; i++) {
+        // using the BREAK keyworrd
+        // in this if statement, only the first number the loop comes across would be logged
+        if (typeof lancerr[i] === 'number') break;
+        console.log(lancerr[i], typeof lancerr[i]);
+    }
+
