@@ -403,14 +403,40 @@
 
     // Another Approach
 
-    const scores = [96,97, 98, 99,];
-    const names = ['mariam', 'john', 'james', 'lancer'];
+    // const scores = [96,97, 98, 99,];
+    // const names = ['mariam', 'john', 'james', 'lancer'];
 
-    // looping through both the scores and names arrays.
-    for (let i = 0; i < scores.length; i++) {
-        for (let i = 0; i < names.length; i++) {
-            console.log(`${names[i]}: ${scores[i]}`);         
-        }        
-        // breaking out of the scores array loop because i only want it to print the scores and names once!
-        break;
+    // // looping through both the scores and names arrays.
+    // for (let i = 0; i < scores.length; i++) {
+    //     for (let i = 0; i < names.length; i++) {
+    //         console.log(`${names[i]}: ${scores[i]}`);         
+    //     }        
+    //     // breaking out of the scores array loop because i only want it to print the scores and names once!
+    //     break;
+    // }
+
+
+
+    // WHILE LOOPING
+    // let i = 1;
+    // while (i <= 10) {
+    //     console.log(`Lifting weights repetition ${i}`);
+    //     i++
+    // }
+
+    // BE VERY VER CAREFUL WHEN USING WHILE LOOPS SO AS TO PREVENT WHAT WE CALL THE INFINITE LOOPS
+    // Always make sure to set the condition later to false so as to keep the loop from running continuosly.
+    // The loop will always continue to run as long as the condition remains true.
+
+    // While loops are the kind of loops that are used for cases where we dont know how many times the loop is going to run
+    // In a case where by we do know the amount of times to iterate or Loop over, a For Loop is to be used.
+
+    let dice = Math.trunc(Math.random() * 6) + 1;
+
+    while (dice !== 6) {
+        console.log(`You rolled a ${dice}`);
+        dice = Math.trunc(Math.random() * 6) + 1;
+        if (dice === 6) {
+            console.log(`The loop is about to end`);
+        }
     }
