@@ -352,19 +352,65 @@
     // Break: This is used to completely terminate the whole loop.
 
     // Continue and Break
-    console.log('--- ONLY STRINGS ---');
-    for (let i = 0; i < lancerr.length; i++) {
-        // using the continue keyworrd
-        // in this if statement, only the contents that has a typeOf value of 'string' would be logged
-        if (typeof lancerr[i] !== 'string') continue;
-        console.log(lancerr[i], typeof lancerr[i]);
-    }
+    // console.log('--- ONLY STRINGS ---');
+    // for (let i = 0; i < lancerr.length; i++) {
+    //     // using the continue keyworrd
+    //     // in this if statement, only the contents that has a typeOf value of 'string' would be logged
+    //     if (typeof lancerr[i] !== 'string') continue;
+    //     console.log(lancerr[i], typeof lancerr[i]);
+    // }
 
-    console.log('--Break Out of the loop the moment you come accross a number--');
-    for (let i = 0; i < lancerr.length; i++) {
-        // using the BREAK keyworrd
-        // in this if statement, only the first number the loop comes across would be logged
-        if (typeof lancerr[i] === 'number') break;
-        console.log(lancerr[i], typeof lancerr[i]);
-    }
+    // console.log('--Break Out of the loop the moment you come accross a number--');
+    // for (let i = 0; i < lancerr.length; i++) {
+    //     // using the BREAK keyworrd
+    //     // in this if statement, only the first number the loop comes across would be logged
+    //     if (typeof lancerr[i] === 'number') break;
+    //     console.log(lancerr[i], typeof lancerr[i]);
+    // }
 
+
+    // LOOPING BACKWARDS IN ARRAYS & LOOPING IN LOOPS
+
+    // looping backwards
+    // const olamide = ['lancer', 18, false, 'Web developer', 2003, [1,2,3,'name'], true];
+
+    // for (let i = olamide.length - 1; i >= 0; i--){
+    //     console.log(i, olamide[i]);
+    // }
+
+    // looping in loops
+
+    // for (let exercise = 1; exercise < 4; exercise++) {
+    //     console.log(`-------Starting exercise ${exercise} `);        
+    //     for (let rep = 1; rep < 6; rep++) {
+    //         console.log(`Exercise ${exercise}: Lifting weight repitiion ${rep} 🦾`);
+    //     }
+    // }
+
+    // Quick Challenge!
+
+    // let B = [90, 91, 92, 93, 94, 95];
+    // let A = [96, 97, 98, 99, 100];
+    // let C = [86, 87, 88, 89, 90];
+    // let names = ['mariam', 'james', 'john', 'lancer']
+    // for (let i = 0; i < A.length; i++) {
+    //     for (let i = 0; i < names.length; i++) {
+    //         if (A[i] >= 96 && A[i] <= 100){
+    //             console.log(`${names[i]} has ${A[i]}`);
+    //         }
+    //     }
+    // }
+
+    // Another Approach
+
+    const scores = [96,97, 98, 99,];
+    const names = ['mariam', 'john', 'james', 'lancer'];
+
+    // looping through both the scores and names arrays.
+    for (let i = 0; i < scores.length; i++) {
+        for (let i = 0; i < names.length; i++) {
+            console.log(`${names[i]}: ${scores[i]}`);         
+        }        
+        // breaking out of the scores array loop because i only want it to print the scores and names once!
+        break;
+    }
