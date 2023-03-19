@@ -23,6 +23,9 @@ const secretNumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector('.number').textContent = secretNumber;
 
 // initializing the initial score to be 20
+
+// This particular variable here can also be called a state variable because this score is part of the application state which is basically all the data that is relevant to the application.
+
 let score = 20;
 
 // Adding an event listner
@@ -37,12 +40,13 @@ btnCheck.addEventListener('click', () => {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
   } else if (guess > secretNumber) {
     document.querySelector('.message').textContent = '📈 Too high!';
-
+    score--;
+    document.querySelector('.score').textContent = score;
   } else if (guess < secretNumber) {
     document.querySelector('.message').textContent = '📉 Too low!';
+    score--;
+    document.querySelector('.score').textContent = score;
   }
-
-
 });
 
 // this particular function will only be called anytime that event takes place and that is the clicking of the button
