@@ -18,9 +18,9 @@ console.log(document.querySelector('.guess').value);
 // An event is something that happens on the page, an event listner waits for the certain event to happen on the page and then reacts to it.
 
 let btnCheck = document.querySelector('.check');
+let btnAgain = document.querySelector('.again');
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = secretNumber;
 
 // initializing the initial score to be 20
 
@@ -39,6 +39,8 @@ btnCheck.addEventListener('click', () => {
     // When player wins Always specify a string when trying to style
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
+    document.querySelector('.number').textContent = secretNumber;   
+    document.querySelector('.highscore').textContent = score;
     document.querySelector('.body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
 
@@ -64,6 +66,23 @@ btnCheck.addEventListener('click', () => {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+
+btnAgain.addEventListener('click', () => {
+    if (document.querySelector('.highscore').textContent > document.querySelector('.score').textContent ){
+        document.querySelector('.highscore').textContent = document.querySelector('.score').textContent
+        document.querySelector('.message').textContent = 'Start guessing...';
+        document.querySelector('.body').style.backgroundColor = '#222';
+        document.querySelector('.score').textContent = 20;
+        document.querySelector('.guess').value = '';
+    } else{
+        document.querySelector('.score').textContent = 20;
+        document.querySelector('.message').textContent = 'Start guessing...';
+        document.querySelector('.body').style.backgroundColor = '#222';
+        document.querySelector('.highscore').textContent = score;
+        document.querySelector('.guess').value = '';
+    }
+
 });
 
 // this particular function will only be called anytime that event takes place and that is the clicking of the button
