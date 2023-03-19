@@ -68,15 +68,21 @@ btnCheck.addEventListener('click', () => {
   }
 });
 
+
+// Eventlistner for adding the event handler when the 'Again' button is clicked
 btnAgain.addEventListener('click', () => {
     if (document.querySelector('.highscore').textContent > document.querySelector('.score').textContent ){
-        document.querySelector('.highscore').textContent = document.querySelector('.score').textContent
+        document.querySelector('.highscore').textContent = document.querySelector('.score').textContent;
+        document.querySelector('.number').textContent = '?';   
+        document.querySelector('.number').style.width = '15rem';
         document.querySelector('.message').textContent = 'Start guessing...';
         document.querySelector('.body').style.backgroundColor = '#222';
         document.querySelector('.score').textContent = 20;
         document.querySelector('.guess').value = '';
     } else{
         document.querySelector('.score').textContent = 20;
+        document.querySelector('.number').textContent = '?';   
+        document.querySelector('.number').style.width = '15rem';
         document.querySelector('.message').textContent = 'Start guessing...';
         document.querySelector('.body').style.backgroundColor = '#222';
         document.querySelector('.highscore').textContent = score;
