@@ -39,7 +39,6 @@ btnCheck.addEventListener('click', () => {
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('.body').style.background = 'green';
-    
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Too high!';
