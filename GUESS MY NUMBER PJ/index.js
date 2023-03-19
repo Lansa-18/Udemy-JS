@@ -19,8 +19,11 @@ console.log(document.querySelector('.guess').value);
 
 let btnCheck = document.querySelector('.check');
 
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector('.number').textContent = secretNumber;
+
+// initializing the initial score to be 20
+let score = 20;
 
 // Adding an event listner
 // the function that is passed into an event listner is called an event handler
@@ -33,10 +36,13 @@ btnCheck.addEventListener('click', () => {
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
   } else if (guess > secretNumber) {
-    document.querySelector('.message').textContent = 'Too high';
+    document.querySelector('.message').textContent = '📈 Too high!';
+
   } else if (guess < secretNumber) {
-    document.querySelector('.message').textContent = 'Too low';
+    document.querySelector('.message').textContent = '📉 Too low!';
   }
+
+
 });
 
 // this particular function will only be called anytime that event takes place and that is the clicking of the button
