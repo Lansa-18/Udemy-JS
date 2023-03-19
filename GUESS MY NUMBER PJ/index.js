@@ -21,8 +21,14 @@ let btnCheck = document.querySelector('.check');
 
 // Adding an event listner
 // the function that is passed into an event listner is called an event handler
-btnCheck.addEventListener('click', () =>{
-    console.log(document.querySelector('.guess').value);
+btnCheck.addEventListener('click', () => {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
+
+  if(!guess){
+    document.querySelector('.message').textContent = '⛔ No Number!';
+
+  }
 });
 
 // this particular function will only be called anytime that event takes place and that is the clicking of the button
