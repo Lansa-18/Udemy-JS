@@ -20,13 +20,14 @@ console.log(document.querySelector('.guess').value);
 let btnCheck = document.querySelector('.check');
 let btnAgain = document.querySelector('.again');
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 // initializing the initial score to be 20
 
 // This particular variable here can also be called a state variable because this score is part of the application state which is basically all the data that is relevant to the application.
 
 let score = 20;
+let hscore = 0;
 
 // Adding an event listner
 // the function that is passed into an event listner is called an event handler
@@ -40,9 +41,15 @@ btnCheck.addEventListener('click', () => {
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('.number').textContent = secretNumber;   
-    document.querySelector('.highscore').textContent = score;
     document.querySelector('.body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+
+    if (score > hscore) {
+        hscore = score;
+        document.querySelector('.highscore').textContent = hscore;
+    } else{
+
+    }
 
     // when guess is too high
   } else if (guess > secretNumber) {
@@ -70,25 +77,36 @@ btnCheck.addEventListener('click', () => {
 
 
 // Eventlistner for adding the event handler when the 'Again' button is clicked
-btnAgain.addEventListener('click', () => {
-    if (document.querySelector('.highscore').textContent > document.querySelector('.score').textContent ){
-        document.querySelector('.highscore').textContent = document.querySelector('.score').textContent;
-        document.querySelector('.number').textContent = '?';   
-        document.querySelector('.number').style.width = '15rem';
-        document.querySelector('.message').textContent = 'Start guessing...';
-        document.querySelector('.body').style.backgroundColor = '#222';
-        document.querySelector('.score').textContent = 20;
-        document.querySelector('.guess').value = '';
-    } else{
-        document.querySelector('.score').textContent = 20;
-        document.querySelector('.number').textContent = '?';   
-        document.querySelector('.number').style.width = '15rem';
-        document.querySelector('.message').textContent = 'Start guessing...';
-        document.querySelector('.body').style.backgroundColor = '#222';
-        document.querySelector('.highscore').textContent = score;
-        document.querySelector('.guess').value = '';
-    }
+// btnAgain.addEventListener('click', () => {
+//     if (document.querySelector('.highscore').textContent > document.querySelector('.score').textContent ){
+//         document.querySelector('.highscore').textContent = document.querySelector('.score').textContent;
+//         document.querySelector('.number').textContent = '?';   
+//         document.querySelector('.number').style.width = '15rem';
+//         document.querySelector('.message').textContent = 'Start guessing...';
+//         document.querySelector('.body').style.backgroundColor = '#222';
+//         document.querySelector('.score').textContent = 20;
+//         document.querySelector('.guess').value = '';
+//     } else{
+//         document.querySelector('.score').textContent = 20;
+//         document.querySelector('.number').textContent = '?';   
+//         document.querySelector('.number').style.width = '15rem';
+//         document.querySelector('.message').textContent = 'Start guessing...';
+//         document.querySelector('.body').style.backgroundColor = '#222';
+//         document.querySelector('.highscore').textContent = score;
+//         document.querySelector('.guess').value = '';
+//     }
 
+// });
+
+btnAgain.addEventListener('click', () =>{
+    score = 20;
+    secretNumber = Math.trunc(Math.random() * 20) + 1;
+    document.querySelector('.message').textContent = 'Start guessing...';
+    document.querySelector('.score').textContent = score;
+    document.querySelector('.number').textContent = '?';  
+    document.querySelector('.number').style.width = '15rem';
+    document.querySelector('.guess').value = '';
+    document.querySelector('.body').style.backgroundColor = '#222';
 });
 
 // this particular function will only be called anytime that event takes place and that is the clicking of the button
