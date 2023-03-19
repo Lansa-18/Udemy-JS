@@ -19,15 +19,23 @@ console.log(document.querySelector('.guess').value);
 
 let btnCheck = document.querySelector('.check');
 
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+document.querySelector('.number').textContent = secretNumber;
+
 // Adding an event listner
 // the function that is passed into an event listner is called an event handler
 btnCheck.addEventListener('click', () => {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
-  if(!guess){
+  if (!guess) {
     document.querySelector('.message').textContent = '⛔ No Number!';
-
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = '🎉 Correct Number!';
+  } else if (guess > secretNumber) {
+    document.querySelector('.message').textContent = 'Too high';
+  } else if (guess < secretNumber) {
+    document.querySelector('.message').textContent = 'Too low';
   }
 });
 
