@@ -32,16 +32,15 @@ let score = 20;
 // the function that is passed into an event listner is called an event handler
 btnCheck.addEventListener('click', () => {
   const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
 
   // When there is no input
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No Number!';
-    // When player wins
+    // When player wins Always specify a string when trying to style
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('.body').style.backgroundColor = '#60b347';
-
+    document.querySelector('.number').style.width = '30rem';
 
     // when guess is too high
   } else if (guess > secretNumber) {
