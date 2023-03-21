@@ -29,6 +29,11 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let hscore = 0;
 
+// Writing a function that helps with getting rid of duplicate coded
+const displayMessage = message => {
+  document.querySelector('.message').textContent = message;
+};
+
 // Adding an event listner
 // the function that is passed into an event listner is called an event handler
 btnCheck.addEventListener('click', () => {
@@ -36,25 +41,28 @@ btnCheck.addEventListener('click', () => {
 
   // When there is no input
   if (!guess) {
-    document.querySelector('.message').textContent = '⛔ No Number!';
+    // document.querySelector('.message').textContent = '⛔ No Number!';
+
+    displayMessage('⛔ No Number!');
     // When player wins Always specify a string when trying to style
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = '🎉 Correct Number!';
-    document.querySelector('.number').textContent = secretNumber;   
+    // document.querySelector('.message').textContent = '🎉 Correct Number!';
+    displayMessage('🎉 Correct Number!');
+    document.querySelector('.number').textContent = secretNumber;
     document.querySelector('.body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
 
     if (score > hscore) {
-        hscore = score;
-        document.querySelector('.highscore').textContent = hscore;
-    } else{
-
+      hscore = score;
+      document.querySelector('.highscore').textContent = hscore;
+    } else {
     }
 
     // when guess is too high
   } else if (guess > secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Too high!';
+    //   document.querySelector('.message').textContent = '📈 Too high!';
+        displayMessage('⛔ No Number!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -75,12 +83,11 @@ btnCheck.addEventListener('click', () => {
   }
 });
 
-
 // Eventlistner for adding the event handler when the 'Again' button is clicked
 // btnAgain.addEventListener('click', () => {
 //     if (document.querySelector('.highscore').textContent > document.querySelector('.score').textContent ){
 //         document.querySelector('.highscore').textContent = document.querySelector('.score').textContent;
-//         document.querySelector('.number').textContent = '?';   
+//         document.querySelector('.number').textContent = '?';
 //         document.querySelector('.number').style.width = '15rem';
 //         document.querySelector('.message').textContent = 'Start guessing...';
 //         document.querySelector('.body').style.backgroundColor = '#222';
@@ -88,7 +95,7 @@ btnCheck.addEventListener('click', () => {
 //         document.querySelector('.guess').value = '';
 //     } else{
 //         document.querySelector('.score').textContent = 20;
-//         document.querySelector('.number').textContent = '?';   
+//         document.querySelector('.number').textContent = '?';
 //         document.querySelector('.number').style.width = '15rem';
 //         document.querySelector('.message').textContent = 'Start guessing...';
 //         document.querySelector('.body').style.backgroundColor = '#222';
@@ -98,15 +105,16 @@ btnCheck.addEventListener('click', () => {
 
 // });
 
-btnAgain.addEventListener('click', () =>{
-    score = 20;
-    secretNumber = Math.trunc(Math.random() * 20) + 1;
-    document.querySelector('.message').textContent = 'Start guessing...';
-    document.querySelector('.score').textContent = score;
-    document.querySelector('.number').textContent = '?';  
-    document.querySelector('.number').style.width = '15rem';
-    document.querySelector('.guess').value = '';
-    document.querySelector('.body').style.backgroundColor = '#222';
+btnAgain.addEventListener('click', () => {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.guess').value = '';
+  document.querySelector('.body').style.backgroundColor = '#222';
 });
 
 // this particular function will only be called anytime that event takes place and that is the clicking of the button
+// Having a lot of repeated codes violates the DRY Principle i.e DO NOT REPEAT YOURSELF Principle
