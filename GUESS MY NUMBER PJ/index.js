@@ -66,6 +66,7 @@ btnCheck.addEventListener('click', () => {
       score--;
       document.querySelector('.score').textContent = score;
     } else {
+        
       document.querySelector('.message').textContent = '💥 You lost the game';
       document.querySelector('.score').textContent = 0;
     }
