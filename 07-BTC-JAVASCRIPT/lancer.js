@@ -14,7 +14,7 @@
 // - single-threaded
 // - non-blocking event loop
 
-// CONCURRENCY MODEL basically means how the javascript engine handles multiple tasks happening at the same time.The reason we use thus model is bcuz js in single threaded.
+// CONCURRENCY MODEL basically means how the javascript engine handles multiple tasks happening at the same time.The reason we use this model is bcuz js in single threaded.
 // It is done using event loops i.e taking long running tasks, execute them in the background, and puts them back in the thread once they are finished.
 
 
