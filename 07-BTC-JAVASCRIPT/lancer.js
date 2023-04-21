@@ -55,4 +55,10 @@
 // -A global execution context is created for top-level code i.e code that aren't in any functions. There is only one GLOBAL EXECUTION CONTEXT
 // An execution context is an environment where a piece of javascript is executed. It stores all the necessary information for some code to be executed.
 
-// 
+// After codes in the global EC has been executed, js executes functions and it waits for callbacks.
+// - For each function call, an execution context is created containing all the informations necessary in running that function.
+
+// All these execution contexts together makes up the callstack.
+// After all the functions has been executed, js waits for callback functions which are provided by the EVENT LOOP from the MESSAGE QUEUE.
+
+// WHAT'S INSIDE THE EXECUTION CONTEXT
