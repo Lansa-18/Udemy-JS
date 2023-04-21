@@ -71,3 +71,4 @@
 
 // WHAT IS THE CALLSTACK
 // It is a place where the execution context gets stacked on top of each other, to keep track of where we are in the execution.
+// After each context is executed, it gets taken of the stack and runs the previous code above it.
