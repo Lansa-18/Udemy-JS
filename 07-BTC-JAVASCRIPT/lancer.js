@@ -67,4 +67,7 @@
 // - contains the 'this keyword'
 
 // All these are generated during the 'creation phase' right before execution.
-// Note that Execution Constexts belonging to Arrow Functions do not contain the 'argument object' as well as the 'this keyword'
+// Note that Execution Constexts belonging to Arrow Functions do not contain the 'argument object' as well as the 'this keyword', instead they use it from their closest function parent
+
+// WHAT IS THE CALLSTACK
+// It is a place where the execution context gets stacked on top of each other, to keep track of where we are in the execution.
