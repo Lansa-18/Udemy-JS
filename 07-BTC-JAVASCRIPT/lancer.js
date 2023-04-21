@@ -62,3 +62,7 @@
 // After all the functions has been executed, js waits for callback functions which are provided by the EVENT LOOP from the MESSAGE QUEUE.
 
 // WHAT'S INSIDE THE EXECUTION CONTEXT
+// - contains the VARIABLE ENVIRONMENT (var declararions, functions, argument objects)
+// - contains the SCOPE CHAIN which consists of referencesto variables locared outside of the current function
+// - contains the 'this keyword'
+
