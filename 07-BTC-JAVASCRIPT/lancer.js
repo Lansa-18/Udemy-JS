@@ -30,6 +30,11 @@
 // Modern javascript makes use of a mixed version of the interpretation and compilation method, it is called JUST-IN-TIME COMPILATION
 //  JUST-IN-TIME COMPILATION convertes the entire code into machine code at once then executes it IMMEDIATELY.
 
-// AST stands for Abstract Syntax Tree.
+// AST stands for Abstract Syntax Tree ; It has nothing to do with the DOM Tree.
+// It's just a representation of our entire code inside the engine.
+
+// MODERN JUST-IN-TIME COMPILATION OF JAVASCRIPT
+// - Parsing
+// - Compilation
 
 
