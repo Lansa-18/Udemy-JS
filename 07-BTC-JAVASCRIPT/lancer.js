@@ -48,3 +48,11 @@
 
 // JAVASCRIPT RUNTIME IN NODE.JS
 // It's quite similar to that of the browsers except that it doesn't contain APIs as they are provided by the browsers. Instead, it contains many C++ bindings and thread pool.
+
+
+// HOW JS IS EXECUTED IN THE CALLSTACK
+
+// -A global execution context is created for top-level code i.e code that aren't in any functions. There is only one GLOBAL EXECUTION CONTEXT
+// An execution context is an environment where a piece of javascript is executed. It stores all the necessary information for some code to be executed.
+
+// 
