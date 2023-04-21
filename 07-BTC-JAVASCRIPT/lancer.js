@@ -82,6 +82,7 @@
 // THE 3 TYPES OF SCOPES 
 // - GLOBAL SCOPE: This scope is for variables that are declared outside any funtion or block. Variables declared in the global scope are accessible everywhere.
 // - FUNTION SCOPE: This scope is for variables that are accessible only inside a function, NOT outside it. It is also called LOCAL SCOPE.
-// - BLOCK SCOPE (ES6): This scope is for variables that are accessible only in a block (block scoped), HOWEVER, this only applies to let and const variables. Functions are also block scoped but only in restrict mode. 
+// - BLOCK SCOPE (ES6): This scope is for variables that are accessible only in a block (block scoped), HOWEVER, this only applies to let and const variables. Functions are also block scoped but only in restrict mode. This only applies to let and const, the var method of declaring varibles isn't scoped to the block scope.
 
 // THE SCOPE CHAIN
+// Basically this is the relationships between scopes and how variables in each scopes are accessed bwtween one another. It is important to note that in the scope-chain, VARIABLE LOOKUP only occurs i.e inner scopes can access variables in outer or parent scopes and not the other way around.
