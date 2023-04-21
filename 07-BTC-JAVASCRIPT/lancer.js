@@ -66,3 +66,5 @@
 // - contains the SCOPE CHAIN which consists of referencesto variables locared outside of the current function
 // - contains the 'this keyword'
 
+// All these are generated during the 'creation phase' right before execution.
+// Note that Execution Constexts belonging to Arrow Functions do not contain the 'argument object' as well as the 'this keyword'
