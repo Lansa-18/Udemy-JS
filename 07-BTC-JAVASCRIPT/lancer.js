@@ -40,6 +40,13 @@
 
 // In modern javascript, the code is always been continually optimized, usually during the execution phase after the code has been compiled.
 
+// JAVASCRIPT RUNTIME IN THE BROWSER
+// - contains the JS Engine, 
+// - contains the Web APIs. They are functionalities provided to the engine but are not javascript objects fundamentally. JS accesses them with the global window objrct.
+// - contains the CallBack Queue. It contains all the callback functions that are ready to be executed.
+
+// The EVENT LOOP takes callback functions from the callback queue and inserts them into the CALLSTACK in order to be executed. 
+
 
 
 
