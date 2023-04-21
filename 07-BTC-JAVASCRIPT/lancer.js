@@ -5,9 +5,9 @@
 // - garbage-collected
 // - Interpreted or Just in time Compiled
 // - multi-paradigm :- Three Optimal paradigms are;
-    // - Procedural Programming
-    // - Object Oriented Programming (OOP)
-    // - Functional Programming (FP)
+// - Procedural Programming
+// - Object Oriented Programming (OOP)
+// - Functional Programming (FP)
 // - prototype based object oriented
 // - first class functions i.e functions are simply treated as variables
 // - dynamic
@@ -17,7 +17,6 @@
 // CONCURRENCY MODEL basically means how the javascript engine handles multiple tasks happening at the same time.The reason we use this model is bcuz js in single threaded.
 // It is done using event loops i.e taking long running tasks, execute them in the background, and puts them back in the thread once they are finished.
 
-
 // JAVASCRIPT ENGINE AND RUNTIME ENVIRONMENT
 // The js engine is simply a program that executes javascript code. e.g the V8 engine of Google Chrome. Every Js engine contains a CALL-STACK and a HEAP.
 
@@ -25,7 +24,7 @@
 
 // Difference between COMPILATION and INTERPRETATION
 // In compilation, the entire source code is converted into machine code at once, and written to a binary file that can be executed by a computer.
-// In interpretation, the interpreter runs the src code and executes it line by line. they are much more slower than the compilation method 
+// In interpretation, the interpreter runs the src code and executes it line by line. they are much more slower than the compilation method
 
 // Modern javascript makes use of a mixed version of the interpretation and compilation method, it is called JUST-IN-TIME COMPILATION
 //  JUST-IN-TIME COMPILATION convertes the entire code into machine code at once then executes it IMMEDIATELY.
@@ -41,13 +40,11 @@
 // In modern javascript, the code is always been continually optimized, usually during the execution phase after the code has been compiled.
 
 // JAVASCRIPT RUNTIME IN THE BROWSER
-// - contains the JS Engine, 
+// - contains the JS Engine,
 // - contains the Web APIs. They are functionalities provided to the engine by the browser but are not javascript objects fundamentally. JS accesses them with the global window objrct.
 // - contains the CallBack Queue. It contains all the callback functions that are ready to be executed.
 
-// The EVENT LOOP takes callback functions from the callback queue and inserts them into the CALLSTACK in order to be executed. 
+// The EVENT LOOP takes callback functions from the callback queue and inserts them into the CALLSTACK in order to be executed.
 
 // JAVASCRIPT RUNTIME IN NODE.JS
-// It's quite similar to that of the browsers except that it doesn't contain APIs as they are provided by the browsers. Instead, it contains many C++ bindings and thread pool
-
-
+// It's quite similar to that of the browsers except that it doesn't contain APIs as they are provided by the browsers. Instead, it contains many C++ bindings and thread pool.
