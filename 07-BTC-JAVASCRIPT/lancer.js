@@ -34,7 +34,10 @@
 // It's just a representation of our entire code inside the engine.
 
 // MODERN JUST-IN-TIME COMPILATION OF JAVASCRIPT
-// - Parsing
+// - Parsing ; javascript essentially reads the code and parses it into what we call an AST
 // - Compilation
+// - Execution (It happens in the callstack).
+
+// In modern javascript, the code is always been continually optimized, usually during the execution phase after the code has been compiled.
 
 
