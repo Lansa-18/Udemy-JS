@@ -83,3 +83,5 @@
 // - GLOBAL SCOPE: This scope is for variables that are declared outside any funtion or block. Variables declared in the global scope are accessible everywhere.
 // - FUNTION SCOPE: This scope is for variables that are accessible only inside a function, NOT outside it. It is also called LOCAL SCOPE.
 // - BLOCK SCOPE (ES6): This scope is for variables that are accessible only in a block (block scoped), HOWEVER, this only applies to let and const variables. Functions are also block scoped but only in restrict mode. 
+
+// THE SCOPE CHAIN
