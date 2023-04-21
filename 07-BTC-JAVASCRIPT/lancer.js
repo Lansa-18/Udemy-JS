@@ -72,3 +72,14 @@
 // WHAT IS THE CALLSTACK
 // It is a place where the execution context gets stacked on top of each other, to keep track of where we are in the execution.
 // After each context is executed, it gets taken of the stack and runs the previous code above it.
+
+// SCOPING AND SCOPE IN JAVASCRIPT
+// Scoping controls how our program's variables are organized and accessed.
+// Lexical Scoping refers to the type of scoping that is controlled by placement of functions and blocks in the code.
+// SCOPE is the space or environmentt in which a certain variable is declared. There is global scope, function scope and block scope.
+// The Scope of a Variable is the entire Region of our code where a certain variable can be accessed
+
+// THE 3 TYPES OF SCOPES 
+// - GLOBAL SCOPE: This scope is for variables that are declared outside any funtion or block. Variables declared in the global scope are accessible everywhere.
+// - FUNTION SCOPE: This scope is for variables that are accessible only inside a function, NOT outside it. It is also called LOCAL SCOPE.
+// - BLOCK SCOPE (ES6): This scope is for variables that are accessible only in a block (block scoped), HOWEVER, this only applies to let and const variables. Functions are also block scoped but only in restrict mode. 
