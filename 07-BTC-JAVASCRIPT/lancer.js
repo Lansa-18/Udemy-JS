@@ -121,7 +121,6 @@
 // const firstName = 'Lancer';
 // calcAge(1991);
 
-
 // HOISTING AND TDZ in Practice
 
 // HOISTING IN VARIABLES
@@ -134,32 +133,30 @@ var me = 'lancer';
 let job = 'Web Developer';
 const year = 2004;
 
-
 // HOISTING IN FUNCTIONS
 // console.log(addDecl(2,3));
 // console.log(addExpr(2,3));
 // console.log(addArr(2,3));
 
-function addDecl(a,b){
-    return a + b;
+function addDecl(a, b) {
+  return a + b;
 }
 
-const addExpr = function(a,b){
-    return a + b
-}
+const addExpr = function (a, b) {
+  return a + b;
+};
 
-const addArr = (a,b) => a + b;
+const addArr = (a, b) => a + b;
 
 // NOTE THAT: Function expressions or Arrow Functions declared with var are hoisted as UNDEFINED, these kind of expressions can only be called or written using the 'let' and 'const' variable.
-
 
 // Example
 
 const numProducts = 10;
-if(!numProducts) delShoppingCart();
+if (!numProducts) delShoppingCart();
 
-function delShoppingCart(){
-    console.log('All product deleted!');
+function delShoppingCart() {
+  console.log('All product deleted!');
 }
 
 var x = 1;
@@ -172,8 +169,30 @@ const z = 3;
 
 console.log(this);
 
-const calcAge = function(birthYear){
-    console.log(2023 - birthYear);
-    console.log(this);
-}
+const calcAge = function (birthYear) {
+  console.log(2023 - birthYear);
+  console.log(this);
+};
 calcAge(2004);
+
+const calcAgeArr = birthYear => {
+  console.log(2023 - birthYear);
+  console.log(this);
+};
+calcAgeArr(2004);
+
+const lancer = {
+  year: 2004,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+lancer.calcAge();
+
+const peace = {
+  year: 2017,
+};
+
+peace.calcAge = lancer.calcAge();
+peace
