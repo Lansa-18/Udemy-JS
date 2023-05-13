@@ -49,7 +49,6 @@
 // JAVASCRIPT RUNTIME IN NODE.JS
 // It's quite similar to that of the browsers except that it doesn't contain APIs as they are provided by the browsers. Instead, it contains many C++ bindings and thread pool.
 
-
 // HOW JS IS EXECUTED IN THE CALLSTACK
 
 // -A global execution context is created for top-level code i.e code that aren't in any functions. There is only one GLOBAL EXECUTION CONTEXT
@@ -79,10 +78,45 @@
 // SCOPE is the space or environmentt in which a certain variable is declared. There is global scope, function scope and block scope.
 // The Scope of a Variable is the entire Region of our code where a certain variable can be accessed
 
-// THE 3 TYPES OF SCOPES 
+// THE 3 TYPES OF SCOPES
 // - GLOBAL SCOPE: This scope is for variables that are declared outside any funtion or block. Variables declared in the global scope are accessible everywhere.
 // - FUNTION SCOPE: This scope is for variables that are accessible only inside a function, NOT outside it. It is also called LOCAL SCOPE.
 // - BLOCK SCOPE (ES6): This scope is for variables that are accessible only in a block (block scoped), HOWEVER, this only applies to let and const variables. Functions are also block scoped but only in restrict mode. This only applies to let and const, the var method of declaring varibles isn't scoped to the block scope.
 
 // THE SCOPE CHAIN
 // Basically this is the relationships between scopes and how variables in each scopes are accessed bwtween one another. It is important to note that in the scope-chain, VARIABLE LOOKUP only occurs i.e inner scopes can access variables in outer or parent scopes and not the other way around.
+
+// DIFFERENCES BETWEEN THE SCOPE CHAIN AND EXECUTION STACK.
+// The scope-chain has nothing to do with the order in which functions are called in the Execution Context.
+
+// SCOPING IN PRACTICE
+
+function calcAge(birthYear) {
+  const age = 2023 - birthYear;
+
+  function PrintAge() {
+    let output = `${firstName}, you are ${age} years old, born in the year ${birthYear}`;
+    console.log(output);
+
+    if (birthYear >= 1981 && birthYear <= 1996) {
+      // Creating NEW variable with same name as outer scope's variable
+      const firstName = 'olamide';
+
+      //   Reassigning outer scope's variable
+      output = 'NEW OUTPUT';
+
+      const str = `Oh , and you are a millenial, ${firstName}`;
+      console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
+    }
+    console.log(output);
+  }
+  PrintAge();
+  return age;
+}
+
+const firstName = 'Lancer';
+calcAge(1991);
