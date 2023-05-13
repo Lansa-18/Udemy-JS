@@ -91,32 +91,61 @@
 
 // SCOPING IN PRACTICE
 
-function calcAge(birthYear) {
-  const age = 2023 - birthYear;
+// function calcAge(birthYear) {
+//   const age = 2023 - birthYear;
 
-  function PrintAge() {
-    let output = `${firstName}, you are ${age} years old, born in the year ${birthYear}`;
-    console.log(output);
+//   function PrintAge() {
+//     let output = `${firstName}, you are ${age} years old, born in the year ${birthYear}`;
+//     console.log(output);
 
-    if (birthYear >= 1981 && birthYear <= 1996) {
-      // Creating NEW variable with same name as outer scope's variable
-      const firstName = 'olamide';
+//     if (birthYear >= 1981 && birthYear <= 1996) {
+//       // Creating NEW variable with same name as outer scope's variable
+//       const firstName = 'olamide';
 
-      //   Reassigning outer scope's variable
-      output = 'NEW OUTPUT';
+//       //   Reassigning outer scope's variable
+//       output = 'NEW OUTPUT';
 
-      const str = `Oh , and you are a millenial, ${firstName}`;
-      console.log(str);
+//       const str = `Oh , and you are a millenial, ${firstName}`;
+//       console.log(str);
 
-      function add(a, b) {
-        return a + b;
-      }
-    }
-    console.log(output);
-  }
-  PrintAge();
-  return age;
+//       function add(a, b) {
+//         return a + b;
+//       }
+//     }
+//     console.log(output);
+//   }
+//   PrintAge();
+//   return age;
+// }
+
+// const firstName = 'Lancer';
+// calcAge(1991);
+
+
+// HOISTING AND TDZ in Practice
+
+// HOISTING IN VARIABLES
+
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = 'lancer';
+let job = 'Web Developer';
+const year = 2004;
+
+
+// HOISTING IN FUNCTIONS
+console.log(addDecl(2,3));
+console.log(addExpr(2,3));
+console.log(addArr(2,3));
+
+function addDecl(a,b){
+    return a + b;
 }
 
-const firstName = 'Lancer';
-calcAge(1991);
+const addExpr = function(a,b){
+    return a + b
+}
+
+const addArr = (a,b) => a + b;
