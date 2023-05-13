@@ -126,7 +126,7 @@
 
 // HOISTING IN VARIABLES
 
-console.log(me);
+// console.log(me);
 // console.log(job);
 // console.log(year);
 
@@ -136,9 +136,9 @@ const year = 2004;
 
 
 // HOISTING IN FUNCTIONS
-console.log(addDecl(2,3));
-console.log(addExpr(2,3));
-console.log(addArr(2,3));
+// console.log(addDecl(2,3));
+// console.log(addExpr(2,3));
+// console.log(addArr(2,3));
 
 function addDecl(a,b){
     return a + b;
@@ -149,3 +149,15 @@ const addExpr = function(a,b){
 }
 
 const addArr = (a,b) => a + b;
+
+// NOTE THAT: Function expressions or Arrow Functions declared with var are hoisted as UNDEFINED, these kind of expressions can only be called or written using the 'let' and 'const' variable.
+
+
+// Example
+
+const numProducts = 10;
+if(!numProducts) delShoppingCart();
+
+function delShoppingCart(){
+    console.log('All product deleted!');
+}
