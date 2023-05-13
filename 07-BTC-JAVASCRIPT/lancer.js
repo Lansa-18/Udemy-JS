@@ -166,6 +166,14 @@ var x = 1;
 let y = 2;
 const z = 3;
 
-console.log(x === window.x);
-console.log(y === window.y);
-console.log(z === window.z);
+// console.log(x === window.x);
+// console.log(y === window.y);
+// console.log(z === window.z);
+
+console.log(this);
+
+const calcAge = function(birthYear){
+    console.log(2023 - birthYear);
+    console.log(this);
+}
+calcAge(2004);
