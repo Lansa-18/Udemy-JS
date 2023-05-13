@@ -161,3 +161,11 @@ if(!numProducts) delShoppingCart();
 function delShoppingCart(){
     console.log('All product deleted!');
 }
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z === window.z);
