@@ -169,17 +169,17 @@ const z = 3;
 
 // console.log(this);
 
-// const calcAge = function (birthYear) {
-//   console.log(2023 - birthYear);
+const calcAge = function (birthYear) {
+  console.log(2023 - birthYear);
 //   console.log(this);
-// };
-// calcAge(2004);
+};
+calcAge(2004);
 
-// const calcAgeArr = birthYear => {
-//   console.log(2023 - birthYear);
+const calcAgeArr = birthYear => {
+  console.log(2023 - birthYear);
 //   console.log(this);
-// };
-// calcAgeArr(2004);
+};
+calcAgeArr(2004);
 
 const lancer = {
   year: 2004,
@@ -198,3 +198,4 @@ peace.calcAge = lancer.calcAge;
 peace.calcAge();
 
 const f = lancer.calcAge;
+f();
