@@ -200,11 +200,10 @@ const z = 3;
 // const f = lancer.calcAge;
 // f();
 
-
 const lancer = {
-    year: 2004,
-    calcAge: function () {
-      console.log(this);
-      console.log(2037 - this.year);
-    },
-  };
+  year: 2004,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
