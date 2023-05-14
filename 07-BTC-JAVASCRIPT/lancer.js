@@ -169,36 +169,36 @@ const z = 3;
 
 // console.log(this);
 
-const calcAge = function (birthYear) {
-  console.log(2023 - birthYear);
-  console.log(this);
-};
-calcAge(2004);
+// const calcAge = function (birthYear) {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// };
+// calcAge(2004);
 
-const calcAgeArr = birthYear => {
-  console.log(2023 - birthYear);
-  console.log(this);
-};
-calcAgeArr(2004);
+// const calcAgeArr = birthYear => {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// };
+// calcAgeArr(2004);
 
-const lancer = {
-  year: 2004,
-  calcAge: function () {
-    console.log(this);
-    console.log(2037 - this.year);
-  },
-};
-lancer.calcAge();
+// const lancer = {
+//   year: 2004,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+// };
+// lancer.calcAge();
 
-const peace = {
-  year: 2017,
-};
+// const peace = {
+//   year: 2017,
+// };
 
-peace.calcAge = lancer.calcAge;
-peace.calcAge();
+// peace.calcAge = lancer.calcAge;
+// peace.calcAge();
 
-const f = lancer.calcAge;
-f();
+// const f = lancer.calcAge;
+// f();
 
 
 const lancer = {
