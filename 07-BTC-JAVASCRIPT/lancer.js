@@ -280,3 +280,9 @@ const jessica = {
     age: 27,
 }
 
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis'
+
+console.log('Before marriage:', jessica);
+console.log('After marriage:', marriedJessica);
+
