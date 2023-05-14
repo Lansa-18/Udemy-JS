@@ -198,4 +198,4 @@ peace.calcAge = lancer.calcAge;
 peace.calcAge();
 
 const f = lancer.calcAge;
-f();
+// f();
