@@ -230,7 +230,7 @@ const lancer = {
 };
 
 // lancer.greet();
-lancer.calcAge();
+// lancer.calcAge();
 
 // ARGUMENTS KEYWORD
 const addExpr = function (a, b) {
@@ -238,12 +238,17 @@ const addExpr = function (a, b) {
   return a + b;
 };
 
-addExpr(2, 5);
-addExpr(2, 5, 8, 12);
+// addExpr(2, 5);
+// addExpr(2, 5, 8, 12);
 
 const addArr = (a, b) => {
   console.log(arguments);
   return a + b;
 };
 
-addArr(2,5)
+// addArr(2,5);
+
+
+
+
+
