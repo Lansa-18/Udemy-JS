@@ -201,9 +201,13 @@ const z = 3;
 // f();
 
 const lancer = {
+  firstName: 'Lancer',
   year: 2004,
   calcAge: function () {
     console.log(this);
     console.log(2037 - this.year);
   },
+  greet: () => console.log(`Hey ${this.firstName}`),
 };
+
+lancer.greet();
