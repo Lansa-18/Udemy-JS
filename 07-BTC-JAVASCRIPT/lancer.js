@@ -142,11 +142,11 @@ function addDecl(a, b) {
   return a + b;
 }
 
-const addExpr = function (a, b) {
-  return a + b;
-};
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
 
-const addArr = (a, b) => a + b;
+// const addArr = (a, b) => a + b;
 
 // NOTE THAT: Function expressions or Arrow Functions declared with var are hoisted as UNDEFINED, these kind of expressions can only be called or written using the 'let' and 'const' variable.
 
@@ -231,3 +231,11 @@ const lancer = {
 
 // lancer.greet();
 lancer.calcAge();
+
+// ARGUMENTS KEYWORD
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+const addArr = (a, b) => a + b;
