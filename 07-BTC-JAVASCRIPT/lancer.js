@@ -255,7 +255,13 @@ age = 31;
 console.log(age);
 console.log(oldAge);
 
-const me = {
+const me1 = {
   name: 'lancer',
   age: 30,
 };
+
+const friend = me1;
+friend.age = 27;
+
+console.log('Friend:', friend);
+console.log('Me:', me1);
