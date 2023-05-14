@@ -271,16 +271,24 @@ let lastName = 'williams';
 let oldLastName = lastName;
 
 lastName = 'Davis';
-console.log(lastName, oldLastName);
+// console.log(lastName, oldLastName);
 
 // REFERENCE TYPES
 const jessica = {
-    firstName: 'Jessica',
-    lastName: 'Williams',
-    age: 27,
-}
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
 const marriedJessica = jessica;
-marriedJessica.lastName = 'Davis'
-console.log('Before marriage:', jessica);
-console.log('After marriage:', marriedJessica);
+marriedJessica.lastName = 'Davis';
+// console.log('Before marriage:', jessica);
+// console.log('After marriage:', marriedJessica);
 
+// COPYING OBJECTS
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+Object.assign({}, jessica2);
