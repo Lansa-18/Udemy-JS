@@ -238,4 +238,12 @@ const addExpr = function (a, b) {
   return a + b;
 };
 
-const addArr = (a, b) => a + b;
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+const addArr = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+addArr(2,5)
