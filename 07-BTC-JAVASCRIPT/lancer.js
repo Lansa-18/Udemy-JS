@@ -291,4 +291,8 @@ const jessica2 = {
   age: 27,
 };
 
-Object.assign({}, jessica2);
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+// console.log('Before marriage:', jessica);
+// console.log('After marriage:', marriedJessica);
