@@ -266,23 +266,21 @@ friend.age = 27;
 // console.log('Friend:', friend);
 // console.log('Me:', me1);
 
-
+// PRIMITIVE TYPES
 let lastName = 'williams';
 let oldLastName = lastName;
 
 lastName = 'Davis';
 console.log(lastName, oldLastName);
 
-
+// REFERENCE TYPES
 const jessica = {
     firstName: 'Jessica',
     lastName: 'Williams',
     age: 27,
 }
-
 const marriedJessica = jessica;
 marriedJessica.lastName = 'Davis'
-
 console.log('Before marriage:', jessica);
 console.log('After marriage:', marriedJessica);
 
