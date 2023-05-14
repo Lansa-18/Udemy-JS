@@ -207,16 +207,20 @@ const lancer = {
     // console.log(this);
     console.log(2037 - this.year);
 
-    const self = this; // A way we use in preserving the 'this' keyword
+    // SOLUTION 1: IN PRESERVING THE THIS KEYWORD FROM AN OBJECT LITERAL
+    // const self = this; // A way we use in preserving the 'this' keyword
+    // const isMillenial = function () {
+    //   // Now it is accessible in this function
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
 
-    const isMillenial = function () {
-      // Now it is accessible in this function
-      console.log(self);
-      console.log(self.year >= 1981 && self.year <= 1996);
-
-      //   console.log(this);
-      //   console.log(this.year >= 1981 && this.year <= 1996);
+    // SOLUTION 2:
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
     };
+
     isMillenial();
   },
 
