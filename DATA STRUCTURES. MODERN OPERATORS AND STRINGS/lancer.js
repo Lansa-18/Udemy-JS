@@ -17,8 +17,8 @@ const c = arr[2];
 
 //Destructuring the array
 const [x,y,z] = arr; 
-console.log(x,y,z);
-console.log(arr);
+// console.log(x,y,z);
+// console.log(arr);
 
 let [main, secondary] = restaurant.categories;
 console.log(main, secondary);
@@ -30,4 +30,5 @@ console.log(main, secondary);
 // console.log(main, secondary, '(SWITCHED)');
 
 // Switching up the order of the item with the aid of destructuring
-// [secondary, ]
+[main, secondary] = [secondary, main]
+console.log(main, secondary, '(SWITCHED)');
