@@ -37,6 +37,7 @@ const {
 } = restaurant;
 console.log(restaurantName, hours, tags);
 
+// Setting default values is helpful especially in cases where date aren't HARDCODED
 const {menu = [], starterMenu: starters = []} = restaurant;
 console.log(menu, starters);
 
