@@ -6,14 +6,71 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  openingHours: {
+    thu: {
+        open: 12,
+        close: 22,
+    },
+    fri: {
+        open: 11,
+        close: 23,
+    },
+    sat: {
+        open: 0, // open: 24hours
+        close: 24,
+    },
+  },
 
   order: function(starterIndex , mainIndex){
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
   },
 };
 
-// DESTRUCTURING ARRAYS
 
+// OBJECT DESTRUCTURING
+const {name, openingHours, categories} = restaurant;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+// DESTRUCTURING ARRAYS
 // Retrieving elements normally
 const arr = [2,3,4];
 const a = arr[0];
