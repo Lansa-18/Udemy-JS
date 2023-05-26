@@ -37,4 +37,10 @@ console.log(main, secondary);
 [main, secondary] = [secondary, main]
 console.log(main, secondary, '(SWITCHED)');
 
-console.log(restaurant.order(2, 0));
+// RECEIVING 2 RETURN VALUES FROM A FUNCTION
+const [starterCourse, mainCourse] = restaurant.order(2,0);
+console.log(starterCourse, mainCourse);
+
+const nested = [2, 4, [5, 6]];
+const [i, ,j] =  nested;
+console.log(i,j);
