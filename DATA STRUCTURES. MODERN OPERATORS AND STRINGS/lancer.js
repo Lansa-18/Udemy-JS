@@ -16,5 +16,7 @@ const b = arr[1];
 const c = arr[2];
 
 //Destructuring the array
-const [x,y,z] = arr;
+const [x,y,z] = arr; 
 console.log(x,y,z);
+console.log(arr);
+
