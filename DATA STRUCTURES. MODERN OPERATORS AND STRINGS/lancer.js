@@ -52,3 +52,5 @@ const [i, , [j, k]] = nested;
 console.log(i,j,k);
 
 // Using Destructuring to set default values of the destructured element
+const [p=1 ,q=1, r=1] = [8];
+console.log(p,q,r);
