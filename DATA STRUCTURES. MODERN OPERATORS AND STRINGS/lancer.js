@@ -42,5 +42,12 @@ const [starterCourse, mainCourse] = restaurant.order(2,0);
 console.log(starterCourse, mainCourse);
 
 const nested = [2, 4, [5, 6]];
-const [i, ,j] =  nested;
-console.log(i,j);
+
+// Destructuring the array to give just 2 and the array [5,6]
+// const [i, ,j] =  nested;
+// console.log(i,j);
+
+// Destructuring an array([5,6]) inside a destructuring that's already ongoing([2,4,[5,6]]), to get 2,5,6 as individual elements.
+const [i, , [j, k]] = nested;
+console.log(i,j,k);
+
