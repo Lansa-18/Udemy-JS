@@ -41,16 +41,43 @@ console.log(restaurantName, hours, tags);
 const {menu = [], starterMenu: starters = []} = restaurant;
 console.log(menu, starters);
 
+// MUTATING VARIABLES
+let a = 111;
+let b = 999;
+const obj = {a: 23, b: 7, c: 14};
+({a,b} = obj);
+console.log(a,b);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////
 // DESTRUCTURING ARRAYS
 // Retrieving elements normally
-const arr = [2, 3, 4];
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
+// const arr = [2, 3, 4];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
 
 //Destructuring the array
-const [x, y, z] = arr;
+// const [x, y, z] = arr;
 // console.log(x,y,z);
 // console.log(arr);
 
