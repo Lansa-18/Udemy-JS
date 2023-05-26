@@ -48,6 +48,11 @@ const obj = {a: 23, b: 7, c: 14};
 ({a,b} = obj); // The code was wrapped in parenthesis because when beginning a javascript line with curly brackets, it expects a code block
 console.log(a,b);
 
+// NESTED OBJECTS DESTRUCTURING
+const {fri} = openingHours.fri;
+
+console.log(fri);
+
 
 
 
