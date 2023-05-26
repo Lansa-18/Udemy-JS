@@ -24,6 +24,10 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function(object){
+    
+  }
 };
 
 // OBJECT DESTRUCTURING
@@ -49,9 +53,9 @@ const obj = {a: 23, b: 7, c: 14};
 console.log(a,b);
 
 // NESTED OBJECTS DESTRUCTURING
-const {fri} = openingHours.fri;
+const {fri: {open, close}} = openingHours;
 
-console.log(fri);
+console.log(open, close);
 
 
 
