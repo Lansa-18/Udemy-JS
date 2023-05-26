@@ -7,6 +7,10 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  order: function(starterIndex, mainIndex){
+    return [this.starterMenu[starterIndex]], [this.mainMenu[mainIndex]];
+  },
 };
 
 // Retrieving elements normally
@@ -32,3 +36,5 @@ console.log(main, secondary);
 // Switching up the order of the item with the aid of destructuring
 [main, secondary] = [secondary, main]
 console.log(main, secondary, '(SWITCHED)');
+
+console.log(restaurant.order(2, 0));
