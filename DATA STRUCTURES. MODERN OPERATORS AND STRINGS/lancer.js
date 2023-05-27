@@ -223,3 +223,6 @@ add(...x);
 // PROPERTIES OF LOGICAL OPERATORS
 // They USE any data type, RETURN any data type and short-circuiting.
 console.log(3 || 'lancer');
+console.log('' || 'lancer');
+console.log(true || 0);
+console.log(undefined || null);
