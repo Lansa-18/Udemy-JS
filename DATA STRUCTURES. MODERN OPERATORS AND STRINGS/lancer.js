@@ -89,7 +89,7 @@ const {
 // SPREAD OPERATOR
 const arr = [7, 8, 9, 10];
 const newArr = [1, 2, ...arr];
-console.log(...newArr);
+// console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 // console.log(newMenu);
@@ -122,7 +122,10 @@ restaurant.orderPasta(...ingredients);
 const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
 // console.log(newRestaurant);
 
-const restaurantCopy = {...restaurant}
+const restaurantCopy = {...restaurant};
+restaurantCopy.name = 'Ristorante Roma'
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
 
 ////////////////////////////////////////////////////////////////////////////
 // DESTRUCTURING ARRAYS
