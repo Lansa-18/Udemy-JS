@@ -43,7 +43,14 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
     );
   },
+
+  orderPizza: function(mainIng, ...otherIng){
+    console.log(mainIng);
+    console.log(otherIng);
+  }
 };
+
+restaurant.orderPizza('Mushrooms', 'Onions', 'Olive', 'Chicken', 'Spinach');
 
 // When the method is called, we pass in the object as a parameter and it would be automatically destructured.
 // restaurant.orderDelivery({
