@@ -176,7 +176,7 @@ restaurantCopy.name = 'Ristorante Roma';
 
 // //////////////////////////////////////////// ------------------------------- REST PATTERN AND REST PARAMETERS --------------------------------- ////////////////////////////////////
 
-//  1. REST IN DESTRUCTURING
+//  1. REST IN DESTRUCTURING (IN THIS CASE , IT IS CALLED REST PATTERNS)
 
 // REST IN ARRAYS
 // SPREAD, because the '...' is on the right hand side of the assignment operator(=)
@@ -184,13 +184,20 @@ const arr2 = [1,2, ...[3,4]];
 
 // REST, because the '...' is on the left hand side of the assignment operator(=)
 const [d,e, ...others] = [1,2,3,4,5];
-console.log(d,e,others);
+// console.log(d,e,others);
 
 const [pizza, , rizzoto, ...otherFoods] = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(pizza, rizzoto, otherFoods);
+// console.log(pizza, rizzoto, otherFoods);
 
 // REST IN OBJECTS
 const {sat, ...weekdays} = restaurant.openingHours;
-console.log(weekdays);
+// console.log(weekdays);
 
-//  2. REST IN FUNCTIONS
+//  2. REST IN FUNCTIONS (IN THIS CASE , IT IS CALLED REST PARAMETERS)
+const add = function(){
+
+}
+
+add(2,3);
+add(5,3,7,2);
+add(24,33,53534,53,534,53,34)
