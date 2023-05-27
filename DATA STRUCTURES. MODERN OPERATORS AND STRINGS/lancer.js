@@ -194,8 +194,12 @@ const {sat, ...weekdays} = restaurant.openingHours;
 // console.log(weekdays);
 
 //  2. REST IN FUNCTIONS (IN THIS CASE , IT IS CALLED REST PARAMETERS)
-const add = function(){
-
+const add = function(...numbers){
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+        console.log(sum);
+    }
 }
 
 add(2,3);
