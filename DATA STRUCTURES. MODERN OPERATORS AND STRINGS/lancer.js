@@ -50,8 +50,6 @@ const restaurant = {
   }
 };
 
-restaurant.orderPizza('Mushrooms', 'Onions', 'Olive', 'Chicken', 'Spinach');
-
 // When the method is called, we pass in the object as a parameter and it would be automatically destructured.
 // restaurant.orderDelivery({
 //     time: '22:30',
@@ -206,7 +204,7 @@ const add = function (...numbers) {
   for(let i=0; i<numbers.length; i++){
     sum += numbers[i];
 }
-console.log(sum);
+// console.log(sum);
 };
 
 add(2, 3);
@@ -215,3 +213,13 @@ add(24,33,53534,53,534,53,34)
 
 const x = [23, 5, 7];
 add(...x);
+
+// Using the Rest Operator in methods
+// restaurant.orderPizza('Mushrooms', 'Onions', 'Olive', 'Chicken', 'Spinach');
+
+
+///////////////////////////////////////////////////// --------------------- SHORT CIRCUITING (&& AND ||) ------------ //////////////////////////////////////////////////////////////////////////////////
+
+// PROPERTIES OF LOGICAL OPERATORS
+// They USE any data type, RETURN any data type and short-circuiting.
+console.log(3 || 'lancer');
