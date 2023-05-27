@@ -226,3 +226,5 @@ console.log(3 || 'lancer');
 console.log('' || 'lancer');
 console.log(true || 0);
 console.log(undefined || null); // Undefined and null are both falsy values, but because the first operand was false, it automatically returned the second operand which is 'null', even though it is also a falsy value.
+
+console.log(undefined || 0 || '' || 'hello' || 23); // In this scenario, 'hello' gets outputed because, all the other operands b4 it were false, and the moment it met the condition (truthy value), it got short-circuited and it got outputed.
