@@ -116,7 +116,7 @@ const ingredients = [
 // console.log(ingredients);
 
 // Application of the Spread Operator from LINE 33.
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
 
 // APPLYING THR SPREAD OPERATOR ON OBJECTS
 const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
@@ -124,8 +124,8 @@ const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
 
 const restaurantCopy = {...restaurant};
 restaurantCopy.name = 'Ristorante Roma'
-console.log(restaurant.name);
-console.log(restaurantCopy.name);
+// console.log(restaurant.name);
+// console.log(restaurantCopy.name);
 
 ////////////////////////////////////////////////////////////////////////////
 // DESTRUCTURING ARRAYS
