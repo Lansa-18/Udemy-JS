@@ -68,8 +68,9 @@ console.log(a,b);
 
 // NESTED OBJECTS DESTRUCTURING
 const {fri: {open, close}} = openingHours;
-
 console.log(open, close);
+
+const arr = [7,8,9];
 
 
 
