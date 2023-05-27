@@ -82,6 +82,7 @@ console.log(newMenu);
 
 // USE CASES OF THE SPREAD OPERATOR
 // 1. Creating Shallow Copies of an Array
+// 2. Merging 2 arrays together
 
 
 
