@@ -30,6 +30,7 @@ const restaurant = {
     console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
   },
 
+//   Application of the Spread Operator in Functions
   orderPasta: function(ing1, ing2, ing3){
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`);
   }
@@ -96,6 +97,10 @@ console.log(menuCopies);
 const str = 'lancer';
 const letters = [...str, '', 's.']
 console.log(letters);
+
+const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'), prompt('Let\'s make pasta! Ingredient 2?'), prompt('Let\'s make pasta! Ingredient 3?')]
+
+
 
 
 
