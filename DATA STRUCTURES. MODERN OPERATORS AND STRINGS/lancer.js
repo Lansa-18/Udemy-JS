@@ -26,14 +26,23 @@ const restaurant = {
   },
 
   // Application of Object Destructuring.
-  orderDelivery: function({starterIndex = 1, mainIndex = 0, time = '20:00', address}){
-    console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
   },
 
-//   Application of the Spread Operator in Functions
-  orderPasta: function(ing1, ing2, ing3){
-    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`);
-  }
+  //   Application of the Spread Operator in Functions
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
+    );
+  },
 };
 
 // When the method is called, we pass in the object as a parameter and it would be automatically destructured.
@@ -61,26 +70,26 @@ const {
 // console.log(restaurantName, hours, tags);
 
 // Setting default values is helpful especially in cases where date aren't HARDCODED
-const {menu = [], starterMenu: starters = []} = restaurant;
+const { menu = [], starterMenu: starters = [] } = restaurant;
 // console.log(menu, starters);
 
 // MUTATING VARIABLES
 let a = 111;
 let b = 999;
-const obj = {a: 23, b: 7, c: 14};
-({a,b} = obj); // The code was wrapped in parenthesis because when beginning a javascript line with curly brackets, it expects a code block
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj); // The code was wrapped in parenthesis because when beginning a javascript line with curly brackets, it expects a code block
 // console.log(a,b);
 
 // NESTED OBJECTS DESTRUCTURING
-const {fri: {open, close}} = openingHours;
+const {
+  fri: { open, close },
+} = openingHours;
 // console.log(open, close);
 
-
 // SPREAD OPERATOR
-const arr = [7,8,9,10];
-const newArr = [1,2, ...arr];
+const arr = [7, 8, 9, 10];
+const newArr = [1, 2, ...arr];
 console.log(...newArr);
-
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenu);
@@ -95,44 +104,22 @@ console.log(menuCopies);
 
 // Iterables are arrays, strings, maps, sets and NOT objects.
 const str = 'lancer';
-const letters = [...str, '', 's.']
+const letters = [...str, '', 's.'];
 console.log(letters);
 
 // Real World Example, Application of the Spread Operator from LINE 33.
-const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'), prompt('Let\'s make pasta! Ingredient 2?'), prompt('Let\'s make pasta! Ingredient 3?')]
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1?"),
+  prompt("Let's make pasta! Ingredient 2?"),
+  prompt("Let's make pasta! Ingredient 3?"),
+];
 // console.log(ingredients);
 
 // Application of the Spread Operator from LINE 33.
 restaurant.orderPasta(...ingredients);
 
 // OBJECTS
-const newRestaurant = {foundedIn: 1998, ...restaurant, founder: 'Guiseppe'}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
 
 ////////////////////////////////////////////////////////////////////////////
 // DESTRUCTURING ARRAYS
