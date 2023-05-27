@@ -241,3 +241,5 @@ console.log(guest2);
 
 console.log('----------- AND ------------------- ');
 console.log(0 && 'jonas');
+console.log(7 && 'jonas');
+console.log(12 && 'lancer' && true && undefined && 23);
