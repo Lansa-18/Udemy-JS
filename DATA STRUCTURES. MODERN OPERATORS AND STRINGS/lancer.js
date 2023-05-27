@@ -175,3 +175,9 @@ restaurantCopy.name = 'Ristorante Roma';
 
 
 // //////////////////////////////////////////// ------------------------------- REST PATTERN AND REST PARAMETERS --------------------------------- ////////////////////////////////////
+
+// SPREAD, because the '...' is on the right hand side of the assignment operator(=)
+const arr2 = [1,2, ...[3,4]];
+
+// REST, because the '...' is on the left hand side of the assignment operator(=)
+const [d,e, ...others] = [1,2,3,4,5];
