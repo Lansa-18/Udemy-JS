@@ -98,10 +98,14 @@ const str = 'lancer';
 const letters = [...str, '', 's.']
 console.log(letters);
 
+// Real World Example, Application of the Spread Operator from LINE 33.
 const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'), prompt('Let\'s make pasta! Ingredient 2?'), prompt('Let\'s make pasta! Ingredient 3?')]
 // console.log(ingredients);
 
+// Application of the Spread Operator from LINE 33.
 restaurant.orderPasta(...ingredients);
+
+// OB
 
 
 
