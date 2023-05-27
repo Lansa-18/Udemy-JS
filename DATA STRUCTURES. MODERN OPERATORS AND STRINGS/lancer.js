@@ -105,7 +105,9 @@ const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'), prompt('Let\'s 
 // Application of the Spread Operator from LINE 33.
 restaurant.orderPasta(...ingredients);
 
-// OB
+// OBJECTS
+const newRestaurant = {foundedIn: 1998, ...restaurant, founder: 'Guiseppe'}
+
 
 
 
