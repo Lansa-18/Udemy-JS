@@ -82,10 +82,13 @@ console.log(newMenu);
 
 // USE CASES OF THE SPREAD OPERATOR
 // 1. Creating Shallow Copies of an Array
+const mainMenuCopy = [...restaurant.mainMenu];
 // 2. Merging 2 arrays together
 
-// 1. COPYING AN ARRAY
-const mainMenuCopy = [...restaurant.mainMenu];
+
+
+// 2. JOINING ARRAYS TOGETHER
+
 
 
 
