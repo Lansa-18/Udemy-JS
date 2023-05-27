@@ -99,7 +99,9 @@ const letters = [...str, '', 's.']
 console.log(letters);
 
 const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'), prompt('Let\'s make pasta! Ingredient 2?'), prompt('Let\'s make pasta! Ingredient 3?')]
-console.log(ingredients);
+// console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
 
 
 
