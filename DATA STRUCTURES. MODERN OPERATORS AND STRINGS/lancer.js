@@ -225,4 +225,4 @@ add(...x);
 console.log(3 || 'lancer');
 console.log('' || 'lancer');
 console.log(true || 0);
-console.log(undefined || null);
+console.log(undefined || null); // Undefined and null are both falsy values, but because the first operand was false, it automatically returned the second operand which is 'null', even though it is also a falsy value.
