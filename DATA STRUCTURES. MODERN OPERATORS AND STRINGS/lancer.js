@@ -92,7 +92,7 @@ const newArr = [1, 2, ...arr];
 console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+// console.log(newMenu);
 
 // USE CASES OF THE SPREAD OPERATOR
 // 1. Creating Shallow Copies of an Array
@@ -100,26 +100,29 @@ const mainMenuCopy = [...restaurant.mainMenu];
 
 // 2. Merging arrays together
 const menuCopies = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menuCopies);
+// console.log(menuCopies);
 
 // Iterables are arrays, strings, maps, sets and NOT objects.
 const str = 'lancer';
 const letters = [...str, '', 's.'];
-console.log(letters);
+// console.log(letters);
 
 // Real World Example, Application of the Spread Operator from LINE 33.
 const ingredients = [
-  prompt("Let's make pasta! Ingredient 1?"),
-  prompt("Let's make pasta! Ingredient 2?"),
-  prompt("Let's make pasta! Ingredient 3?"),
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt("Let's make pasta! Ingredient 2?"),
+//   prompt("Let's make pasta! Ingredient 3?"),
 ];
 // console.log(ingredients);
 
 // Application of the Spread Operator from LINE 33.
 restaurant.orderPasta(...ingredients);
 
-// OBJECTS
+// APPLYING THR SPREAD OPERATOR ON OBJECTS
 const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+// console.log(newRestaurant);
+
+const restaurantCopy = {...restaurant}
 
 ////////////////////////////////////////////////////////////////////////////
 // DESTRUCTURING ARRAYS
