@@ -243,3 +243,10 @@ console.log('----------- AND ------------------- ');
 console.log(0 && 'jonas');
 console.log(7 && 'jonas');
 console.log(12 && 'lancer' && true && undefined && 23);
+
+// Apllication
+if(restaurant.orderPizza){
+    restaurant.orderPizza('Mushrooms', 'Chicken');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('Chicken', 'Spinach')
