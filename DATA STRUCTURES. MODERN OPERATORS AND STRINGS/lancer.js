@@ -83,11 +83,15 @@ console.log(newMenu);
 // USE CASES OF THE SPREAD OPERATOR
 // 1. Creating Shallow Copies of an Array
 const mainMenuCopy = [...restaurant.mainMenu];
-// 2. Merging 2 arrays together
+
+// 2. Merging arrays together
+const menuCopies = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menuCopies);
+
+// Iterables are arrays, strings, maps, sets and NOT objects.
 
 
 
-// 2. JOINING ARRAYS TOGETHER
 
 
 
