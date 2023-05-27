@@ -32,44 +32,46 @@ const restaurant = {
 };
 
 // When the method is called, we pass in the object as a parameter and it would be automatically destructured.
-restaurant.orderDelivery({
-    time: '22:30',
-    address: 'Via del Sole, 21',
-    mainIndex: 2,
-    starterIndex: 2
-})
+// restaurant.orderDelivery({
+//     time: '22:30',
+//     address: 'Via del Sole, 21',
+//     mainIndex: 2,
+//     starterIndex: 2
+// })
 
-restaurant.orderDelivery({
-    address: 'Via del Sole, 21',
-    starterIndex: 1
-})
+// restaurant.orderDelivery({
+//     address: 'Via del Sole, 21',
+//     starterIndex: 1
+// })
 
 // OBJECT DESTRUCTURING
 const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// console.log(name, openingHours, categories);
 
 const {
   name: restaurantName,
   openingHours: hours,
   categories: tags,
 } = restaurant;
-console.log(restaurantName, hours, tags);
+// console.log(restaurantName, hours, tags);
 
 // Setting default values is helpful especially in cases where date aren't HARDCODED
 const {menu = [], starterMenu: starters = []} = restaurant;
-console.log(menu, starters);
+// console.log(menu, starters);
 
 // MUTATING VARIABLES
 let a = 111;
 let b = 999;
 const obj = {a: 23, b: 7, c: 14};
 ({a,b} = obj); // The code was wrapped in parenthesis because when beginning a javascript line with curly brackets, it expects a code block
-console.log(a,b);
+// console.log(a,b);
 
 // NESTED OBJECTS DESTRUCTURING
 const {fri: {open, close}} = openingHours;
-console.log(open, close);
+// console.log(open, close);
 
+
+// SPREAD OPERATOR
 const arr = [7,8,9];
 
 
