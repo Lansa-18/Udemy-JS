@@ -176,6 +176,8 @@ restaurantCopy.name = 'Ristorante Roma';
 
 // //////////////////////////////////////////// ------------------------------- REST PATTERN AND REST PARAMETERS --------------------------------- ////////////////////////////////////
 
+//  1. REST IN DESTRUCTURING
+
 // REST IN ARRAYS
 // SPREAD, because the '...' is on the right hand side of the assignment operator(=)
 const arr2 = [1,2, ...[3,4]];
@@ -190,3 +192,5 @@ console.log(pizza, rizzoto, otherFoods);
 // REST IN OBJECTS
 const {sat, ...weekdays} = restaurant.openingHours;
 console.log(weekdays);
+
+//  2. REST IN FUNCTIONS
