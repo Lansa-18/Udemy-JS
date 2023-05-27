@@ -72,7 +72,13 @@ const {fri: {open, close}} = openingHours;
 
 
 // SPREAD OPERATOR
-const arr = [7,8,9];
+const arr = [7,8,9,10];
+const newArr = [1,2, ...arr];
+console.log(...newArr);
+
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];\
+
 
 
 
