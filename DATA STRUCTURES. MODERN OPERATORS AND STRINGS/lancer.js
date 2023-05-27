@@ -89,7 +89,9 @@ const menuCopies = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menuCopies);
 
 // Iterables are arrays, strings, maps, sets and NOT objects.
-
+const str = 'lancer';
+const letters = [...str, '', 's.']
+console.log(letters);
 
 
 
