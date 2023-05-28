@@ -44,10 +44,10 @@ const restaurant = {
     );
   },
 
-  orderPizza: function(mainIng, ...otherIng){
+  orderPizza: function (mainIng, ...otherIng) {
     console.log(mainIng);
     console.log(otherIng);
-  }
+  },
 };
 
 // When the method is called, we pass in the object as a parameter and it would be automatically destructured.
@@ -201,22 +201,21 @@ const { sat, ...weekdays } = restaurant.openingHours;
 //  2. REST IN FUNCTIONS (IN THIS CASE , IT IS CALLED REST PARAMETERS)
 const add = function (...numbers) {
   let sum = 0;
-  for(let i=0; i<numbers.length; i++){
+  for (let i = 0; i < numbers.length; i++) {
     sum += numbers[i];
-}
-// console.log(sum);
+  }
+  // console.log(sum);
 };
 
 add(2, 3);
-add(5,3,7,2);
-add(24,33,53534,53,534,53,34)
+add(5, 3, 7, 2);
+add(24, 33, 53534, 53, 534, 53, 34);
 
 const x = [23, 5, 7];
 add(...x);
 
 // Using the Rest Operator in methods
 // restaurant.orderPizza('Mushrooms', 'Onions', 'Olive', 'Chicken', 'Spinach');
-
 
 ///////////////////////////////////////////////////// --------------------- SHORT CIRCUITING (&& AND ||) ------------ //////////////////////////////////////////////////////////////////////////////////
 
@@ -237,7 +236,6 @@ add(...x);
 
 // const guest2 = restaurant.numGuests || 10;
 // console.log(guest2);
-
 
 // console.log('----------- AND ------------------- ');
 // console.log(0 && 'jonas');
@@ -260,22 +258,19 @@ const guest = restaurant.numGuests || 10;
 const guestCorrect = restaurant.numGuests ?? 10;
 // console.log(guestCorrect);
 
-
-
 /////////////////// --------------- LOGICAL ASSIGNMENT OPERATOR -------------------- //////////////////////
-const rest1 ={
-    name: 'Capri',
-    numGuests: 20,
-}
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
 
-const rest2 ={
-    name: 'La Piazza',
-    owner: 'Mapelujo Abdulkareem',
-}
-
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Mapelujo Abdulkareem',
+};
 
 rest1.numGuests = rest1.numGuests || 10;
 rest2.numGuests = rest2.numGuests || 10;
 
-
-
+console.log(rest1);
+console.log(rest2);
