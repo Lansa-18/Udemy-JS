@@ -339,5 +339,6 @@ const game = {
 
   // 2. 
   const [gk, ...fieldPlayers] = players1;
-  console.log(gk);
-  console.log(fieldPlayers);
+  
+  // 3. 
+  const allPlayers = [...players1, ...players2];
