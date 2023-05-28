@@ -348,6 +348,8 @@ const game = {
 
   // 5.
   const {team1, x:draw, team2} = game.odds;
-  console.log(team1);
-  console.log(draw);
-  console.log(team2);
+
+  // 6. 
+  const printGoals = function(){
+    
+  }
