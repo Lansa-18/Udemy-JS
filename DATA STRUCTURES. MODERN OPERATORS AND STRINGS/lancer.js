@@ -333,7 +333,7 @@ const game = {
   },
 };
 
-// 1. 
+// 1.
 const [players1, players2] = game.players;
 
 // 2.
@@ -346,28 +346,23 @@ const allPlayers = [...players1, ...players2];
 const playersFinal = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
 // 5.
-const { team1, x: draw, team2 } = game.odds; //OR 
+const { team1, x: draw, team2 } = game.odds; //OR
 // const {odds: {team1, x:draw, team2}} = game;
 
 // 6.
 const printGoals = function (...players) {
-//   console.log(`${players} scored goals`);
-//   console.log(`${players.length} goals were scored`);
+  //   console.log(`${players} scored goals`);
+  //   console.log(`${players.length} goals were scored`);
 };
 
 printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
 printGoals(...game.scored);
 
-// 7.  
+// 7.
 // team1 < team2 && console.log('Team1 is more likely to win');
 // team1 > team2 && console.log('Team2 is more likely to win');
-
-
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu2) console.log(item);
-
-
-
