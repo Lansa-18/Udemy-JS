@@ -365,4 +365,12 @@ printGoals(...game.scored);
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-for (const item of menu2) console.log(item);
+for (const item of menu2) console.log(item); // The 'for-of' loop basically gives you the current element in each iteration of whatever you are looping through. 
+
+// To get the current Index, this is how it's done;
+for (const item of menu2.entries()) {
+    console.log(item);
+}
+
+// console.log(...menu2.entries());
+
