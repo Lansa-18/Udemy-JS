@@ -252,9 +252,7 @@ console.log('----------- OR ------------------- ');
 // restaurant.orderPizza && restaurant.orderPizza('Chicken', 'Spinach')
 
 // THE NULLISH COALESCING OPERATOR(??)restaurant.numGuests = 40;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;  // TERNARY OPERATOR
-console.log(guests1);
-
-const guest2 = restaurant.numGuests || 10;
-console.log(guest2);
+restaurant.numGuests = 0;
+const guest = restaurant.numGuests || 10;
+console.log(guest);
 
