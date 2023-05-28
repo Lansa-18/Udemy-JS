@@ -345,3 +345,9 @@ const game = {
 
   // 4. 
   const playersFinal = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+  // 5.
+  const {team1, x:draw, team2} = game.odds;
+  console.log(team1);
+  console.log(draw);
+  console.log(team2);
