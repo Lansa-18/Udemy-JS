@@ -346,7 +346,8 @@ const allPlayers = [...players1, ...players2];
 const playersFinal = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
 // 5.
-const { team1, x: draw, team2 } = game.odds;
+const { team1, x: draw, team2 } = game.odds; //OR 
+// const {odds: {team1, x:draw, team2}} = game;
 
 // 6.
 const printGoals = function (...players) {
