@@ -333,7 +333,7 @@ const game = {
   },
 };
 
-// 1. Create 1 player array for each team (variables 'players1' and 'players2').
+// 1. 
 const [players1, players2] = game.players;
 
 // 2.
@@ -358,4 +358,3 @@ printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
 printGoals(...game.scored);
 
 // 7. 
-
