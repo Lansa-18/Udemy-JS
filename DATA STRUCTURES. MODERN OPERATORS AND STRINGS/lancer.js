@@ -333,3 +333,11 @@ const game = {
       team2: 6.5,
     },
   };
+
+  // 1. Create 1 player array for each team (variables 'players1' and 'players2').
+  const [players1, players2] = game.players;
+
+  // 2. 
+  const [gk, ...fieldPlayers] = players1;
+  console.log(gk);
+  console.log(fieldPlayers);
