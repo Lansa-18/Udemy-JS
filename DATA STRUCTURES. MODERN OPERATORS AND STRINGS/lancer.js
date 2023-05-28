@@ -362,4 +362,5 @@ printGoals(...game.scored);
 team1 < team2 && console.log('Team1 is more likely to win');
 team1 > team2 && console.log('Team2 is more likely to win');
 
-// console.log(`Team1 wins cuz their odds are ${team1 || team2 || draw}`);
+
+
