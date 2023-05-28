@@ -263,5 +263,13 @@ const guestCorrect = restaurant.numGuests ?? 10;
 
 
 /////////////////// --------------- LOGICAL ASSIGNMENT OPERATOR -------------------- //////////////////////
+const rest1 ={
+    name: 'Capri',
+    numGuests: 20
+}
 
+const rest2 ={
+    name: 'La Piazza',
+    owner: 'Mapelujo Abdulkareem'
+}
 
