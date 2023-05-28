@@ -1,19 +1,21 @@
 'use strict';
 
+const weekdays2 = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun' ];
+
 const openingHours = {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // open: 24hours
-      close: 24,
-    },
-  };
+  [weekdays2[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays2[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays2[5]]: {
+    open: 0, // open: 24hours
+    close: 24,
+  },
+};
 
 const restaurant = {
   name: 'Classico Italiano',
@@ -21,15 +23,16 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  openingHours: openingHours,
 
+  //   ES6 ENHANCED OBJECT LITERALS
+  openingHours,
 
-  order: function (starterIndex, mainIndex) {
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
   // Application of Object Destructuring.
-  orderDelivery: function ({
+  orderDelivery({
     starterIndex = 1,
     mainIndex = 0,
     time = '20:00',
@@ -41,13 +44,13 @@ const restaurant = {
   },
 
   //   Application of the Spread Operator in Functions
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(
       `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
     );
   },
 
-  orderPizza: function (mainIng, ...otherIng) {
+  orderPizza(mainIng, ...otherIng) {
     console.log(mainIng);
     console.log(otherIng);
   },
@@ -354,26 +357,34 @@ const { team1, x: draw, team2 } = game.odds; //OR
 
 // 6.
 const printGoals = function (...players) {
-    // console.log(`${players} scored goals`);
-    // console.log(`${players.length} goals were scored`);
+  console.log(`${players} scored goals`);
+  console.log(`${players.length} goals were scored`);
 };
 
 printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
 printGoals(...game.scored);
 
-// 7.
-// team1 < team2 && console.log('Team1 is more likely to win');
-// team1 > team2 && console.log('Team2 is more likely to win');
+7.
+team1 < team2 && console.log('Team1 is more likely to win');
+team1 > team2 && console.log('Team2 is more likely to win');
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-// for (const item of menu2) console.log(item); // The 'for-of' loop basically gives you the current element in each iteration of whatever you are looping through. 
+// for (const item of menu2) console.log(item); // The 'for-of' loop basically gives you the current element in each iteration of whatever you are looping through.
 
 // To get the current Index, this is how it's done;
-for (const [i,el] of menu2.entries()){
-    // console.log(`${i+1}: ${el}`);
+for (const [i, el] of menu2.entries()) {
+  // console.log(`${i+1}: ${el}`);
 }
 // console.log(...menu2.entries());
 
-// //////////////////////////// ------------------- ENHANCED OBJECT LITERALS ------------------------ /////////////////////////////////////
+// //////////////////////////// ------------------- OPTIONAL CHAINING  ------------------------ /////////////////////////////////////
+// console.log(restaurant.openingHours.mon.open);
+
+// With Optional Chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// Example
+
