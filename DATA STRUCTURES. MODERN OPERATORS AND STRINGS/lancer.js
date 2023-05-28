@@ -356,5 +356,5 @@ const game = {
 
   }
 
-  printGoals(...game.scored);
+  printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
   printGoals(...game.scored);
