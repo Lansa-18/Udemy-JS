@@ -351,8 +351,8 @@ const { team1, x: draw, team2 } = game.odds; //OR
 
 // 6.
 const printGoals = function (...players) {
-  //   console.log(`${players} scored goals`);
-  //   console.log(`${players.length} goals were scored`);
+    // console.log(`${players} scored goals`);
+    // console.log(`${players.length} goals were scored`);
 };
 
 printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
