@@ -358,5 +358,8 @@ const printGoals = function (...players) {
 printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
 printGoals(...game.scored);
 
-// 7. 
-console.log(`Team1 wins cuz their odds are ${team1 || team2 || draw}`);
+// 7.  
+team1 < team2 && console.log('Team1 is more likely to win');
+team1 < team2 && console.log('Team1 is more likely to win');
+
+// console.log(`Team1 wins cuz their odds are ${team1 || team2 || draw}`);
