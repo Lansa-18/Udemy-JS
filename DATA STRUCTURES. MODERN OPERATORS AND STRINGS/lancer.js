@@ -291,6 +291,7 @@ rest2.owner &&= '<ANONYMOUS>';
 
 
 /////////// ------------- CODING CHALLENGE #1 ---------------- //////////////////
+// GIVEN DATA
 
 const game = {
     team1: 'Bayern Munich',
