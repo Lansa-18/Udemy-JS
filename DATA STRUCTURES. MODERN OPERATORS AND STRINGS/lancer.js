@@ -356,3 +356,6 @@ const printGoals = function (...players) {
 
 printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
 printGoals(...game.scored);
+
+// 7. 
+
