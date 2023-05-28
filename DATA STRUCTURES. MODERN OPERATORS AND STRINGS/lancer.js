@@ -1,12 +1,6 @@
 'use strict';
 
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  openingHours: {
+const openingHours = {
     thu: {
       open: 12,
       close: 22,
@@ -19,7 +13,16 @@ const restaurant = {
       open: 0, // open: 24hours
       close: 24,
     },
-  },
+  };
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  openingHours: openingHours,
+
 
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
@@ -64,7 +67,7 @@ const restaurant = {
 // })
 
 // OBJECT DESTRUCTURING
-const { name, openingHours, categories } = restaurant;
+// const { name, openingHours, categories } = restaurant;
 // console.log(name, openingHours, categories);
 
 const {
@@ -365,12 +368,12 @@ printGoals(...game.scored);
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-for (const item of menu2) console.log(item); // The 'for-of' loop basically gives you the current element in each iteration of whatever you are looping through. 
+// for (const item of menu2) console.log(item); // The 'for-of' loop basically gives you the current element in each iteration of whatever you are looping through. 
 
 // To get the current Index, this is how it's done;
 for (const [i,el] of menu2.entries()){
-    console.log(`${i+1}: ${el}`);
+    // console.log(`${i+1}: ${el}`);
 }
+// console.log(...menu2.entries());
 
-console.log(...menu2.entries());
-
+// //////////////////////////// ------------------- ENHANCED OBJECT LITERALS ------------------------ /////////////////////////////////////
