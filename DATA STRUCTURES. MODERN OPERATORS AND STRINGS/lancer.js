@@ -358,3 +358,4 @@ printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
 printGoals(...game.scored);
 
 // 7. 
+console.log(`Team1 wins cuz their odds are ${team1 || team2 || draw}`);
