@@ -290,8 +290,8 @@ rest2.owner &&= '<ANONYMOUS>';
 // console.log(rest2);
 
 /////////// ------------- CODING CHALLENGE #1 ---------------- //////////////////
-// GIVEN DATA
 
+// GIVEN DATA
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -363,4 +363,6 @@ team1 < team2 && console.log('Team1 is more likely to win');
 team1 > team2 && console.log('Team2 is more likely to win');
 
 
+
+/////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 
