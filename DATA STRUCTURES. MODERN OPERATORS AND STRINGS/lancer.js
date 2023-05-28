@@ -357,16 +357,16 @@ const { team1, x: draw, team2 } = game.odds; //OR
 
 // 6.
 const printGoals = function (...players) {
-  console.log(`${players} scored goals`);
-  console.log(`${players.length} goals were scored`);
+//   console.log(`${players} scored goals`);
+//   console.log(`${players.length} goals were scored`);
 };
 
 printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
 printGoals(...game.scored);
 
-7.
-team1 < team2 && console.log('Team1 is more likely to win');
-team1 > team2 && console.log('Team2 is more likely to win');
+// 7.
+// team1 < team2 && console.log('Team1 is more likely to win');
+// team1 > team2 && console.log('Team2 is more likely to win');
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
@@ -387,4 +387,7 @@ console.log(restaurant.openingHours.mon?.open);
 console.log(restaurant.openingHours?.mon?.open);
 
 // Example
-
+const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun' ];
+for (const day of days){
+    console.log(day);
+}
