@@ -262,3 +262,6 @@ const guestCorrect = restaurant.numGuests ?? 10;
 
 
 
+/////////////////// --------------- LOGICAL ASSIGNMENT OPERATOR -------------------- //////////////////////
+
+
