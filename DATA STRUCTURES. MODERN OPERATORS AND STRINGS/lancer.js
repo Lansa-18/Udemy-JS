@@ -342,3 +342,6 @@ const game = {
   
   // 3. 
   const allPlayers = [...players1, ...players2];
+
+  // 4. 
+  const playersFinal = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
