@@ -276,7 +276,7 @@ const rest2 = {
 // rest1.numGuests ||= 10;
 // rest2.numGuests ||= 10;
 
-// NULLISH COALESCING operator
+// NULLISH COALESCING operator (null or undefined)
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
 
