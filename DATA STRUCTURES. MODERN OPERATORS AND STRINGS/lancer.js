@@ -252,7 +252,12 @@ console.log('----------- OR ------------------- ');
 // restaurant.orderPizza && restaurant.orderPizza('Chicken', 'Spinach')
 
 // THE NULLISH COALESCING OPERATOR(??)restaurant.numGuests = 40;
+
 restaurant.numGuests = 0;
 const guest = restaurant.numGuests || 10;
 console.log(guest);
+
+// Nullish Values are: Null and Undefined. (NOT 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
 
