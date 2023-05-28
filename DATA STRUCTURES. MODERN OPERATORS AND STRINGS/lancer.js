@@ -366,10 +366,8 @@ printGoals(...game.scored);
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
-console.log(menu2);
 
-for (const item of menu2){
-    console.log(item);
-}
+for (const item of menu2) console.log(item);
+
 
 
