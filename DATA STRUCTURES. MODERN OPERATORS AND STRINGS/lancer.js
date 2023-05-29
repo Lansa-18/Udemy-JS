@@ -389,7 +389,7 @@ console.log(`Odd of Victory ${game.team2}: ${game.odds.team2}`);
 const scoresObj = {};
 for (const [i, el] of game.scored.entries()){
    scoresObj[el] = el;
-   console.log(``);
+   console.log(`${scoresObj[el]}: ${i}`);
 }
 // console.log(scoresObj);
 
