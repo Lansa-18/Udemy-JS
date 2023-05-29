@@ -374,12 +374,11 @@ for (const [i, el] of game.scored.entries()){
 // 2. Calculating the averages
 const oddValues = Object.values(game.odds);
 let sum = 0
+let avgOdds = 0
 for (const average of oddValues){
     sum += average;
+   avgOdds = sum/oddValues.length;
 }
-console.log(sum);
-
-
 
 
 
