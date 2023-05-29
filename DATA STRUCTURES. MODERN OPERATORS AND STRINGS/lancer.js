@@ -381,9 +381,12 @@ for (const average of oddValues){
 }
 
 // 3. 
+// const gameEntries = Object.entries(game);
+// console.log(gameEntries);
 
-
-
+// for (const [i, el, ,  ] of gameEntries){
+//     // console.log(i, el);
+// }
 
 
 
