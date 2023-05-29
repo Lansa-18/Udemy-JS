@@ -329,7 +329,7 @@ const game = {
   date: 'Nov 9th, 2037',
   odds: {
     team1: 1.33,
-    x: 3.25, 
+    x: 3.25,
     team2: 6.5,
   },
 };
@@ -363,66 +363,37 @@ printGoals(...game.scored);
 // team1 < team2 && console.log('Team1 is more likely to win');
 // team1 > team2 && console.log('Team2 is more likely to win');
 
-
 ////////////////////// ------------------ CODING CHALLENGE #2 ------------------------- ////////////////////////
 // continuation from THE FIRST CODING CHALLENGE.
 // 1.
-for (const [i, el] of game.scored.entries()){
-    console.log(`Goal ${i+1}: ${el}`);
+for (const [i, el] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${el}`);
 }
 
 // 2. Calculating the averages
 const oddValues = Object.values(game.odds);
-let sum = 0
-let avgOdds = 0
-for (const average of oddValues){
-    sum += average;
-   avgOdds = sum/oddValues.length;
+let sum = 0;
+let avgOdds = 0;
+for (const average of oddValues) {
+  sum += average;
+  avgOdds = sum / oddValues.length;
 }
 
-// 3. 
+// 3.
 console.log(`Odd of Victory ${game.team1}: ${game.odds.team1}`);
 console.log(`Odd of Draw: ${game.odds.x}`);
 console.log(`Odd of Victory ${game.team2}: ${game.odds.team2}`);
 
 // BONUS:
 const scoresObj = {};
-for (const name of game.scored){
-    if (scoresObj[name]) {
-       scoresObj[name] += 1
-   } else{
-    scoresObj[name] = 1
-   }
-
+for (const name of game.scored) {
+  if (scoresObj[name]) {
+    scoresObj[name] += 1;
+  } else {
+    scoresObj[name] = 1;
+  }
 }
 console.log(scoresObj);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
@@ -448,7 +419,7 @@ const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
 for (const day of days) {
   // console.log(day);
   const open = restaurant.openingHours[day]?.open ?? 'closed';
-//   console.log(`On ${day}, we open at ${open}`);
+  //   console.log(`On ${day}, we open at ${open}`);
 }
 
 // Optional Chaining on Methods
@@ -464,7 +435,6 @@ const users = [
 // console.log(users[0]?.name ?? 'User Array Empty');
 // console.log(users[2]?.name ?? 'User Array Empty');
 
-
 ////////////////////// --------------------- LOOPING OBJECTS: OBJECT KEYS, VALUES, AND ENTRIES ---------------------------- ///////////////////////////////////////////
 // NOTE: OBJECTS ARE NOT ITERABLES
 
@@ -473,8 +443,8 @@ const properties = Object.keys(openingHours);
 // console.log(properties);
 
 let openStr = `We are open on ${properties.length} days: `;
-for (const day of Object.keys(openingHours)){
-    openStr += `${day}, `;
+for (const day of Object.keys(openingHours)) {
+  openStr += `${day}, `;
 }
 // console.log(openStr);
 
@@ -486,10 +456,6 @@ const values = Object.values(openingHours);
 const entries = Object.entries(openingHours);
 // console.log(entries);
 
-for (const [day, {open, close}] of entries){
-    // console.log(`On ${day} we open ${open} and close at ${close}`);
+for (const [day, { open, close }] of entries) {
+  // console.log(`On ${day} we open ${open} and close at ${close}`);
 }
-
-
-
-
