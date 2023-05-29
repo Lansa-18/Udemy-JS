@@ -363,6 +363,50 @@ printGoals(...game.scored);
 // team1 < team2 && console.log('Team1 is more likely to win');
 // team1 > team2 && console.log('Team2 is more likely to win');
 
+
+////////////////////// ------------------ CODING CHALLENGE #2 ------------------------- ////////////////////////
+// continuation from THE FIRST CODING CHALLENGE.
+// 1.
+for (const [i, el] of game.scored.entries()){
+    console.log(`Goal ${i+1}: ${el}`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
@@ -430,5 +474,5 @@ for (const [day, {open, close}] of entries){
 }
 
 
-////////////////////// ------------------ CODING CHALLENGE #2 ------------------------- ////////////////////////
+
 
