@@ -407,4 +407,12 @@ const users = [
 ////////////////////// --------------------- LOOPING OBJECTS: OBJECT KEYS, VALUES, AND ENTRIES ---------------------------- ///////////////////////////////////////////
 // NOTE: OBJECTS ARE NOT ITERABLES
 
+// looping over property names, (KEYS);
+const properties = Object.keys(openingHours);
+console.log(properties);
 
+let openStr = `We are open on ${properties.length} days`;
+
+for (const day of Object.keys(openingHours)){
+    console.log(day);
+}
