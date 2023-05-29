@@ -423,8 +423,8 @@ const values = Object.values(openingHours);
 
 // To loop over the entire object, we need to make use of the entries. ENTRIES contain both the Keys and the values.
 const entries = Object.entries(openingHours);
-// console.log(entries);
+console.log(entries);
 
-for (const [key, {open, close}] of entries){
-    console.log(`On ${key} we open ${open} and close at ${close}`);
+for (const [day, {open, close}] of entries){
+    console.log(`On ${day} we open ${open} and close at ${close}`);
 }
