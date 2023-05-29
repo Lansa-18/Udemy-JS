@@ -421,3 +421,6 @@ console.log(openStr);
 // looping over property values, (VALUES);
 const values = Object.values(openingHours);
 console.log(values);
+
+// To loop over the entire object, we need to make use of the entries. ENTRIES contain both the Keys and the values.
+
