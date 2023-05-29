@@ -380,6 +380,7 @@ for (const average of oddValues){
    avgOdds = sum/oddValues.length;
 }
 
+// 3. 
 
 
 
