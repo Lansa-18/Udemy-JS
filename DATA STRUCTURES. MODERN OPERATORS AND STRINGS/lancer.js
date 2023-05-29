@@ -423,4 +423,9 @@ const values = Object.values(openingHours);
 console.log(values);
 
 // To loop over the entire object, we need to make use of the entries. ENTRIES contain both the Keys and the values.
+const entries = Object.entries(openingHours);
+// console.log(entries);
 
+for (const x of entries){
+    console.log(x);
+}
