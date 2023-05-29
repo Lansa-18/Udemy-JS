@@ -378,8 +378,8 @@ for (const [i, el] of menu2.entries()) {
 // console.log(restaurant.openingHours.mon.open);
 
 // With Optional Chaining
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open);
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open);
 
 // Example
 const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
@@ -387,7 +387,7 @@ const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
 for (const day of days) {
   // console.log(day);
   const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day}, we open at ${open}`);
+//   console.log(`On ${day}, we open at ${open}`);
 }
 
 // Optional Chaining on Methods
@@ -402,3 +402,9 @@ const users = [
 
 // console.log(users[0]?.name ?? 'User Array Empty');
 // console.log(users[2]?.name ?? 'User Array Empty');
+
+
+////////////////////// --------------------- LOOPING OBJECTS: OBJECT KEYS, VALUES, AND ENTRIES ---------------------------- ///////////////////////////////////////////
+// NOTE: OBJECTS ARE NOT ITERABLES
+
+
