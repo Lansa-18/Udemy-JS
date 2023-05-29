@@ -1,6 +1,6 @@
 'use strict';
 
-const weekdays2 = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun' ];
+const weekdays2 = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
 
 const openingHours = {
   [weekdays2[3]]: {
@@ -32,12 +32,7 @@ const restaurant = {
   },
 
   // Application of Object Destructuring.
-  orderDelivery({
-    starterIndex = 1,
-    mainIndex = 0,
-    time = '20:00',
-    address,
-  }) {
+  orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
     console.log(
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
@@ -357,8 +352,8 @@ const { team1, x: draw, team2 } = game.odds; //OR
 
 // 6.
 const printGoals = function (...players) {
-//   console.log(`${players} scored goals`);
-//   console.log(`${players.length} goals were scored`);
+  //   console.log(`${players} scored goals`);
+  //   console.log(`${players.length} goals were scored`);
 };
 
 printGoals('Lewandoskie', 'Davies', 'Muller', 'Kimmich');
@@ -387,10 +382,10 @@ console.log(restaurant.openingHours.mon?.open);
 console.log(restaurant.openingHours?.mon?.open);
 
 // Example
-const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun' ];
+const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
 
-for (const day of days){
-    // console.log(day);
-    const open = restaurant.openingHours[day]?.open ?? 'closed';
-    console.log(`On ${day}, we open at ${open}`);
+for (const day of days) {
+  // console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
 }
