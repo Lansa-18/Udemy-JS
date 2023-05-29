@@ -399,3 +399,6 @@ const users = [
     {name: 'lancer', email: 'olamideiyanda18@gmail.com'},
     {name: 'mizt', email: 'olamideiyanda20@gmail.com'}
 ]
+
+console.log(users[0]?.name ?? 'User Array Empty');
+console.log(users[2]?.name ?? 'User Array Empty');
