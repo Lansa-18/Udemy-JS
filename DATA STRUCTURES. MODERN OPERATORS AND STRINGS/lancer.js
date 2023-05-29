@@ -391,14 +391,14 @@ for (const day of days) {
 }
 
 // Optional Chaining on Methods
-console.log(restaurant.order?.(0,1) ?? 'Method Does not exist'); 
-console.log(restaurant.orderRissotto?.(0,1) ?? 'Method Does not exist'); 
+console.log(restaurant.order?.(0, 1) ?? 'Method Does not exist');
+console.log(restaurant.orderRissotto?.(0, 1) ?? 'Method Does not exist');
 
 // Optional Chaining on Arrays
 const users = [
-    {name: 'lancer', email: 'olamideiyanda18@gmail.com'},
-    {name: 'mizt', email: 'olamideiyanda20@gmail.com'}
-]
+  { name: 'lancer', email: 'olamideiyanda18@gmail.com' },
+  { name: 'mizt', email: 'olamideiyanda20@gmail.com' },
+];
 
 console.log(users[0]?.name ?? 'User Array Empty');
 console.log(users[2]?.name ?? 'User Array Empty');
