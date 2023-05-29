@@ -409,23 +409,22 @@ const users = [
 
 // looping over property names, (KEYS);
 const properties = Object.keys(openingHours);
-console.log(properties);
+// console.log(properties);
 
 let openStr = `We are open on ${properties.length} days: `;
-
 for (const day of Object.keys(openingHours)){
     openStr += `${day}, `;
 }
-console.log(openStr);
+// console.log(openStr);
 
 // looping over property values, (VALUES);
 const values = Object.values(openingHours);
-console.log(values);
+// console.log(values);
 
 // To loop over the entire object, we need to make use of the entries. ENTRIES contain both the Keys and the values.
 const entries = Object.entries(openingHours);
 // console.log(entries);
 
 for (const x of entries){
-    console.log(x);
+    console.log(`On ${key} we open ${open} and close at ${close}`);
 }
