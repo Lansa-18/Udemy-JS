@@ -411,8 +411,13 @@ const users = [
 const properties = Object.keys(openingHours);
 console.log(properties);
 
-let openStr = `We are open on ${properties.length} days`;
+let openStr = `We are open on ${properties.length} days: `;
 
 for (const day of Object.keys(openingHours)){
-    openStr += `${day}`;
+    openStr += `${day}, `;
 }
+console.log(openStr);
+
+// looping over property values, (VALUES);
+const values = Object.values(openingHours);
+console.log(values);
