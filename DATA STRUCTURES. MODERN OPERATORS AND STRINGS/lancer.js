@@ -371,6 +371,8 @@ for (const [i, el] of game.scored.entries()){
     console.log(`Goal ${i+1}: ${el}`);
 }
 
+// 2. Calculating the averages
+
 
 
 
