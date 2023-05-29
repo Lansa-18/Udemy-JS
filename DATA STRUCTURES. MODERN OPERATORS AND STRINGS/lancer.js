@@ -329,7 +329,7 @@ const game = {
   date: 'Nov 9th, 2037',
   odds: {
     team1: 1.33,
-    x: 3.25,
+    x: 3.25, 
     team2: 6.5,
   },
 };
@@ -372,7 +372,12 @@ for (const [i, el] of game.scored.entries()){
 }
 
 // 2. Calculating the averages
-
+const oddValues = Object.values(game.odds);
+let sum = 0
+for (const average of oddValues){
+    sum += average;
+}
+console.log(sum);
 
 
 
