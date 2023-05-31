@@ -367,7 +367,7 @@ printGoals(...game.scored);
 // continuation from THE FIRST CODING CHALLENGE.
 // 1.
 for (const [i, el] of game.scored.entries()) {
-//   console.log(`Goal ${i + 1}: ${el}`);
+  //   console.log(`Goal ${i + 1}: ${el}`);
 }
 
 // 2. Calculating the averages
@@ -383,7 +383,7 @@ for (const average of oddValues) {
 const gameEntries = Object.entries(game.odds);
 for (const [team, odd] of gameEntries) {
   const teamString = team === 'x' ? 'draw' : `Victory ${game[team]}`;
-//   console.log(`Odd of ${teamString}: ${odd}`);
+  //   console.log(`Odd of ${teamString}: ${odd}`);
 }
 
 // BONUS:
@@ -462,9 +462,15 @@ for (const [day, { open, close }] of entries) {
   // console.log(`On ${day} we open ${open} and close at ${close}`);
 }
 
-
 /////////////////////////// ------------------------- SETS --------------------------------------- /////////////////////////////////////
-const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pizza', 'Pasta', 'Pizza']);
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Risotto',
+  'Pizza',
+  'Pasta',
+  'Pizza',
+]);
 // console.log(ordersSet);
 
 // console.log(new Set('Nabasf'));
@@ -492,7 +498,6 @@ ordersSet.add('Garlic Bread');
 // Since sets are iterables, we can loop through them
 // for (const order of ordersSet) console.log(order);
 
-
 // An example use case of sets
 const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 
@@ -501,7 +506,4 @@ const staffUnique = [...new Set(staff)];
 // console.log(staffUnique);
 // console.log(staffUnique.length);
 
-
-
 //////////////////////////////// --------------------- MAPS --------------------------------- //////////////////////////
-
