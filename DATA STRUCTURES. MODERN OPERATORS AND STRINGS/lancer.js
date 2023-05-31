@@ -528,3 +528,10 @@ console.log(rest.get(1));
 
 const time = 21;
 console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// In order to check if a map contains a certain key
+console.log(rest.has('categories'));
+
+// Deleting elements in a map happens based on the key.
+rest.delete(2);
+console.log(rest);
