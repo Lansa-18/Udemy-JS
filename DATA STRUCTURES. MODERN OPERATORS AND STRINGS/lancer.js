@@ -512,7 +512,7 @@ const staffUnique = [...new Set(staff)];
 const rest = new Map();
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze Italy');
-console.log(rest.set(2, 'Lisbon Portugal'));
+// console.log(rest.set(2, 'Lisbon Portugal'));
 
 rest
   .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
@@ -522,25 +522,25 @@ rest
   .set(false, 'We are Closed :( ');
 
 // In Order to read data from Maps, we use the get method
-console.log(rest.get('name'));
-console.log(rest.get(true));
-console.log(rest.get(1));
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+// console.log(rest.get(1));
 
 const time = 21;
-console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
 // In order to check if a map contains a certain key
-console.log(rest.has('categories'));
+// console.log(rest.has('categories'));
 
 // Deleting elements in a map happens based on the key.
 rest.delete(2);
 const mapArr = [1,2];
 rest.set(mapArr, 'Test');
 rest.set(document.querySelector('h1'), 'Heading')
-console.log(rest);
+// console.log(rest);
 
 // Checking the amount of elements in the map
-console.log(rest.size);
+// console.log(rest.size);
 
 // Removing all the elemensts from the map
 // console.log(rest.clear);
@@ -549,5 +549,5 @@ console.log(rest.size);
 
 // Getting data from Maps if the keys are ARRAY BASED
 // In order for this to work, the array needs to be assigned to a variable, that way the variable is the one storing that array in memory. Then when defining the key, we access the array based on that variable name, same way if we want to access the value that was assigned to that particular key(i.e the array), we use the same variable name to access it. THE SAME PRINCIPLE APPLIES TO OBJECTS.
-console.log(rest.get(mapArr));
+// console.log(rest.get(mapArr));
 
