@@ -551,3 +551,16 @@ rest.set(document.querySelector('h1'), 'Heading')
 // In order for this to work, the array needs to be assigned to a variable, that way the variable is the one storing that array in memory. Then when defining the key, we access the array based on that variable name, same way if we want to access the value that was assigned to that particular key(i.e the array), we use the same variable name to access it. THE SAME PRINCIPLE APPLIES TO OBJECTS.
 // console.log(rest.get(mapArr));
 
+
+//////////////////////////// ----------------------------- MAPS: ITERATION --------------------------------------- ///////////////////////////////////////
+
+const question = new Map([
+    ['question', 'What is the best programming language in the world'],
+    [1, 'C'],
+    [2, 'Java'],
+    [3, 'Javascript'],
+    ['correct', 3],
+    [true, 'Correct! 🎉'],
+    [false, 'Try Again!']
+]);
+
