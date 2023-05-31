@@ -367,7 +367,7 @@ printGoals(...game.scored);
 // continuation from THE FIRST CODING CHALLENGE.
 // 1.
 for (const [i, el] of game.scored.entries()) {
-  console.log(`Goal ${i + 1}: ${el}`);
+//   console.log(`Goal ${i + 1}: ${el}`);
 }
 
 // 2. Calculating the averages
@@ -383,7 +383,7 @@ for (const average of oddValues) {
 const gameEntries = Object.entries(game.odds);
 for (const [team, odd] of gameEntries) {
   const teamString = team === 'x' ? 'draw' : `Victory ${game[team]}`;
-  console.log(`Odd of ${teamString}: ${odd}`);
+//   console.log(`Odd of ${teamString}: ${odd}`);
 }
 
 // BONUS:
@@ -395,7 +395,7 @@ for (const name of game.scored) {
     scoresObj[name] = 1;
   }
 }
-console.log(scoresObj);
+// console.log(scoresObj);
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
