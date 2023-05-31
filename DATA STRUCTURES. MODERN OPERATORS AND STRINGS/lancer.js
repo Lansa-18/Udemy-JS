@@ -421,13 +421,28 @@ const gameEvents = new Map([
 // const trial = ['Goal', 'Sub', 'Goal', 'Yellow', 'Sub', 'Red', 'Goal', 'Red']
 const eventsValue = [];
 const eventsSet = new Set();
-
 for (const value of gameEvents.values()){
     eventsSet.add(value);
 }
-
 const events = [...eventsSet];
 console.log(events);
+
+// 2. 
+gameEvents.delete(64);
+
+// 3.
+const gameTime = 90;
+const avgTime = gameTime / gameEvents.size;
+console.log(`An event happened, on average, every ${avgTime} minutes.`);
+
+// 4.
+const eventsArr = [...gameEvents];
+// console.log(eventsArr);
+
+for (const [time, value] of eventsArr){
+    const halfStr = time < 45 ? '[FIRST HALF]' : '[SECOND HALF]';
+    console.log(`${halfStr} ${time}: ${value}`);
+}
 
 
 
