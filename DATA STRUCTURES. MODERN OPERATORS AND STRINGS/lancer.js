@@ -564,3 +564,7 @@ const question = new Map([
 ]);
 
 console.log(question);
+
+// An easy way of converting from OBJECTS to MAPS
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
