@@ -571,8 +571,10 @@ console.log(hoursMap);
 
 // Iteration in Maps
 console.log(question.get('question'));
-for (const [key, value] of question){
-    if (typeof key === 'number'){
-        console.log(`Answer ${key}: ${value}`);
-    }
+for (const [key, value] of question) {
+  if (typeof key === 'number') {
+    console.log(`Answer ${key}: ${value}`);
+  }
 }
+
+// Getting answer from the
