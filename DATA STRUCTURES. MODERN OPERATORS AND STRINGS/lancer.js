@@ -571,10 +571,16 @@ console.log(hoursMap);
 
 // Iteration in Maps
 console.log(question.get('question'));
-for (const [key, value] of question) {
-  if (typeof key === 'number') {
-    console.log(`Answer ${key}: ${value}`);
-  }
-}
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') {
+//     console.log(`Answer ${key}: ${value}`);
+//   }
+// }
 
-// Getting answer from the
+// Getting answer from the User
+const answer = Number(prompt('Your answer'));
+if (answer === 3) {
+    console.log(question.get(true));
+} else{
+    console.log(question.get(false));
+}
