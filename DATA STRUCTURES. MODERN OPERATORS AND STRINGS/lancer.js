@@ -464,5 +464,5 @@ for (const [day, { open, close }] of entries) {
 
 
 /////////////////////////// ------------------------- SETS --------------------------------------- /////////////////////////////////////
-const ordersSet = new Set('Pasta', 'Pizza', 'Rissotto', 'Pizza', 'Pasta', 'Pizza');
+const ordersSet = new Set(['Pasta', 'Pizza', 'Rissotto', 'Pizza', 'Pasta', 'Pizza']);
 console.log(ordersSet);
