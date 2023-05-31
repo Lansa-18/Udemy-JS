@@ -536,6 +536,7 @@ console.log(rest.has('categories'));
 rest.delete(2);
 const mapArr = [1,2];
 rest.set(mapArr, 'Test');
+rest.set(document.querySelector('h1'), 'Heading')
 console.log(rest);
 
 // Checking the amount of elements in the map
