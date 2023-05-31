@@ -519,8 +519,8 @@ rest
   .set('Open', 11)
   .set('close', 23)
   .set(true, 'We are Open :D ')
-  .set(false, 'We are Closed :( ')
-  
+  .set(false, 'We are Closed :( ');
+
 // In Order to read data from Maps, we use the get method
 console.log(rest.get('name'));
 console.log(rest.get(true));
