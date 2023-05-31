@@ -466,3 +466,20 @@ for (const [day, { open, close }] of entries) {
 /////////////////////////// ------------------------- SETS --------------------------------------- /////////////////////////////////////
 const ordersSet = new Set(['Pasta', 'Pizza', 'Rissotto', 'Pizza', 'Pasta', 'Pizza']);
 console.log(ordersSet);
+
+console.log(new Set('Nabasf'));
+
+// Checking the amount of items in a set
+console.log(ordersSet.size);
+
+// Checking if an item is in a set
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+
+// To add an item into a set
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+console.log(ordersSet);
+
+// Removing / Deleting items from a set.
+ordersSet.delete('Risotto')
