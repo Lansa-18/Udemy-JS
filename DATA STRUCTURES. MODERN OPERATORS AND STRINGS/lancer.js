@@ -418,7 +418,6 @@ const gameEvents = new Map([
 ]);
 
 // 1. 
-// const trial = ['Goal', 'Sub', 'Goal', 'Yellow', 'Sub', 'Red', 'Goal', 'Red']
 const eventsValue = [];
 const eventsSet = new Set();
 for (const value of gameEvents.values()){
