@@ -482,5 +482,13 @@ ordersSet.add('Garlic Bread');
 console.log(ordersSet);
 
 // Removing / Deleting items from a set.
-ordersSet.delete('Risotto')
-console.log(ordersSet);
+// ordersSet.delete('Risotto');
+// console.log(ordersSet);
+
+// To delete all of the elements in a set
+// ordersSet.clear();
+// console.log(ordersSet);
+
+// Since sets are 
+
+
