@@ -579,8 +579,11 @@ console.log(question.get('question'));
 
 // Getting answer from the User
 const answer = Number(prompt('Your answer'));
-if (answer === 3) {
-    console.log(question.get(true));
-} else{
-    console.log(question.get(false));
-}
+// if (answer === 3) {
+//     console.log(question.get(true));
+// } else{
+//     console.log(question.get(false));
+// }
+
+// OR 
+console.log(question.get(question.get('correct') === answer));
