@@ -543,3 +543,5 @@ console.log(rest.size);
 // console.log(rest.clear);
 
 // NOTE: The 'Map' and the 'Set' Data structures were both released in ES6, hence why they have similar methods on them 
+
+rest.set([1,2], 'Test');
