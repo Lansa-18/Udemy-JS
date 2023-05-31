@@ -507,3 +507,12 @@ const staffUnique = [...new Set(staff)];
 // console.log(staffUnique.length);
 
 //////////////////////////////// --------------------- MAPS --------------------------------- //////////////////////////
+
+// Best way to create maps efficiently is to create an empty map first, then pass data into it using the set method which takes in two arguments
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze Italy');
+rest.set(2, 'Lisbon Portugal');
+
+
+
