@@ -554,7 +554,7 @@ rest.set(document.querySelector('h1'), 'Heading');
 //////////////////////////// ----------------------------- MAPS: ITERATION --------------------------------------- ///////////////////////////////////////
 
 const question = new Map([
-  ['question', 'What is the best programming language in the world'],
+  ['question', 'What is the best programming language in the world?'],
   [1, 'C'],
   [2, 'Java'],
   [3, 'Javascript'],
@@ -568,3 +568,11 @@ console.log(question);
 // An easy way of converting from OBJECTS to MAPS
 const hoursMap = new Map(Object.entries(openingHours));
 console.log(hoursMap);
+
+// Iteration in Maps
+console.log(question.get('question'));
+for (const [key, value] of question){
+    if (typeof key === 'number'){
+        console.log(`Answer ${key}: ${value}`);
+    }
+}
