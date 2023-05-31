@@ -489,6 +489,9 @@ console.log(ordersSet);
 // ordersSet.clear();
 // console.log(ordersSet);
 
-// Since sets are 
+// Since sets are iterables, we can loop through them
+for (const order of ordersSet){
+    
+}
 
 
