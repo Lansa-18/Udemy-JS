@@ -534,6 +534,8 @@ console.log(rest.has('categories'));
 
 // Deleting elements in a map happens based on the key.
 rest.delete(2);
+const mapArr = [1,2];
+rest.set(mapArr, 'Test');
 console.log(rest);
 
 // Checking the amount of elements in the map
@@ -544,4 +546,5 @@ console.log(rest.size);
 
 // NOTE: The 'Map' and the 'Set' Data structures were both released in ES6, hence why they have similar methods on them 
 
-rest.set([1,2], 'Test');
+// Getting data from Maps if the keys are ARRAY BASED
+console.log(rest.get(mapArr));
