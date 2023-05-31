@@ -515,4 +515,7 @@ rest.set(1, 'Firenze Italy');
 rest.set(2, 'Lisbon Portugal');
 
 
+rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+
+
 
