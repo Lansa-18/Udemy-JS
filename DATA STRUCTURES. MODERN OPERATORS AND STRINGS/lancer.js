@@ -415,7 +415,10 @@ const gameEvents = new Map([
     [76, '⚽️ GOAL'],
     [80, '⚽️ GOAL'],
     [92, '🔶 Yellow card'],
-  ]);
+]);
+
+// 1. 
+const events = []
 
 
 
@@ -588,14 +591,14 @@ const question = new Map([
   [false, 'Try Again!'],
 ]);
 
-console.log(question);
+// console.log(question);
 
 // An easy way of converting from OBJECTS to MAPS
 const hoursMap = new Map(Object.entries(openingHours));
-console.log(hoursMap);
+// console.log(hoursMap);
 
 // Iteration in Maps
-console.log(question.get('question'));
+// console.log(question.get('question'));
 // for (const [key, value] of question) {
 //   if (typeof key === 'number') {
 //     console.log(`Answer ${key}: ${value}`);
@@ -614,6 +617,6 @@ console.log(question.get('question'));
 // console.log(question.get(question.get('correct') === answer));
 
 // Converting Maps to Array
-console.log([...question]);
+// console.log([...question]);
 
 // WHICH DATA STRUCTURE TO USE?
