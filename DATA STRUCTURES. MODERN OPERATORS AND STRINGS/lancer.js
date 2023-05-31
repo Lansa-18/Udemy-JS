@@ -494,4 +494,5 @@ for (const order of ordersSet) console.log(order);
 
 
 // An example use case of sets
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 
