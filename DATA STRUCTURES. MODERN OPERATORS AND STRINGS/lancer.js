@@ -490,8 +490,8 @@ console.log(ordersSet);
 // console.log(ordersSet);
 
 // Since sets are iterables, we can loop through them
-for (const order of ordersSet){
-    
-}
+for (const order of ordersSet) console.log(order);
 
+
+// An example use case of sets
 
