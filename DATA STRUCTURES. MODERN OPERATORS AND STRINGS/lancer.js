@@ -578,7 +578,7 @@ console.log(question.get('question'));
 // }
 
 // Getting answer from the User
-const answer = Number(prompt('Your answer'));
+// const answer = Number(prompt('Your answer'));
 // if (answer === 3) {
 //     console.log(question.get(true));
 // } else{
@@ -586,4 +586,9 @@ const answer = Number(prompt('Your answer'));
 // }
 
 // OR 
-console.log(question.get(question.get('correct') === answer));
+// console.log(question.get(question.get('correct') === answer));
+
+// Converting Maps to Array
+console.log([...question]);
+
+// WHICH DATA STRUCTURE TO USE?
