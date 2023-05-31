@@ -535,3 +535,11 @@ console.log(rest.has('categories'));
 // Deleting elements in a map happens based on the key.
 rest.delete(2);
 console.log(rest);
+
+// Checking the amount of elements in the map
+console.log(rest.size);
+
+// Removing all the elemensts from the map
+// console.log(rest.clear);
+
+// NOTE: The 'Map' and the 'Set' Data structures were both released in ES6, hence why they have similar methods on them 
