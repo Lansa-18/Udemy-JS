@@ -534,9 +534,9 @@ const time = 21;
 
 // Deleting elements in a map happens based on the key.
 rest.delete(2);
-const mapArr = [1,2];
+const mapArr = [1, 2];
 rest.set(mapArr, 'Test');
-rest.set(document.querySelector('h1'), 'Heading')
+rest.set(document.querySelector('h1'), 'Heading');
 // console.log(rest);
 
 // Checking the amount of elements in the map
@@ -545,22 +545,22 @@ rest.set(document.querySelector('h1'), 'Heading')
 // Removing all the elemensts from the map
 // console.log(rest.clear);
 
-// NOTE: The 'Map' and the 'Set' Data structures were both released in ES6, hence why they have similar methods on them 
+// NOTE: The 'Map' and the 'Set' Data structures were both released in ES6, hence why they have similar methods on them
 
 // Getting data from Maps if the keys are ARRAY BASED
 // In order for this to work, the array needs to be assigned to a variable, that way the variable is the one storing that array in memory. Then when defining the key, we access the array based on that variable name, same way if we want to access the value that was assigned to that particular key(i.e the array), we use the same variable name to access it. THE SAME PRINCIPLE APPLIES TO OBJECTS.
 // console.log(rest.get(mapArr));
 
-
 //////////////////////////// ----------------------------- MAPS: ITERATION --------------------------------------- ///////////////////////////////////////
 
 const question = new Map([
-    ['question', 'What is the best programming language in the world'],
-    [1, 'C'],
-    [2, 'Java'],
-    [3, 'Javascript'],
-    ['correct', 3],
-    [true, 'Correct! 🎉'],
-    [false, 'Try Again!']
+  ['question', 'What is the best programming language in the world'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct! 🎉'],
+  [false, 'Try Again!'],
 ]);
 
+console.log(question);
