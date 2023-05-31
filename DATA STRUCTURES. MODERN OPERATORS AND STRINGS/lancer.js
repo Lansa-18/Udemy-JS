@@ -499,3 +499,4 @@ const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 // To convert a set into an array, it should be wraaped in an array literal and then making use of the spread operator to unpack it.
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
+console.log(staffUnique.length);
