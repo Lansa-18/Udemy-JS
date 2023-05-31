@@ -464,7 +464,7 @@ for (const [day, { open, close }] of entries) {
 
 
 /////////////////////////// ------------------------- SETS --------------------------------------- /////////////////////////////////////
-const ordersSet = new Set(['Pasta', 'Pizza', 'Rissotto', 'Pizza', 'Pasta', 'Pizza']);
+const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pizza', 'Pasta', 'Pizza']);
 console.log(ordersSet);
 
 console.log(new Set('Nabasf'));
@@ -483,3 +483,4 @@ console.log(ordersSet);
 
 // Removing / Deleting items from a set.
 ordersSet.delete('Risotto')
+console.log(ordersSet);
