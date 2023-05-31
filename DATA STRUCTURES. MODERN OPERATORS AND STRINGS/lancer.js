@@ -465,21 +465,21 @@ for (const [day, { open, close }] of entries) {
 
 /////////////////////////// ------------------------- SETS --------------------------------------- /////////////////////////////////////
 const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pizza', 'Pasta', 'Pizza']);
-console.log(ordersSet);
+// console.log(ordersSet);
 
-console.log(new Set('Nabasf'));
+// console.log(new Set('Nabasf'));
 
 // Checking the amount of items in a set
-console.log(ordersSet.size);
+// console.log(ordersSet.size);
 
 // Checking if an item is in a set
-console.log(ordersSet.has('Pizza'));
-console.log(ordersSet.has('Bread'));
+// console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Bread'));
 
 // To add an item into a set
 ordersSet.add('Garlic Bread');
 ordersSet.add('Garlic Bread');
-console.log(ordersSet);
+// console.log(ordersSet);
 
 // Removing / Deleting items from a set.
 // ordersSet.delete('Risotto');
@@ -490,7 +490,7 @@ console.log(ordersSet);
 // console.log(ordersSet);
 
 // Since sets are iterables, we can loop through them
-for (const order of ordersSet) console.log(order);
+// for (const order of ordersSet) console.log(order);
 
 
 // An example use case of sets
@@ -498,8 +498,8 @@ const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 
 // To convert a set into an array, it should be wraaped in an array literal and then making use of the spread operator to unpack it.
 const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
-console.log(staffUnique.length);
+// console.log(staffUnique);
+// console.log(staffUnique.length);
 
 
 
