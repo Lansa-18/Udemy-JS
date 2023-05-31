@@ -418,7 +418,14 @@ const gameEvents = new Map([
 ]);
 
 // 1. 
-const events = []
+// const trial = ['Goal', 'Sub', 'Goal', 'Yellow', 'Sub', 'Red', 'Goal', 'Red']
+const events = [...gameEvents];
+const eventsSet = [...new Set(events)];
+for (const [key, value] of eventsSet){
+  const [...valueArr] = value;
+  console.log(valueArr); 
+};
+console.log(eventsSet);
 
 
 
