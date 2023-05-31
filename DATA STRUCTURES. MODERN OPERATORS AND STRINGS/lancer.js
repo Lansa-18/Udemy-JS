@@ -461,3 +461,8 @@ const entries = Object.entries(openingHours);
 for (const [day, { open, close }] of entries) {
   // console.log(`On ${day} we open ${open} and close at ${close}`);
 }
+
+
+/////////////////////////// ------------------------- SETS --------------------------------------- /////////////////////////////////////
+const ordersSet = new Set('Pasta', 'Pizza', 'Rissotto', 'Pizza', 'Pasta', 'Pizza');
+console.log(ordersSet);
