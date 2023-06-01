@@ -430,7 +430,6 @@ console.log(`An event happened, on average, every ${avgTime} minutes.`);
 const eventsArr = [...gameEvents];
 // console.log(eventsArr);
 
-
 for (const [time, value] of eventsArr) {
   const halfStr = time <= 45 ? '[FIRST HALF]' : '[SECOND HALF]';
   console.log(`${halfStr} ${time}: ${value}`);
