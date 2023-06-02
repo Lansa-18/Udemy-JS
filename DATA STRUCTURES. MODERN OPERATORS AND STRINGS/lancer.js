@@ -716,3 +716,5 @@ const announcement = 'All passengers come to boarding door 23. Boarding door 23!
 // In regular expressions, we need to call the strings between slashes and not quotes
 console.log(announcement.replace(/door/g, 'gate'));
 
+
+// Booleans: These methodes returns booleans and they are: Includes, startsWith, endsWith.
