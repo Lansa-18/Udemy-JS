@@ -650,6 +650,6 @@ console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 console.log(airline.indexOf('Portugal'));
 
-// The Slice method takes in a parameter that specifies where the slicing should begin
+// The Slice method takes in a parameter that specifies where the slicing should begin, and what it does is that it extracts everything starting from that particular index that was defined.
 console.log(airline.slice(4));
 
