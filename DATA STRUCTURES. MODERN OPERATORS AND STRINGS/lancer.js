@@ -694,9 +694,11 @@ fixPassengerName('abDULkareeM');
 // Comparing a user input email
 const email = 'hello@jonas.io';
 const loginEmail = '     Hello@jonas.Io \n';
-const normalizedEmail = loginEmail.toLowerCase().trim();
 
-const lowerEmail = loginEmail.toLowerCase();
-const trimmedEmail = lowerEmail.trim();
+const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
-console.log(trimmedEmail);
+console.log(email === normalizedEmail);
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
