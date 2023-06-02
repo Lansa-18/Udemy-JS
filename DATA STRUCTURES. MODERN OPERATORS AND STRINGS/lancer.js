@@ -416,7 +416,7 @@ const gameEvents = new Map([
 
 // 1.
 const events = [...new Set(gameEvents.values())];
-console.log(events);
+// console.log(events);
 
 // 2.
 gameEvents.delete(64);
@@ -424,7 +424,7 @@ gameEvents.delete(64);
 // 3.
 const gameTime = 90;
 const avgTime = gameTime / gameEvents.size;
-console.log(`An event happened, on average, every ${avgTime} minutes.`);
+// console.log(`An event happened, on average, every ${avgTime} minutes.`);
 
 // 4.
 const eventsArr = [...gameEvents];
@@ -432,7 +432,7 @@ const eventsArr = [...gameEvents];
 
 for (const [time, value] of eventsArr) {
   const halfStr = time <= 45 ? '[FIRST HALF]' : '[SECOND HALF]';
-  console.log(`${halfStr} ${time}: ${value}`);
+//   console.log(`${halfStr} ${time}: ${value}`);
 }
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
