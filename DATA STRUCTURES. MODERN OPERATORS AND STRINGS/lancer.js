@@ -692,3 +692,5 @@ const fixPassengerName = function(pName){
 }
 fixPassengerName('abDULkareeM');
  
+// Comparing a user input email
+const email =
