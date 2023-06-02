@@ -684,11 +684,11 @@ const checkMiddleSeat = function (seat) {
 // console.log(airline.toUpperCase());
 
 // Fixing Capitalization in Passenger names
-const fixPassengerName = function (pName) {
-  const pNameLower = pName.toLowerCase();
-  const pNameCorrect = pNameLower[0].toUpperCase() + pNameLower.slice(1);
-  console.log(pNameCorrect);
-};
+// const fixPassengerName = function (pName) {
+//   const pNameLower = pName.toLowerCase();
+//   const pNameCorrect = pNameLower[0].toUpperCase() + pNameLower.slice(1);
+//   console.log(pNameCorrect);
+// };
 // fixPassengerName('abDULkareeM');
 
 // Comparing a user input email
@@ -723,7 +723,7 @@ const plane2 = 'Airbus A320neo';
 // console.log(plane2.startsWith('Air'));
 
 if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
-//   console.log('Part of the new airbus family');
+  //   console.log('Part of the new airbus family');
 }
 
 // Practice Exercise
@@ -740,12 +740,25 @@ const checkBaggage = function (items) {
 // checkBaggage('Socks and camera');
 // checkBaggage('Got some snacks and a gun for protection');
 
-
 ///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS (PART3)  --------------------------------- /////////////////////////////////////////////////
 
 // Splitting and joining a string
 console.log('Mapelujo Abdulkareem'.split(' '));
 
 const [lastname, firstName] = 'Mapelujo Abdulkareem'.split(' ');
-const newName = ['Mr', firstName, lastname.toUpperCase()].join(' ')
+const newName = ['Mr', firstName, lastname.toUpperCase()].join(' ');
 
+const capitalizeName = function(name){
+    const names = name.split(' ');
+    const namesUpper = []
+    for (const n of names){
+        namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    }
+    console.log(namesUpper.join(' '));
+}
+
+capitalizeName('jessica ann smith davis');
+capitalizeName('mapelujo abdulkareem');
+
+
+// Padding a string, i.e adding words to a string till it reaches the desired amount.
