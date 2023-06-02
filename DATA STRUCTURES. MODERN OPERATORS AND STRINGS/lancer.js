@@ -630,3 +630,7 @@ const hoursMap = new Map(Object.entries(openingHours));
 // console.log([...question]);
 
 // WHICH DATA STRUCTURE TO USE?
+
+
+///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS --------------------------------- /////////////////////////////////////////////////
+
