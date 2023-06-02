@@ -702,3 +702,11 @@ console.log(email === normalizedEmail);
 // const lowerEmail = loginEmail.toLowerCase();
 // const trimmedEmail = lowerEmail.trim();
 // console.log(trimmedEmail);
+
+
+// Replacing parts of a string
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£','$').replace(',','.');
+console.log(priceUS);
+
+
