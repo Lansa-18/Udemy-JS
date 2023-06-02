@@ -718,3 +718,26 @@ console.log(announcement.replace(/door/g, 'gate'));
 
 
 // Booleans: These methodes returns booleans and they are: Includes, startsWith, endsWith.
+const plane2 = 'Airbus A320neo';
+console.log(plane2.includes('A320'));
+console.log(plane2.includes('Boeing'));
+console.log(plane2.startsWith('Air'));
+
+
+if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
+    console.log('Part of the new airbus family');
+}
+
+// Practice Exercise
+const checkBaggage = function(items){
+    const baggage = items.toLowerCase();
+    if (baggage.includes('knife') || baggage.includes('gun')) {
+        console.log('You are not allowed on board');
+    } else {
+        console.log('Welcome Aboard');
+    }
+}
+
+checkBaggage('I have a Laptop, some Foods and a Pocket knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
