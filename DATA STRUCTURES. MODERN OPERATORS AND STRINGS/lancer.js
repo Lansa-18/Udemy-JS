@@ -667,7 +667,9 @@ const checkMiddleSeat = function(seat){
     // B and E are the middle seats
     const s = seat.slice(-1);
     if (s === 'B' || s === 'E'){
-
+        console.log('You got the middle seat 😐');
+    } else {
+        console.log('You got lucky 💥');
     }
 
 }
