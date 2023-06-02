@@ -634,3 +634,22 @@ const hoursMap = new Map(Object.entries(openingHours));
 
 ///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS --------------------------------- /////////////////////////////////////////////////
 
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+// Getting the position of letters in a string
+console.log(plane[2]);
+console.log('B737'[1]);
+
+// Getting the length of a string
+console.log(airline.length);
+console.log('B737'.length);
+
+// Strings can also make use of methods
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
+
+// The Slice method takes in a parameter that specifies where the slicing should begin
+console.log(airline.slice(4));
+
