@@ -656,6 +656,13 @@ console.log(airline.slice(4,7)); // NOTE: That the length of the substring is th
 
 // Extracting some strings based on the Indexes......
 console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+
+
 
 
