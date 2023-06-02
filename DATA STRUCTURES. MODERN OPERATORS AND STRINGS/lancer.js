@@ -678,3 +678,4 @@ checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
+// when a method is called on a string, behind the scenes, JAVASCRIPT automatically places the string in an object, and it on that object the method is actually called. This process where the string is placed in an object (BOX) is known an 'BOXING'.
