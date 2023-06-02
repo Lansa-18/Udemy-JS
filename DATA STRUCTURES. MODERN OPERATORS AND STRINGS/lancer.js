@@ -703,19 +703,18 @@ console.log(email === normalizedEmail);
 // const trimmedEmail = lowerEmail.trim();
 // console.log(trimmedEmail);
 
-
 // Replacing parts of a string
 const priceGB = '288,97£';
-const priceUS = priceGB.replace('£','$').replace(',','.');
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
 console.log(priceUS);
 
-const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
 // console.log(announcement.replaceAll('door', 'gate'));
 
 // REGULAR EXPRESSIONS
 // In regular expressions, we need to call the strings between slashes and not quotes
 console.log(announcement.replace(/door/g, 'gate'));
-
 
 // Booleans: These methodes returns booleans and they are: Includes, startsWith, endsWith.
 const plane2 = 'Airbus A320neo';
@@ -723,20 +722,19 @@ console.log(plane2.includes('A320'));
 console.log(plane2.includes('Boeing'));
 console.log(plane2.startsWith('Air'));
 
-
 if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
-    console.log('Part of the new airbus family');
+  console.log('Part of the new airbus family');
 }
 
 // Practice Exercise
-const checkBaggage = function(items){
-    const baggage = items.toLowerCase();
-    if (baggage.includes('knife') || baggage.includes('gun')) {
-        console.log('You are not allowed on board');
-    } else {
-        console.log('Welcome Aboard');
-    }
-}
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed on board');
+  } else {
+    console.log('Welcome Aboard');
+  }
+};
 
 checkBaggage('I have a Laptop, some Foods and a Pocket Knife');
 checkBaggage('Socks and camera');
