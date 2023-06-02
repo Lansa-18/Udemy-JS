@@ -680,8 +680,8 @@ const checkMiddleSeat = function (seat) {
 
 ///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS (PART2)  --------------------------------- /////////////////////////////////////////////////
 
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
 
 // Fixing Capitalization in Passenger names
 const fixPassengerName = function (pName) {
@@ -689,15 +689,15 @@ const fixPassengerName = function (pName) {
   const pNameCorrect = pNameLower[0].toUpperCase() + pNameLower.slice(1);
   console.log(pNameCorrect);
 };
-fixPassengerName('abDULkareeM');
+// fixPassengerName('abDULkareeM');
 
 // Comparing a user input email
 const email = 'hello@jonas.io';
 const loginEmail = '     Hello@jonas.Io \n';
 
 const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
-console.log(email === normalizedEmail);
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
 
 // const lowerEmail = loginEmail.toLowerCase();
 // const trimmedEmail = lowerEmail.trim();
@@ -706,7 +706,7 @@ console.log(email === normalizedEmail);
 // Replacing parts of a string
 const priceGB = '288,97£';
 const priceUS = priceGB.replace('£', '$').replace(',', '.');
-console.log(priceUS);
+// console.log(priceUS);
 
 const announcement =
   'All passengers come to boarding door 23. Boarding door 23!';
@@ -714,16 +714,16 @@ const announcement =
 
 // REGULAR EXPRESSIONS
 // In regular expressions, we need to call the strings between slashes and not quotes
-console.log(announcement.replace(/door/g, 'gate'));
+// console.log(announcement.replace(/door/g, 'gate'));
 
 // Booleans: These methodes returns booleans and they are: Includes, startsWith, endsWith.
 const plane2 = 'Airbus A320neo';
-console.log(plane2.includes('A320'));
-console.log(plane2.includes('Boeing'));
-console.log(plane2.startsWith('Air'));
+// console.log(plane2.includes('A320'));
+// console.log(plane2.includes('Boeing'));
+// console.log(plane2.startsWith('Air'));
 
 if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
-  console.log('Part of the new airbus family');
+//   console.log('Part of the new airbus family');
 }
 
 // Practice Exercise
@@ -736,6 +736,6 @@ const checkBaggage = function (items) {
   }
 };
 
-checkBaggage('I have a Laptop, some Foods and a Pocket Knife');
-checkBaggage('Socks and camera');
-checkBaggage('Got some snacks and a gun for protection');
+// checkBaggage('I have a Laptop, some Foods and a Pocket Knife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Got some snacks and a gun for protection');
