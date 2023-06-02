@@ -432,7 +432,7 @@ const eventsArr = [...gameEvents];
 
 for (const [time, value] of eventsArr) {
   const halfStr = time <= 45 ? '[FIRST HALF]' : '[SECOND HALF]';
-//   console.log(`${halfStr} ${time}: ${value}`);
+  //   console.log(`${halfStr} ${time}: ${value}`);
 }
 
 /////////////////// -------------- LOOPING ARRAYS: THE FOR-OF LOOPS ------------------ ////////////////////////
@@ -631,7 +631,6 @@ const hoursMap = new Map(Object.entries(openingHours));
 
 // WHICH DATA STRUCTURE TO USE?
 
-
 ///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS --------------------------------- /////////////////////////////////////////////////
 
 const airline = 'TAP Air Portugal';
@@ -651,33 +650,30 @@ console.log(airline.lastIndexOf('r'));
 console.log(airline.indexOf('Portugal'));
 
 // The Slice method takes in two parameters that specifies where the slicing should begin as well as where it should end, and what it does is that it extracts everything starting from that particular index that was defined and it doesn't include the index where it was specified to stop.
-console.log(airline.slice(4));  // the string that was sliced off is called a 'substring', and it doesn't in no way affect the main string. This is because strings are PRIMITIVES and as a result they cannot be mutated.
-console.log(airline.slice(4,7)); // NOTE: That the length of the substring is the endIndex subtracted by the startingIndex. In this case the length of the substring would be (7-4) i.e '3'
+console.log(airline.slice(4)); // the string that was sliced off is called a 'substring', and it doesn't in no way affect the main string. This is because strings are PRIMITIVES and as a result they cannot be mutated.
+console.log(airline.slice(4, 7)); // NOTE: That the length of the substring is the endIndex subtracted by the startingIndex. In this case the length of the substring would be (7-4) i.e '3'
 
 // Extracting some strings based on the Indexes......
 console.log(airline.slice(0, airline.indexOf(' ')));
 console.log(airline.slice(airline.lastIndexOf(' ') + 1));
 
-
 console.log(airline.slice(-2));
 console.log(airline.slice(1, -1));
 
-
-const checkMiddleSeat = function(seat){
-    // B and E are the middle seats
-    const s = seat.slice(-1);
-    if (s === 'B' || s === 'E'){
-        console.log('You got the middle seat 😐');
-    } else {
-        console.log('You got lucky 💥');
-    }
-
-}
+const checkMiddleSeat = function (seat) {
+  // B and E are the middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You got the middle seat 😐');
+  } else {
+    console.log('You got lucky 💥');
+  }
+};
 
 checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
-// when a method is called on a string, behind the scenes, JAVASCRIPT automatically places the string in an object, and it on that object the method is actually called. This process where the string is placed in an object (BOX) is known an 'BOXING'. 
-console.log(new String('jonas'));  // THIS IS WHAT THE BOXING DOES.
+// when a method is called on a string, behind the scenes, JAVASCRIPT automatically places the string in an object, and it on that object the method is actually called. This process where the string is placed in an object (BOX) is known an 'BOXING'.
+console.log(new String('jonas')); // THIS IS WHAT THE BOXING DOES.
 // Once the method has been carried out, the string object would be automatically converted to a string.
