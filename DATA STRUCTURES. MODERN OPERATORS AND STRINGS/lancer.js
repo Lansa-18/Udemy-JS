@@ -650,8 +650,8 @@ console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 console.log(airline.indexOf('Portugal'));
 
-// The Slice method takes in a parameter that specifies where the slicing should begin, and what it does is that it extracts everything starting from that particular index that was defined.
+// The Slice method takes in two parameters that specifies where the slicing should begin as well as where it should end, and what it does is that it extracts everything starting from that particular index that was defined and it doesn't include the index where it was specified to stop.
 console.log(airline.slice(4));  // the string that was sliced off is called a 'substring', and it doesn't in no way affect the main string. This is because strings are PRIMITIVES and as a result they cannot be mutated.
-
+console.log(airline.slice(4,7));
 
 
