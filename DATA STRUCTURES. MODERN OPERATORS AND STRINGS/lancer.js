@@ -709,4 +709,10 @@ const priceGB = '288,97£';
 const priceUS = priceGB.replace('£','$').replace(',','.');
 console.log(priceUS);
 
+const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+// console.log(announcement.replaceAll('door', 'gate'));
+
+// REGULAR EXPRESSIONS
+// In regular expressions, we need to call the strings between slashes and not quotes
+console.log(announcement.replace(/door/g, 'gate'));
 
