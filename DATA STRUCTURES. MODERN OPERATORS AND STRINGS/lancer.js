@@ -739,3 +739,13 @@ const checkBaggage = function (items) {
 // checkBaggage('I have a Laptop, some Foods and a Pocket Knife');
 // checkBaggage('Socks and camera');
 // checkBaggage('Got some snacks and a gun for protection');
+
+
+///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS (PART3)  --------------------------------- /////////////////////////////////////////////////
+
+// Splitting and joining a string
+console.log('Mapelujo Abdulkareem'.split(' '));
+
+const [lastname, firstName] = 'Mapelujo Abdulkareem'.split(' ');
+const newName = ['Mr', firstName, lastname.toUpperCase()].join(' ')
+
