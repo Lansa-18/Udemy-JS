@@ -678,19 +678,25 @@ const checkMiddleSeat = function (seat) {
 // console.log(new String('jonas')); THIS IS WHAT THE BOXING DOES.
 // Once the method has been carried out, the string object would be automatically converted to a string.
 
-
 ///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS (PART2)  --------------------------------- /////////////////////////////////////////////////
 
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
 
 // Fixing Capitalization in Passenger names
-const fixPassengerName = function(pName){
-    const pNameLower = pName.toLowerCase();
-    const pNameCorrect = pNameLower[0].toUpperCase() + pNameLower.slice(1)
-    console.log(pNameCorrect);
-}
+const fixPassengerName = function (pName) {
+  const pNameLower = pName.toLowerCase();
+  const pNameCorrect = pNameLower[0].toUpperCase() + pNameLower.slice(1);
+  console.log(pNameCorrect);
+};
 fixPassengerName('abDULkareeM');
- 
+
 // Comparing a user input email
-const email =
+const email = 'hello@jonas.io';
+const loginEmail = '     Hello@jonas.Io \n';
+const normalizedEmail = loginEmail.toLowerCase().trim();
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(normalizedEmail);
+console.log(trimmedEmail);
