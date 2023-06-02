@@ -738,6 +738,6 @@ const checkBaggage = function(items){
     }
 }
 
-checkBaggage('I have a Laptop, some Foods and a Pocket knife');
+checkBaggage('I have a Laptop, some Foods and a Pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
