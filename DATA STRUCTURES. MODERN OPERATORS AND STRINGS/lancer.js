@@ -819,7 +819,7 @@ const convertCamelCase = function () {
       textAfter[0].toUpperCase()
     );
     const textArrNew = [textB4, textAfterUpper];
-    let camelCase = textArrNew.join('');
+    let camelCase = textArrNew.join('').padEnd(20,' ');
     camelCase += '✅'.repeat(itext+1)
     console.log(camelCase);
   }
@@ -832,6 +832,8 @@ button.addEventListener('click', convertCamelCase);
 //   const rows = inputText.split('\n');
 //   console.log(rows);
 //   for (const row of rows){
-
+//     const [first,second] = row.toLowerCase().trim().split('_')
+//     const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+//     console.log(output);
 //   }
 // })
