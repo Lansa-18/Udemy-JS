@@ -762,5 +762,6 @@ const capitalizeName = function (name) {
 
 capitalizeName('jessica ann smith davis');
 capitalizeName('mapelujo abdulkareem');
+capitalizeName('lancer nabasf');
 
 // Padding a string, i.e adding words to a string till it reaches the desired amount.
