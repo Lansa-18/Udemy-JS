@@ -792,6 +792,11 @@ const planesInLine = function (n) {
 // planesInLine(3);
 // planesInLine(12);
 
+// underscore_case
+//  first_name
+// some_Variable
+//   calculate_AGE
+// delayed_departure
 
 // CODING CHALLENGE #4
 document.body.append(document.createElement('textarea'));
@@ -801,14 +806,19 @@ const text = document.querySelector('textarea');
 const button = document.querySelector('button');
 
 const convertCamelCase = function (){
-    const textValue = text.value;
+    let textValue = text.value;
+    const trimmedTextValue = textValue.replace(/(^|\n)\s+/g, '$1');
+    console.log(trimmedTextValue);
+    textValue = '';
+    // if (textValue.includes('_')) {
+        
+    // }
 
 
 
 
 
     
-    textValue = '';
 }
 
 button.addEventListener('click', convertCamelCase);
