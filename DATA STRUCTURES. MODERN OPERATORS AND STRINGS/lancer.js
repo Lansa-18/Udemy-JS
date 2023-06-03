@@ -743,7 +743,7 @@ const checkBaggage = function (items) {
 ///////////////////////////////////////////// -------------------------------- WORKING WITH STRINGS (PART3)  --------------------------------- /////////////////////////////////////////////////
 
 // Splitting and joining a string
-console.log('Mapelujo Abdulkareem'.split(' '));
+// console.log('Mapelujo Abdulkareem'.split(' '));
 
 const [lastname, firstName] = 'Mapelujo Abdulkareem'.split(' ');
 const newName = ['Mr', firstName, lastname.toUpperCase()].join(' ');
@@ -760,14 +760,14 @@ const capitalizeName = function (name) {
   console.log(namesUpper.join(' '));
 };
 
-capitalizeName('jessica ann smith davis');
-capitalizeName('mapelujo abdulkareem');
-capitalizeName('lancer nabasf');
+// capitalizeName('jessica ann smith davis');
+// capitalizeName('mapelujo abdulkareem');
+// capitalizeName('lancer nabasf');
 
 // Padding a string, i.e adding a number of characters to a string till it reaches the desired length.
 const message = 'Go to gate 23!';
-console.log(message.padStart(20, '+').padEnd(30, '+'));
-console.log('lancer'.padStart(20, '!').padEnd(30, '!'));
+// console.log(message.padStart(20, '+').padEnd(30, '+'));
+// console.log('lancer'.padStart(20, '!').padEnd(30, '!'));
 
 // Real world application of padding of strings
 const maskCreditCard = function (number) {
@@ -776,17 +776,39 @@ const maskCreditCard = function (number) {
   return last.padStart(str.length, '*');
 };
 
-console.log(maskCreditCard(2212021954));
-console.log(maskCreditCard(564643654564564));
-console.log(maskCreditCard('3423642366123721'));
+// console.log(maskCreditCard(2212021954));
+// console.log(maskCreditCard(564643654564564));
+// console.log(maskCreditCard('3423642366123721'));
 
 // Repeating in strings
 const message2 = 'Bad Weather....All Departures Delayed......\n';
-console.log(message2.repeat(5));
+// console.log(message2.repeat(5));
 
 const planesInLine = function (n) {
   console.log(`There are ${n} planes in line ${'✈️'.repeat(n)}`);
 };
-planesInLine(5);
-planesInLine(3);
-planesInLine(12);
+
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
+
+
+// CODING CHALLENGE #4
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+const text = document.querySelector('textarea');
+const button = document.querySelector('button');
+
+const convertCamelCase = function (){
+    const textValue = text.value;
+
+
+
+
+
+    
+    textValue = '';
+}
+
+button.addEventListener('click', convertCamelCase);
