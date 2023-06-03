@@ -805,14 +805,13 @@ document.body.append(document.createElement('button'));
 const text = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-const convertCamelCase = function (){
-    let textValue = text.value;
+const convertCamelCase = function (textValue){
     const trimmedTextValue = textValue.replace(/(^|\n)\s+/g, '$1');
     console.log(trimmedTextValue);
-    textValue = '';
-    // if (textValue.includes('_')) {
-        
-    // }   
+    text.value = '';
 }
 
-button.addEventListener('click', convertCamelCase);
+button.addEventListener('click', function(){
+    let textValue = text.value;
+    convertCamelCase(textValue);
+})
