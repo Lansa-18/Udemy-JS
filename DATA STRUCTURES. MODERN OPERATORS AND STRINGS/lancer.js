@@ -805,28 +805,33 @@ document.body.append(document.createElement('button'));
 const input = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-// const convertCamelCase = function () {
-//   const inputText = input.value;
-//   const trimmedTextValue = inputText.replace(/(^|\n)\s+/g, '$1');
-//   input.value = '';
-//   const texts = trimmedTextValue.split('\n');
-//   for (const [itext, eltext] of texts.entries()) {
-//     const eltextLower = eltext.toLowerCase();
-//     const textArr = eltextLower.split('_');
-//     const [textB4, textAfter] = textArr;
-//     const textAfterUpper = textAfter.replace(
-//       textAfter[0],
-//       textAfter[0].toUpperCase()
-//     );
-//     const textArrNew = [textB4, textAfterUpper];
-//     let camelCase = textArrNew.join('_');
-//     camelCase += '✅'.repeat(itext+1)
-//     console.log(camelCase);
+const convertCamelCase = function () {
+  const inputText = input.value;
+  const trimmedTextValue = inputText.replace(/(^|\n)\s+/g, '$1');
+  input.value = '';
+  const texts = trimmedTextValue.split('\n');
+  for (const [itext, eltext] of texts.entries()) {
+    const eltextLower = eltext.toLowerCase();
+    const textArr = eltextLower.split('_');
+    const [textB4, textAfter] = textArr;
+    const textAfterUpper = textAfter.replace(
+      textAfter[0],
+      textAfter[0].toUpperCase()
+    );
+    const textArrNew = [textB4, textAfterUpper];
+    let camelCase = textArrNew.join('');
+    camelCase += '✅'.repeat(itext+1)
+    console.log(camelCase);
+  }
+};
+
+button.addEventListener('click', convertCamelCase);
+
+// button.addEventListener('click', function(){
+//   const inputText = input.value; 
+//   const rows = inputText.split('\n');
+//   console.log(rows);
+//   for (const row of rows){
+
 //   }
-// };
-
-// button.addEventListener('click', convertCamelCase);
-
-button.addEventListener('click', function(){
-  const inputText = input.value; 
-})
+// })
