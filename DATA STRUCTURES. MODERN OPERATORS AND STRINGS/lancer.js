@@ -748,20 +748,19 @@ console.log('Mapelujo Abdulkareem'.split(' '));
 const [lastname, firstName] = 'Mapelujo Abdulkareem'.split(' ');
 const newName = ['Mr', firstName, lastname.toUpperCase()].join(' ');
 
-const capitalizeName = function(name){
-    const names = name.split(' ');
-    const namesUpper = []
-    for (const n of names){
-        // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
 
-        // Another way of going about it
-        namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
-    }
-    console.log(namesUpper.join(' '));
-}
+    // Another way of going about it
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
 
 capitalizeName('jessica ann smith davis');
 capitalizeName('mapelujo abdulkareem');
-
 
 // Padding a string, i.e adding words to a string till it reaches the desired amount.
