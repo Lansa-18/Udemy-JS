@@ -770,11 +770,11 @@ console.log(message.padStart(20, '+').padEnd(30, '+'));
 console.log('lancer'.padStart(20, '!').padEnd(30, '!'));
 
 // Real world application of padding of strings
-const maskCreditCard = function(number){
-    const str = number + '';
-    const last = str.slice(-4);
-    return last.padStart(str.length, '*');
-}
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
 
 console.log(maskCreditCard(2212021954));
 console.log(maskCreditCard(564643654564564));
