@@ -805,39 +805,31 @@ document.body.append(document.createElement('button'));
 const input = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-// const convertCamelCase = function () {
-//   const inputText = input.value;
-//   const trimmedTextValue = inputText.replace(/(^|\n)\s+/g, '$1');
-//   input.value = '';
-//   const texts = trimmedTextValue.split('\n');
-//   for (const [itext, eltext] of texts.entries()) {
-//     const eltextLower = eltext.toLowerCase();
-//     const textArr = eltextLower.split('_');
-//     const [textB4, textAfter] = textArr;
-//     const textAfterUpper = textAfter.replace(
-//       textAfter[0],
-//       textAfter[0].toUpperCase()
-//     );
-//     const textArrNew = [textB4, textAfterUpper];
-//     let camelCase = textArrNew.join('').padEnd(20,' ');
-//     camelCase += '✅'.repeat(itext+1)
-//     console.log(camelCase);
-//   }
-// };
-
-// button.addEventListener('click', convertCamelCase);
-
-button.addEventListener('click', function () {
+const convertCamelCase = function () {
   const inputText = input.value;
-  const rows = inputText.split('\n');
-  console.log(rows);
-  for (const [i, row] of rows.entries()) {
-    const [first, second] = row.toLowerCase().trim().split('_');
-    const output = `${first}${second.replace(
-      second[0],
-      second[0].toUpperCase()
-    )}`;
-    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
-    input.value = '';
+  input.value = '';
+  const texts = inputText.split('\n');
+  for (const [i, text] of texts.entries()) {
+    const [first,second] = text.toLowerCase().trim().split('_');
+    const camelCase = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
+    const output = `${camelCase.padEnd(20)}${'✅'.repeat(i+1)}`
+    console.log(output);
   }
-});
+};
+
+button.addEventListener('click', convertCamelCase);
+
+// button.addEventListener('click', function () {
+//   const inputText = input.value;
+//   const rows = inputText.split('\n');
+//   console.log(rows);
+//   for (const [i, row] of rows.entries()) {
+//     const [first, second] = row.toLowerCase().trim().split('_');
+//     const output = `${first}${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
+//     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+//     input.value = '';
+//   }
+// });
