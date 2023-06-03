@@ -812,13 +812,7 @@ const convertCamelCase = function (){
     textValue = '';
     // if (textValue.includes('_')) {
         
-    // }
-
-
-
-
-
-    
+    // }   
 }
 
 button.addEventListener('click', convertCamelCase);
