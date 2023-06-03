@@ -847,12 +847,15 @@ const flights =
 //            Departure from FAO to LIS (12h30)
 
 const eachFlight = flights.split('+');
-const getCodes = str => str.slice(0,3).toUpperCase();
+const getCodes = str => str.slice(0, 3).toUpperCase();
 for (const flight of eachFlight) {
   const [type, from, to, time] = flight.split(';');
   const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll(
     '_',
     ' '
-  )} from ${getCodes(from)} to ${getCodes(to)} (${time.replace(':', 'h')})`.padStart(46);
+  )} from ${getCodes(from)} to ${getCodes(to)} (${time.replace(
+    ':',
+    'h'
+  )})`.padStart(46);
   console.log(output);
 }
