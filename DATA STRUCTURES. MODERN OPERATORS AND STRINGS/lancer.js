@@ -811,7 +811,8 @@ const convertCamelCase = function(){
     input.value = '';
     const texts = trimmedTextValue.split('\n');
     for (const text of texts){
-        console.log(text);
+        const textLower = text.toLowerCase();
+        console.log(textLower.indexOf('_'));
     }
 }
 
