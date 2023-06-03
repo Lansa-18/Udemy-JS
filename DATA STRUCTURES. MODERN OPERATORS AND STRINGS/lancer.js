@@ -802,19 +802,17 @@ const planesInLine = function (n) {
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
 
-const texts = document.querySelector('textarea');
-const text = texts.value.split('\n');
+const input = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-let textValues = texts.value;
-const convertCamelCase = function () {
-    for (let i = 0; i<text.length; i++){
-        console.log(text[i]);
+const convertCamelCase = function(){
+    const inputText = input.value;
+    const trimmedTextValue = inputText.replace(/(^|\n)\s+/g, '$1');
+    input.value = '';
+    const texts = trimmedTextValue.split('\n');
+    for (const text of texts){
+        console.log(text);
     }
-
-//   const trimmedTextValue = textValue.replace(/(^|\n)\s+/g, '$1');
-//   console.log(trimmedTextValue);
-  text.value = '';
-};
+}
 
 button.addEventListener('click', convertCamelCase);
