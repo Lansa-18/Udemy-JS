@@ -810,9 +810,12 @@ const convertCamelCase = function () {
   input.value = '';
   const texts = inputText.split('\n');
   for (const [i, text] of texts.entries()) {
-    const [first,second] = text.toLowerCase().trim().split('_');
-    const camelCase = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
-    const output = `${camelCase.padEnd(20)}${'✅'.repeat(i+1)}`
+    const [first, second] = text.toLowerCase().trim().split('_');
+    const camelCase = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    const output = `${camelCase.padEnd(20)}${'✅'.repeat(i + 1)}`;
     console.log(output);
   }
 };
