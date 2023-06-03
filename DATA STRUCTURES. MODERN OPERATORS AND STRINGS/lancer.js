@@ -764,4 +764,18 @@ capitalizeName('jessica ann smith davis');
 capitalizeName('mapelujo abdulkareem');
 capitalizeName('lancer nabasf');
 
-// Padding a string, i.e adding words to a string till it reaches the desired amount.
+// Padding a string, i.e adding a number of characters to a string till it reaches the desired length.
+const message = 'Go to gate 23!';
+console.log(message.padStart(20, '+').padEnd(30, '+'));
+console.log('lancer'.padStart(20, '!').padEnd(30, '!'));
+
+// Real world application of padding of strings
+const maskCreditCard = function(number){
+    const str = number + '';
+    const last = str.slice(-4);
+    return last.padStart(str.length, '*');
+}
+
+console.log(maskCreditCard(2212021954));
+console.log(maskCreditCard(564643654564564));
+console.log(maskCreditCard('3423642366123721'));
