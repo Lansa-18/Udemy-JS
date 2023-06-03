@@ -853,6 +853,6 @@ for (const flight of eachFlight) {
   const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll(
     '_',
     ' '
-  )} from ${getCodes(from)} to ${getCodes(to)} (${time.replace(':', 'h')})`;
+  )} from ${getCodes(from)} to ${getCodes(to)} (${time.replace(':', 'h')})`.padStart(46);
   console.log(output);
 }
