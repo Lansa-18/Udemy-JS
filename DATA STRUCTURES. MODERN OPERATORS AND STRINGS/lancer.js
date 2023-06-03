@@ -805,13 +805,13 @@ document.body.append(document.createElement('button'));
 const text = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-const convertCamelCase = function (textValue){
-    const trimmedTextValue = textValue.replace(/(^|\n)\s+/g, '$1');
-    console.log(trimmedTextValue);
-    text.value = '';
-}
+const convertCamelCase = function (textValue) {
+  const trimmedTextValue = textValue.replace(/(^|\n)\s+/g, '$1');
+  console.log(trimmedTextValue);
+  text.value = '';
+};
 
-button.addEventListener('click', function(){
-    let textValue = text.value;
-    convertCamelCase(textValue);
-})
+button.addEventListener('click', function () {
+  let textValue = text.value;
+  convertCamelCase(textValue);
+});
