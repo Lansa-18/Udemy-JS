@@ -805,19 +805,24 @@ document.body.append(document.createElement('button'));
 const input = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-const convertCamelCase = function(){
-    const inputText = input.value;
-    const trimmedTextValue = inputText.replace(/(^|\n)\s+/g, '$1');
-    input.value = '';
-    const texts = trimmedTextValue.split('\n');
-    for (const text of texts){
-        const textLower = text.toLowerCase();
-        const textArr = textLower.split('_');
-        const [textB4, textAfter] = textArr;
-        const textAfterUpper = textAfter.replace(textAfter[0], textAfter[0].toUpperCase());
-        const textArrNew = [textB4, textAfterUpper];
-        console.log(textArrNew.join('_'));
-    }
-}
+const convertCamelCase = function () {
+  const inputText = input.value;
+  const trimmedTextValue = inputText.replace(/(^|\n)\s+/g, '$1');
+  input.value = '';
+  const texts = trimmedTextValue.split('\n');
+  for (const text of texts) {
+    const textLower = text.toLowerCase();
+    const textArr = textLower.split('_');
+    const [textB4, textAfter] = textArr;
+    const textAfterUpper = textAfter.replace(
+      textAfter[0],
+      textAfter[0].toUpperCase()
+    );
+    const textArrNew = [textB4, textAfterUpper];
+    let camelCase = textArrNew.join('_');
+    camelCase += '✅'
+    console.log(camelCase);
+  }
+};
 
 button.addEventListener('click', convertCamelCase);
