@@ -812,7 +812,11 @@ const convertCamelCase = function(){
     const texts = trimmedTextValue.split('\n');
     for (const text of texts){
         const textLower = text.toLowerCase();
-        console.log(textLower.indexOf('_'));
+        const textArr = textLower.split('_');
+        const [textB4, textAfter] = textArr;
+        const textAfterUpper = textAfter.replace(textAfter[0], textAfter[0].toUpperCase());
+        const textArrNew = [textB4, textAfterUpper];
+        console.log(textArrNew.join('_'));
     }
 }
 
