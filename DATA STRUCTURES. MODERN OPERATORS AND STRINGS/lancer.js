@@ -822,7 +822,6 @@ const convertCamelCase = function () {
 
 button.addEventListener('click', convertCamelCase);
 
-
 // JONAZ' SOLUTION
 // button.addEventListener('click', function () {
 //   const inputText = input.value;
