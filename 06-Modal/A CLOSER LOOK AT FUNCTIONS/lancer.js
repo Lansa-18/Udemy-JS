@@ -2,7 +2,7 @@
 ////////////////////////////////////// DEFAULT PARAMETERS //////////////////////////////
 
 // without default parameters
-const b
+const bookingArr = []
 const createBooking = function(flightNum, numPassengers, price){
     const booking = {
         flightNum,
@@ -10,4 +10,7 @@ const createBooking = function(flightNum, numPassengers, price){
         price
     }
     console.log(booking);
+    bookingArr.push(booking)
 }
+
+createBooking('LH123')
