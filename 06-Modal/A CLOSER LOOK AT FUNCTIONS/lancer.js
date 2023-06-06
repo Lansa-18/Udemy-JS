@@ -1,12 +1,13 @@
 'use strict';
 ////////////////////////////////////// DEFAULT PARAMETERS //////////////////////////////
 
-// without default parameters
+
 const bookingArr = []
 const createBooking = function(flightNum, numPassengers, price){
+    //ES5 WAY OF DOING IT
     numPassengers = numPassengers || 1;
     price = price || 199;
-    
+
     const booking = {
         flightNum,
         numPassengers,
