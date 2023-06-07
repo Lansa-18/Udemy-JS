@@ -19,7 +19,6 @@ const createBooking = function (
   console.log(booking);
   bookingArr.push(booking);
 };
-
 // To skip an argument so that we can leave it at it's default parameter that was assigned, all we need to do is set it to undefined
 createBooking('ABC12', 4, undefined);
 createBooking('LH123');
