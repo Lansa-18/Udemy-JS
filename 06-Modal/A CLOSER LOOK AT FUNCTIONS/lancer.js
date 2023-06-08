@@ -38,13 +38,15 @@ const lancer = {
 const checkIn = function(flightNum, passenger){
     // NOTE THAT IT IS BAD PRACTICE TO CHANGE THE NAMES OF PARAMETERS OF A FUNCTION IN THE CODE BLOCK
     flightNum = 'LH999';
-    passenger.name = 'Mr' + passenger.name;
+    passenger.name = 'Mr. ' + passenger.name;
 
     if (passenger.passport === 26272788722) {
-        alert('Check In')
+        alert('Checked In')
     } else {
         alert('Wrong Passport')
     }
 }
 
 checkIn(flight, lancer);
+console.log(flight);
+console.log(lancer);
