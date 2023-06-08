@@ -25,3 +25,7 @@ const createBooking = function (
 // createBooking('LK123', 5, 1200);
 // createBooking('AK123', 2);
 // createBooking('BK123', 3);
+
+
+
+/////////////////////////////// ------------ HOW PASSING ARGUMENTS WORKS: VALUE VS REFERENCE ---------------------------------- /////////////////////////////////
