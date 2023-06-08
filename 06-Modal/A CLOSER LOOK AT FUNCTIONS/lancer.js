@@ -34,3 +34,9 @@ const lancer = {
     name: 'Mapelujo Abdulkareem',
     passport: 26272788722,
 }
+
+const checkIn = function(flightNum, passenger){
+    // NOTE THAT IT IS BAD PRACTICE TO CHANGE THE NAMES OF PARAMETERS OF A FUNCTION IN THE CODE BLOCK
+}
+
+checkIn(flight, lancer);
