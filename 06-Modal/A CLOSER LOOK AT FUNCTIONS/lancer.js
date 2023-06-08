@@ -29,3 +29,8 @@ const createBooking = function (
 
 
 /////////////////////////////// ------------ HOW PASSING ARGUMENTS WORKS: VALUE VS REFERENCE ---------------------------------- /////////////////////////////////
+const flight = 'LH324';
+const lancer = {
+    name: 'Mapelujo Abdulkareem',
+    passport: 26272788722,
+}
