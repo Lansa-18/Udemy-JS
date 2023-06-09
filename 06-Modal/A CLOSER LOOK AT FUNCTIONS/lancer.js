@@ -89,4 +89,11 @@ const greet = function(greeting){
 }
 
 const greeterHey = greet('Hey');
-gre
+greeterHey('Lancer');
+greeterHey('Olamide');
+
+// Rewriting the above function using arrow functions
+const greet2 = (greeting) =>{ return function (name) {console.log(`${greeting} ${name}`) };}
+
+const greetHello = greet2('Hello');
+greetHello('Abdulkareem');
