@@ -66,5 +66,9 @@ let count = 0;
 let countWord = '';
 let countArr = []
 const checkWords = function (arr){
-    for 
+    for (const word of arr){
+        console.log(word);
+    }
 }
+
+checkWords(example);
