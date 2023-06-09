@@ -57,46 +57,6 @@ const newPassport = function (person) {
 // checkIn(flight, lancer);
 // console.log(flight, lancer);
 
-const example = [
-  'Allah',
-  'first',
-  'second',
-  'third',
-  'first',
-  'fourth',
-  'lancer',
-];
-let count = 0;
-let countWord = '';
-let countArr = [];
-let level = '';
-const grt3 = count >= 3;
-const checkWords = function (arr) {
-  for (const word of arr) {
-    if (word === word) {
-      count += 1;
-      countWord = word;
-      countArr.push(countWord);
-    } else {
-      countArr.push(word);
-    }
-    switch (count) {
-      case 0:
-        level = 'Risky';
-        break;
-      case 2:
-        level = 'Critical';
-        break;
-      case grt3:
-        level = 'Demon';
-        break;
-      default:
-        level = 'Ok';
-        break;
-    }
-  }
-  // return `Flagged_Words: ${countArr}, threat_level: "${level}"`
-  console.log(`Flagged_Words: ${countArr} threat_level: "${level}"`);
-};
-
-checkWords(example);
+const oneWord = function (str){
+    return str.replace()
+}
