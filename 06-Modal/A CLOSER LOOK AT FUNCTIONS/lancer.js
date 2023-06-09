@@ -67,7 +67,11 @@ let countWord = '';
 let countArr = []
 const checkWords = function (arr){
     for (const word of arr){
-        console.log(word);
+        if (word === word) {
+            count += 1;
+            countWord = word;
+            countArr.push(countWord);
+        } else 
     }
 }
 
