@@ -26,73 +26,77 @@ const createBooking = function (
 // createBooking('AK123', 2);
 // createBooking('BK123', 3);
 
-
-
 /////////////////////////////// ------------ HOW PASSING ARGUMENTS WORKS: VALUE VS REFERENCE ---------------------------------- /////////////////////////////////
 const flight = 'LH324';
 const lancer = {
-    name: 'Mapelujo Abdulkareem',
-    passport: 26272788722,
-}
+  name: 'Mapelujo Abdulkareem',
+  passport: 26272788722,
+};
 
-const checkIn = function(flightNum, passenger){
-    // NOTE THAT IT IS BAD PRACTICE TO CHANGE THE NAMES OF PARAMETERS OF A FUNCTION IN THE CODE BLOCK
-    flightNum = 'LH999';
-    passenger.name = 'Mr. ' + passenger.name;
+const checkIn = function (flightNum, passenger) {
+  // NOTE THAT IT IS BAD PRACTICE TO CHANGE THE NAMES OF PARAMETERS OF A FUNCTION IN THE CODE BLOCK
+  flightNum = 'LH999';
+  passenger.name = 'Mr. ' + passenger.name;
 
-    if (passenger.passport === 26272788722) {
-        alert('Checked In')
-    } else {
-        alert('Wrong Passport')
-    }
-}
+  if (passenger.passport === 26272788722) {
+    alert('Checked In');
+  } else {
+    alert('Wrong Passport');
+  }
+};
 
 // checkIn(flight, lancer);
 // console.log(flight);
 // console.log(lancer);
 
-
-
-const newPassport = function(person){
-    person.passport = Math.trunc(Math.random() * 100000000000);
-}
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 100000000000);
+};
 
 // newPassport(lancer);
 // checkIn(flight, lancer);
 // console.log(flight, lancer);
 
-const example = ['Allah', 'first', 'second', 'third', 'first', 'fourth', 'lancer']
+const example = [
+  'Allah',
+  'first',
+  'second',
+  'third',
+  'first',
+  'fourth',
+  'lancer',
+];
 let count = 0;
 let countWord = '';
-let countArr = []
-let level = ''
+let countArr = [];
+let level = '';
 const grt3 = count >= 3;
-const checkWords = function (arr){
-    for (const word of arr){
-        if (word === word) {
-            count += 1;
-            countWord = word;
-            countArr.push(countWord);
-        } else {
-            countArr.push(word)
-        }
-        switch (count) {
-            case 0:
-                level = 'Risky'
-                break;
-            case 2:
-                level = 'Critical'
-                break;
-            case grt3:
-                level = 'Demon'
-                break;
-            default:
-                level = 'Ok'
-                break;
-        }
+const checkWords = function (arr) {
+  for (const word of arr) {
+    if (word === word) {
+      count += 1;
+      countWord = word;
+      countArr.push(countWord);
+    } else {
+      countArr.push(word);
     }
-    // return `Flagged_Words: ${countArr}, threat_level: "${level}"`
-    console.log(`Flagged_Words: ${countArr} threat_level: "${level}"`);
-}
+    switch (count) {
+      case 0:
+        level = 'Risky';
+        break;
+      case 2:
+        level = 'Critical';
+        break;
+      case grt3:
+        level = 'Demon';
+        break;
+      default:
+        level = 'Ok';
+        break;
+    }
+  }
+  // return `Flagged_Words: ${countArr}, threat_level: "${level}"`
+  console.log(`Flagged_Words: ${countArr} threat_level: "${level}"`);
+};
 
 checkWords(example);
