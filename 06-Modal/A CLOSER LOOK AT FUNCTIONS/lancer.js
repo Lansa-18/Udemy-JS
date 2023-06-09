@@ -87,7 +87,7 @@ const checkWords = function (arr){
                 level = 'Demon'
                 break;
             default:
-                
+                level = 'Ok'
                 break;
         }
     }
