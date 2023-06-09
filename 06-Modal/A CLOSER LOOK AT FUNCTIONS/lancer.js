@@ -79,4 +79,5 @@ const high5 = function (){
     console.log('👋');
 }
 
-['jonas', 'lancer', 'martha'].forEach(high5);
+const names = ['jonas', 'lancer', 'martha'];
+names.forEach(high5);
