@@ -79,4 +79,4 @@ const high = function (){
     console.log('👋');
 }
 
-['jonas', 'lancer', 'martha'].forEach();
+['jonas', 'lancer', 'martha'].forEach(high);
