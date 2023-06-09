@@ -91,6 +91,8 @@ const checkWords = function (arr){
                 break;
         }
     }
+    // return `Flagged_Words: ${countArr}, threat_level: "${level}"`
+    console.log(`Flagged_Words: ${countArr} threat_level: "${level}"`);
 }
 
 checkWords(example);
