@@ -61,3 +61,10 @@ const newPassport = function(person){
 // checkIn(flight, lancer);
 // console.log(flight, lancer);
 
+
+let count = 0;
+let countWord = '';
+let countArr = []
+const checkWords = function (arr){
+
+}
