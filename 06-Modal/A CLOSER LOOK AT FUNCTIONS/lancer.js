@@ -176,9 +176,18 @@ document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind
 
 // Partial Application USECASE
 // NOTE: When trying to preset values, the order of the argument matters a lot.
-const addTax = (rate, value) => value + (value * rate);
-console.log(addTax(0.1, 200));
+// const addTax = (rate, value) => value + (value * rate);
+// console.log(addTax(0.1, 200));
 
-const addVAT = addTax.bind(null, 0.23);
+// const addVAT = addTax.bind(null, 0.23);
 
-console.log(addVAT(100));
+// console.log(addVAT(100));
+
+
+// Challenge
+const add = function (rate){
+    return function (price) {
+        const value = price + (price * rate);
+        console.log(value);
+    }
+}
