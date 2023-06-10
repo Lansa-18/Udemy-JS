@@ -165,3 +165,11 @@ bookEW23('lansa')
 
 
 // with Event Listeners.
+lufthansa.planes = 300;
+lufthansa.buyPlane = function (){
+    console.log(this);
+    this.planes++
+    console.log(this.planes);
+}
+
+document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane)
