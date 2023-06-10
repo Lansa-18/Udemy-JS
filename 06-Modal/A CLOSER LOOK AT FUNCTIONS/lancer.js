@@ -191,3 +191,7 @@ const add = function (rate){
         console.log(value);
     }
 }
+const addVat = add(0.23);
+addVat(100);
+addVat(200);
+addVat(300);
