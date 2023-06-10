@@ -130,3 +130,4 @@ book.call(eurowings, 23, 'Sarah Williams')
 console.log(eurowings);
 
 book.call(lufthansa, 154, 'Mapelujo Abdulkareem')
+console.log(lufthansa);
