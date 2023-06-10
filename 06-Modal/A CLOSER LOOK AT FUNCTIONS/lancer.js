@@ -158,7 +158,8 @@ const bookLX = book.bind(swiss);
 
 bookEW('567', 'Oluokun Shaakirah')
 bookLH('468', 'Mapelujo Abdulrazaq')
-bookLX('567', 'Jonas Schmedtman')
+bookLX('567', 'Jonas Schmedtmann')
 
 const bookEW23 = book.bind(eurowings, 23)
 bookEW23('lansa')
+
