@@ -111,9 +111,9 @@ const lufthansa = {
   },
 };
 
-lufthansa.book(239, 'Lancer');
-lufthansa.book(635, 'Olamide');
-console.log(lufthansa);
+// lufthansa.book(239, 'Lancer');
+// lufthansa.book(635, 'Olamide');
+// console.log(lufthansa);
 
 const eurowings = {
   airline: 'Eurowings',
@@ -133,13 +133,19 @@ const book = lufthansa.book;
 // book.call(lufthansa, 154, 'Mapelujo Abdulkareem')
 // console.log(lufthansa);
 
-// const swiss = {
-//     airline: 'Swiss Air Lines',
-//     iatacode: 'LX',
-//     bookings: []
-// }
+const swiss = {
+    airline: 'Swiss Air Lines',
+    iatacode: 'LX',
+    bookings: []
+}
 
 // book.call(swiss, 583, 'Mapelujo Faiq')
 // console.log(swiss);
 
 // USING THE APPLY METHOD.
+const flightData = [432, 'Mapelujo Faiza'];
+
+book.apply(lufthansa, flightData)
+console.log(lufthansa);
+
+book.apply(swiss, [234, 'Mapelujo Aliyah'])
