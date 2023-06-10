@@ -106,10 +106,15 @@ const lufthansa = {
     bookings: [],
     book(flightNum, name) {
         console.log(`${name} booked a seat on ${this.airline} flight ${this.iatacode}${flightNum}`);
+        this.bookings({flight: `${this.iatacode}${flightNum}`})
+
     }
 }
 
 lufthansa.book(239,'Lancer')
 lufthansa.book(635,'Olamide')
 
-const
+const eurowings = {
+    name: 'Eurowings',
+    iatacode: 'EW'
+}
