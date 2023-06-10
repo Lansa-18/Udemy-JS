@@ -127,19 +127,19 @@ const book = lufthansa.book;
 // book(23, 'Sarah Williams')
 
 // USING THE CALL METHOD to set the 'this' keyword.
-book.call(eurowings, 23, 'Sarah Williams')
-console.log(eurowings);
+// book.call(eurowings, 23, 'Sarah Williams')
+// console.log(eurowings);
 
-book.call(lufthansa, 154, 'Mapelujo Abdulkareem')
-console.log(lufthansa);
+// book.call(lufthansa, 154, 'Mapelujo Abdulkareem')
+// console.log(lufthansa);
 
-const swiss = {
-    airline: 'Swiss Air Lines',
-    iatacode: 'LX',
-    bookings: []
-}
+// const swiss = {
+//     airline: 'Swiss Air Lines',
+//     iatacode: 'LX',
+//     bookings: []
+// }
 
-book.call(swiss, 583, 'Mapelujo Faiq')
-console.log(swiss);
+// book.call(swiss, 583, 'Mapelujo Faiq')
+// console.log(swiss);
 
 // USING THE APPLY METHOD.
