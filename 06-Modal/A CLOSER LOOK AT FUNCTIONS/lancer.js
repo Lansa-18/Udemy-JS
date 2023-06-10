@@ -126,6 +126,7 @@ const book = lufthansa.book;
 // does not work because the 'this' keyword would point to undefined as it is now a regular function call and not a method.
 // book(23, 'Sarah Williams')
 
+// USING THE CALL METHOD to set the 'this' keyword.
 book.call(eurowings, 23, 'Sarah Williams')
 console.log(eurowings);
 
