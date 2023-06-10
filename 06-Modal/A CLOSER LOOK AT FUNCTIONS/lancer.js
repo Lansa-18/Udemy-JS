@@ -107,7 +107,7 @@ const lufthansa = {
     console.log(
       `${name} booked a seat on ${this.airline} flight ${this.iatacode}${flightNum}`
     );
-    this.bookings.push({ flight: `${this.iatacode}${flightNum}`, name});
+    this.bookings.push({ flight: `${this.iatacode}${flightNum}`, name });
   },
 };
 
@@ -134,10 +134,10 @@ const book = lufthansa.book;
 // console.log(lufthansa);
 
 const swiss = {
-    airline: 'Swiss Air Lines',
-    iatacode: 'LX',
-    bookings: []
-}
+  airline: 'Swiss Air Lines',
+  iatacode: 'LX',
+  bookings: [],
+};
 
 // book.call(swiss, 583, 'Mapelujo Faiq')
 // console.log(swiss);
@@ -150,29 +150,29 @@ const swiss = {
 
 // book.apply(swiss, [234, 'Mapelujo Aliyah'])
 
-
 // THE BIND METHOD
 const bookEW = book.bind(eurowings);
 const bookLH = book.bind(lufthansa);
 const bookLX = book.bind(swiss);
 
-bookEW('567', 'Oluokun Shaakirah')
-bookLH('468', 'Mapelujo Abdulrazaq')
-bookLX('567', 'Jonas Schmedtmann')
+bookEW('567', 'Oluokun Shaakirah');
+bookLH('468', 'Mapelujo Abdulrazaq');
+bookLX('567', 'Jonas Schmedtmann');
 
-const bookEW23 = book.bind(eurowings, 23)
-bookEW23('lansa')
-
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('lansa');
 
 // with Event Listeners.
 lufthansa.planes = 300;
-lufthansa.buyPlane = function (){
-    console.log(this);
-    this.planes++
-    console.log(this.planes);
-}
+lufthansa.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
 
-document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa))
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
 // Partial Application USECASE
 // NOTE: When trying to preset values, the order of the argument matters a lot.
@@ -183,15 +183,15 @@ document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind
 
 // console.log(addVAT(100));
 
-
 // Challenge
-const add = function (rate){
-    return function (price) {
-        const value = price + (price * rate);
-        console.log(value);
-    }
-}
+const add = function (rate) {
+  return function (price) {
+    const value = price + price * rate;
+    console.log(value);
+  };
+};
 const addVat = add(0.23);
+
 addVat(100);
 addVat(200);
 addVat(300);
