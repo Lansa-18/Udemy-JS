@@ -89,11 +89,22 @@ const greet = function(greeting){
 }
 
 const greeterHey = greet('Hey');
-greeterHey('Lancer');
-greeterHey('Olamide');
+// greeterHey('Lancer');
+// greeterHey('Olamide');
 
 // Rewriting the above function using arrow functions
 const greet2 = (greeting) => (name) => console.log(`${greeting} ${name}`) ;
 
 const greetHello = greet2('Hello');
-greetHello('Abdulkareem');
+// greetHello('Abdulkareem');
+
+
+/////////////////////// -------------------------- THE CALL AND APPLY METHOD ----------------------- ///////////////////////////////////
+const lufthansa = {
+    airline: 'lufthansa',
+    iatacode: 'LH',
+    bookings: [],
+    book(flightNum, name) {
+        console.log(`$${name} booked a seat on ${this.airline} flight ${this.iatacode}`);
+    }
+}
