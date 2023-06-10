@@ -143,9 +143,10 @@ const swiss = {
 // console.log(swiss);
 
 // USING THE APPLY METHOD.
-const flightData = [432, 'Mapelujo Faiza'];
+// const flightData = [432, 'Mapelujo Faiza'];
 
-book.apply(lufthansa, flightData)
-console.log(lufthansa);
+// book.apply(lufthansa, flightData)
+// console.log(lufthansa);
 
-book.apply(swiss, [234, 'Mapelujo Aliyah'])
+// book.apply(swiss, [234, 'Mapelujo Aliyah'])
+
