@@ -141,3 +141,5 @@ const swiss = {
 
 book.call(swiss, 583, 'Mapelujo Faiq')
 console.log(swiss);
+
+// USING THE APPLY METHOD.
