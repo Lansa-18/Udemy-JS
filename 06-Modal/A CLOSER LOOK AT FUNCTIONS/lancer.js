@@ -116,11 +116,15 @@ lufthansa.book(635, 'Olamide');
 console.log(lufthansa);
 
 const eurowings = {
-  name: 'Eurowings',
+  airline: 'Eurowings',
   iatacode: 'EW',
+  bookings: [],
 };
 
 const book = lufthansa.book;
 
 // does not work because the 'this' keyword would point to undefined as it is now a regular function call and not a method.
 // book(23, 'Sarah Williams')
+
+book.call(eurowings, 23, 'Sarah Williams')
+console.log(eurowings);
