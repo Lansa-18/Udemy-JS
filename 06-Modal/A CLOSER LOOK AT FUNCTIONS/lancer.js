@@ -131,3 +131,12 @@ console.log(eurowings);
 
 book.call(lufthansa, 154, 'Mapelujo Abdulkareem')
 console.log(lufthansa);
+
+const swiss = {
+    airline: 'Swiss Air Lines',
+    iatacode: 'LX',
+    bookings: []
+}
+
+book.call(swiss, 583, 'Mapelujo Faiq')
+console.log(swiss);
