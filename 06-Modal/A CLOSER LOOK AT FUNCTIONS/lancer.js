@@ -186,12 +186,10 @@ document
 // Challenge
 const add = function (rate) {
   return function (price) {
-    const value = price + price * rate;
-    console.log(value);
+   return price + price * rate;
   };
 };
-const addVat = add(0.23);
 
-addVat(100);
-addVat(200);
-addVat(300);
+const addVat = add(0.23);
+console.log(addVat(100));
+
