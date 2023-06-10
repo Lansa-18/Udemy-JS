@@ -57,64 +57,70 @@ const newPassport = function (person) {
 // checkIn(flight, lancer);
 // console.log(flight, lancer);
 
-const oneWord = function (str){
-    return str.replace(/ /g, '').toLowerCase();
-}
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
 
-const upperFirstWord = function (str){
-    const [first, ...others] = str.split(' ');
-    return [first.toUpperCase(), ...others].join(' ');
-}
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
 
-const transformer = function(str, fn){
-    console.log(`Original string: ${str}`);
-    console.log(`Transformed string: ${fn(str)}`);
-    console.log(`Transformed by: ${fn.name}`);
-}
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+  console.log(`Transformed by: ${fn.name}`);
+};
 
 // transformer('JavaScript is the best!', upperFirstWord);
 // transformer('JavaScript is the best!', oneWord);
 
-const high5 = function (){
-    console.log('👋');
-}
+const high5 = function () {
+  console.log('👋');
+};
 
 const names = ['jonas', 'lancer', 'martha'];
 // names.forEach(high5);
 
-const greet = function(greeting){
-    return function(name){
-        console.log(`${greeting} ${name}`);
-    }
-}
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
 
 const greeterHey = greet('Hey');
 // greeterHey('Lancer');
 // greeterHey('Olamide');
 
 // Rewriting the above function using arrow functions
-const greet2 = (greeting) => (name) => console.log(`${greeting} ${name}`) ;
+const greet2 = greeting => name => console.log(`${greeting} ${name}`);
 
 const greetHello = greet2('Hello');
 // greetHello('Abdulkareem');
 
-
 /////////////////////// -------------------------- THE CALL AND APPLY METHOD ----------------------- ///////////////////////////////////
 const lufthansa = {
-    airline: 'lufthansa',
-    iatacode: 'LH',
-    bookings: [],
-    book(flightNum, name) {
-        console.log(`${name} booked a seat on ${this.airline} flight ${this.iatacode}${flightNum}`);
-        this.bookings({flight: `${this.iatacode}${flightNum}`})
+  airline: 'lufthansa',
+  iatacode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iatacode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iatacode}${flightNum}`, name});
+  },
+};
 
-    }
-}
-
-lufthansa.book(239,'Lancer')
-lufthansa.book(635,'Olamide')
+lufthansa.book(239, 'Lancer');
+lufthansa.book(635, 'Olamide');
+console.log(lufthansa);
 
 const eurowings = {
-    name: 'Eurowings',
-    iatacode: 'EW'
-}
+  name: 'Eurowings',
+  iatacode: 'EW',
+};
+
+const book = lufthansa.book;
+
+// does not work because the 'this' keyword would point to undefined as it is now a regular function call and not a method.
+// book(23, 'Sarah Williams')
