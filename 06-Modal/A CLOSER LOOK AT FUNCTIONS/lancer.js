@@ -150,3 +150,12 @@ const swiss = {
 
 // book.apply(swiss, [234, 'Mapelujo Aliyah'])
 
+
+// THE BIND METHOD
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW('567', 'Oluokun Shaakirah')
+bookLH('468', 'Mapelujo Abdulrazaq')
+bookLX('567', 'Jonas Schmedtman')
