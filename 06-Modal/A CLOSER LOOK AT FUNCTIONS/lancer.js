@@ -105,6 +105,11 @@ const lufthansa = {
     iatacode: 'LH',
     bookings: [],
     book(flightNum, name) {
-        console.log(`$${name} booked a seat on ${this.airline} flight ${this.iatacode}${flightNum}`);
+        console.log(`${name} booked a seat on ${this.airline} flight ${this.iatacode}${flightNum}`);
     }
 }
+
+lufthansa.book(239,'Lancer')
+lufthansa.book(635,'Olamide')
+
+const
