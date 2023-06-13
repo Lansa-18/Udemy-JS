@@ -155,12 +155,12 @@ const bookEW = book.bind(eurowings);
 const bookLH = book.bind(lufthansa);
 const bookLX = book.bind(swiss);
 
-bookEW('567', 'Oluokun Shaakirah');
-bookLH('468', 'Mapelujo Abdulrazaq');
-bookLX('567', 'Jonas Schmedtmann');
+// bookEW('567', 'Oluokun Shaakirah');
+// bookLH('468', 'Mapelujo Abdulrazaq');
+// bookLX('567', 'Jonas Schmedtmann');
 
 const bookEW23 = book.bind(eurowings, 23);
-bookEW23('lansa');
+// bookEW23('lansa');
 
 // with Event Listeners.
 lufthansa.planes = 300;
@@ -191,7 +191,7 @@ const add = function (rate) {
 };
 
 const addVat = add(0.23);
-console.log(addVat(100));
+// console.log(addVat(100));
 
 // CODING CHALLENGE #1
 // GIVEN DATA
@@ -201,3 +201,9 @@ const poll = {
 
   answers: new Array(4).fill(0),
 }
+
+poll.registerAnswers = function(){
+  // displaying the prompt
+}
+
+console.log(poll);
