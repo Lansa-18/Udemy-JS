@@ -205,7 +205,11 @@ const poll = {
 poll.registerAnswers = function(){
   // displaying the prompt
   const registerPrompt = Number(prompt('What is your favorite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++'))
-
+  for (const [i, answer] of this.answers){
+    if (registerPrompt === 1) {
+      
+    }
+  }
 }
 
 poll.registerAnswers()
