@@ -186,7 +186,7 @@ document
 // Challenge
 const add = function (rate) {
   return function (price) {
-   return price + price * rate;
+    return price + price * rate;
   };
 };
 
@@ -200,22 +200,31 @@ const poll = {
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
 
   answers: new Array(4).fill(0),
-}
+};
 
-poll.registerAnswers = function(){
+poll.registerAnswers = function () {
   // displaying the prompt
-  const registerPrompt = Number(prompt('What is your favorite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++'))
+  const registerPrompt = Number(
+    prompt(
+      'What is your favorite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++'
+    )
+  );
 
   // looping through the answers array
-  for (const [i, answer] of this.answers.entries()){
-    if (registerPrompt === 0 || registerPrompt === 1 || registerPrompt === 2 || registerPrompt === 3 && registerPrompt <= 3) {
+  for (const [i, answer] of this.answers.entries()) {
+    if (
+      registerPrompt === 0 ||
+      registerPrompt === 1 ||
+      registerPrompt === 2 ||
+      (registerPrompt === 3 && registerPrompt <= 3)
+    ) {
       this.answers[registerPrompt] = 0 + 1;
       console.log(this.answers);
     } else {
       console.log('Conditions are not satisfied');
     }
   }
-}
+};
 const register = poll.registerAnswers;
-const registerPoll = register.bind(poll)
+const registerPoll = register.bind(poll);
 registerPoll();
