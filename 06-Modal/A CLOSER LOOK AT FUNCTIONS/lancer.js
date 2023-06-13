@@ -207,7 +207,8 @@ poll.registerAnswers = function(){
   const registerPrompt = Number(prompt('What is your favorite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++'))
   for (const [i, answer] of this.answers.entries()){
     if (registerPrompt === 0 || registerPrompt === 1 || registerPrompt === 2 || registerPrompt === 3 && registerPrompt <= 3) {
-      console.log(this.answers[registerPrompt]);
+      this.answers[registerPrompt] = registerPrompt + 1;
+      console.log(this.answers);
     } else {
       console.log('Conditions are not satisfied');
     }
