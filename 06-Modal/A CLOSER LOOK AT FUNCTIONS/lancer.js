@@ -207,4 +207,5 @@ poll.registerAnswers = function(){
   const registerPrompt = Number(prompt('What is your favorite programming language?'))
 }
 
+poll.registerAnswers()
 console.log(poll);
