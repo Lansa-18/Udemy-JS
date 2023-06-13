@@ -214,6 +214,7 @@ poll.registerAnswers = function(){
   }
 }
 const register = poll.registerAnswers;
-// console.log(register);
-// poll.registerAnswers.bind(register)
+const registerPoll = register.bind(poll)
+registerPoll();
+// poll.registerAnswers();
 console.log(poll);
