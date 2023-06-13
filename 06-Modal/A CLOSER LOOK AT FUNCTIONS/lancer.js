@@ -213,6 +213,7 @@ poll.registerAnswers = function(){
     }
   }
 }
-const register = poll.registerAnswers();
-poll.registerAnswers.bind(register)
+const register = poll.registerAnswers;
+// console.log(register);
+// poll.registerAnswers.bind(register)
 console.log(poll);
