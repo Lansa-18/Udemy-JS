@@ -193,3 +193,4 @@ const add = function (rate) {
 const addVat = add(0.23);
 console.log(addVat(100));
 
+// CODING CHALLENGE #1
