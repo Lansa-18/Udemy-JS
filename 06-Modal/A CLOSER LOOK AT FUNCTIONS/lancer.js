@@ -229,4 +229,3 @@ const register = poll.registerAnswers;
 const registerPoll = register.bind(poll);
 registerPoll();
 
-
