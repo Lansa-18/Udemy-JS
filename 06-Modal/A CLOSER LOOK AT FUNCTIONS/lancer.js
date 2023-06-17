@@ -235,14 +235,14 @@ pollBtn.addEventListener('click', registerPoll);
 
 poll.displayResults = function(type){
  if (typeof type === 'string') {
-  console.log('this is a string');
+  console.log(`Poll results are: ${type}`);
  } else {
   console.log('this is an array');
  }
 
 }
 
-poll.displayResults([1,2,3])
+poll.displayResults('1,2,3')
 
 // console.log(poll);
 
