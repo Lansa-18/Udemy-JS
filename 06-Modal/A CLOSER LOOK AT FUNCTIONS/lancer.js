@@ -234,9 +234,12 @@ const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', registerPoll);
 
 poll.displayResults = function(type){
- if (type = '') {
-  
+ if (typeof type === 'string') {
+  console.log('this is a string');
+ } else {
+  console.log();
  }
+
 }
 
 poll.displayResults('kareem')
