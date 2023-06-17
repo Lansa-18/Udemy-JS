@@ -221,13 +221,18 @@ poll.registerAnswers = function () {
       this.answers[registerPrompt] = 0 + 1;
       console.log(this.answers);
     } else {
-      console.log('Conditions are not satisfied');
+      alert('Conditions are not satisfied');
+      break;
     }
   }
 };
 const register = poll.registerAnswers;
 const registerPoll = register.bind(poll);
-registerPoll();
+// registerPoll();
+
+const pollBtn = document.querySelector('.poll');
+
+pollBtn.addEventListener('click', registerPoll)
 
 
 
