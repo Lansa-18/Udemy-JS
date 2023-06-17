@@ -219,14 +219,13 @@ poll.registerNewAnswers = function () {
       (registerPrompt === 3 && registerPrompt <= 3)
     ) {
       this.answers[registerPrompt] = 0 + 1;
-      console.log(this.answers);
     } else {
       alert('Conditions are not satisfied');
       break;
     }
   }
 
-  poll.displayResults()
+  poll.displayResults([2,4,5])
 };
 
 const register = poll.registerNewAnswers;
