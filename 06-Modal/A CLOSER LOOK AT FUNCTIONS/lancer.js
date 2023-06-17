@@ -217,32 +217,31 @@ const poll = {
         (registerPrompt === 3 && registerPrompt <= 3)
       ) {
         this.answers[registerPrompt]++;
-        // poll.displayResults([5, 2, 3].concat([1,5,3,9,6,1]));
-        poll.displayResults(this.answers);
+        this.displayResults();
         break;
       } else {
         alert('Conditions are not satisfied');
         break;
       }
     }
-  };
+  },
+  displayResults(type = 'array') {
+    if (typeof type === 'array') {
+      console.log(this.answers);
+    } else if (type === 'string') {
+      console.log(`Poll results are ${this.answers.join(', ')}`);
+    }
+  }
 };
 
-const register = poll.registerNewAnswers;
-const registerPoll = register.bind(poll);
+
 
 // applying the function on the answer poll button
 const pollBtn = document.querySelector('.poll');
-pollBtn.addEventListener('click', registerPoll);
+pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
 
 // creating a displayResult method that should be called by the registerNewAnswer method.
-poll.displayResults = function (type) {
-  if (typeof type === 'string') {
-    console.log(`Poll results are: ${type}`);
-  } else {
-    console.log(type);
-  }
-};
+
 
 // JONAS' SOLUTION.
 // const poll = {
