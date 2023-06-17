@@ -234,16 +234,12 @@ const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', registerPoll);
 
 poll.displayResults = function(type){
-  switch (type) {
-    case type = String:
-      console.log('this is a string');
-      break;
+ if (type = '') {
   
-    default:
-      console.log('this is an array');
-      break;
-  }
+ }
 }
+
+poll.displayResults('kareem')
 
 // console.log(poll);
 
