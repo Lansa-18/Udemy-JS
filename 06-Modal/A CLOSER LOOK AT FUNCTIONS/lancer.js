@@ -234,12 +234,13 @@ const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', registerPoll);
 
 poll.displayResults = function(type){
-  switch (key) {
-    case value:
-      
+  switch (type) {
+    case type = String:
+      console.log('this is a string');
       break;
   
     default:
+      console.log('this is an array');
       break;
   }
 }
