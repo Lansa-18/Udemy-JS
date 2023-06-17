@@ -231,7 +231,11 @@ const registerPoll = register.bind(poll);
 
 // applying the function on the answer poll button
 const pollBtn = document.querySelector('.poll');
-pollBtn.addEventListener('click', registerPoll)
+pollBtn.addEventListener('click', registerPoll);
+
+poll.displayResults = function(type){
+  
+}
 
 
 
