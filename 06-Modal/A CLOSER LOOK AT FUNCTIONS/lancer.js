@@ -237,12 +237,12 @@ poll.displayResults = function(type){
  if (typeof type === 'string') {
   console.log('this is a string');
  } else {
-  console.log();
+  console.log('this is an array');
  }
 
 }
 
-poll.displayResults('kareem')
+poll.displayResults([1,2,3])
 
 // console.log(poll);
 
