@@ -251,19 +251,19 @@ const poll = {
 
   answers: new Array(4).fill(0),
   registerNewAnswer() {
-
     // Getting the answer
     const answer = Number(
       prompt(
         `${this.question}\n${this.options.join('\n')}\n(Write Option Number)`
       )
     );
-        console.log(answer);
+    console.log(answer);
     // Registering the answer
-        typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
-        console.log(this.answers);
-
+    typeof answer === 'number' &&
+      answer < this.answers.length &&
+      this.answers[answer]++;
+    console.log(this.answers);
   },
 };
 
-poll.registerNewAnswer()
+poll.registerNewAnswer();
