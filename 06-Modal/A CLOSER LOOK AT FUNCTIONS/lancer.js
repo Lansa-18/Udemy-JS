@@ -194,7 +194,7 @@ const addVat = add(0.23);
 // console.log(addVat(100));
 
 // CODING CHALLENGE #1 (MY SOLUTION)
-// GIVEN DATA 
+// GIVEN DATA
 // const poll = {
 //   question: 'What is your favorite programming language?',
 //   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
@@ -244,14 +244,26 @@ const addVat = add(0.23);
 //   }
 // };
 
-
 // JONAS' SOLUTION.
 const poll = {
   question: 'What is your favorite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
 
   answers: new Array(4).fill(0),
-  registerNewAnswer(){
-    const answer = Number (prompt(`${this.question}\n${this.options.join('\n')}\n(Write Option Number)`));
-  }
+  registerNewAnswer() {
+
+    // Getting the answer
+    const answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join('\n')}\n(Write Option Number)`
+      )
+    );
+        console.log(answer);
+    // Registering the answer
+        typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
+        console.log(this.answers);
+
+  },
 };
+
+poll.registerNewAnswer()
