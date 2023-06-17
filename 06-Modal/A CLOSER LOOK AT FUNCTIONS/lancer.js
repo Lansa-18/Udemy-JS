@@ -219,7 +219,7 @@ poll.registerNewAnswers = function () {
       (registerPrompt === 3 && registerPrompt <= 3)
     ) {
       this.answers[registerPrompt] = 0 + 1;
-      poll.displayResults([2,4,5]);
+      poll.displayResults([2, 4, 5]);
       poll.displayResults(this.answers);
       break;
     } else {
@@ -227,7 +227,6 @@ poll.registerNewAnswers = function () {
       break;
     }
   }
-
 };
 
 const register = poll.registerNewAnswers;
@@ -238,20 +237,15 @@ const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', registerPoll);
 
 // creating a displayResult method that should be called by the registerNewAnswer method.
-poll.displayResults = function(type){
- if (typeof type === 'string') {
-  console.log(`Poll results are: ${type}`);
- } else {
-  console.log(type);
- }
-
-}
+poll.displayResults = function (type) {
+  if (typeof type === 'string') {
+    console.log(`Poll results are: ${type}`);
+  } else {
+    console.log(type);
+  }
+};
 
 // poll.displayResults('1,2,3')
 // poll.displayResults([1,2,3])
 
 // console.log(poll);
-
-
-
-
