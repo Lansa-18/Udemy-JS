@@ -195,54 +195,54 @@ const addVat = add(0.23);
 
 // CODING CHALLENGE #1 (MY SOLUTION)
 // GIVEN DATA
-// const poll = {
-//   question: 'What is your favorite programming language?',
-//   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+const poll = {
+  question: 'What is your favorite programming language?',
+  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
 
-//   answers: new Array(4).fill(0),
-// };
-// poll.registerNewAnswers = function () {
-//   // displaying the prompt
-//   const registerPrompt = Number(
-//     prompt(
-//       'What is your favorite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++'
-//     )
-//   );
+  answers: new Array(4).fill(0),
+  registerNewAnswers(){
+    // displaying the prompt
+    const registerPrompt = Number(
+      prompt(
+        'What is your favorite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++'
+      )
+    );
+  
+    // looping through the answers array
+    for (const [i, answer] of this.answers.entries()) {
+      if (
+        registerPrompt === 0 ||
+        registerPrompt === 1 ||
+        registerPrompt === 2 ||
+        (registerPrompt === 3 && registerPrompt <= 3)
+      ) {
+        this.answers[registerPrompt]++;
+        // poll.displayResults([5, 2, 3].concat([1,5,3,9,6,1]));
+        poll.displayResults(this.answers);
+        break;
+      } else {
+        alert('Conditions are not satisfied');
+        break;
+      }
+    }
+  };
+};
 
-//   // looping through the answers array
-//   for (const [i, answer] of this.answers.entries()) {
-//     if (
-//       registerPrompt === 0 ||
-//       registerPrompt === 1 ||
-//       registerPrompt === 2 ||
-//       (registerPrompt === 3 && registerPrompt <= 3)
-//     ) {
-//       this.answers[registerPrompt]++;
-//       // poll.displayResults([5, 2, 3].concat([1,5,3,9,6,1]));
-//       poll.displayResults(this.answers);
-//       break;
-//     } else {
-//       alert('Conditions are not satisfied');
-//       break;
-//     }
-//   }
-// };
+const register = poll.registerNewAnswers;
+const registerPoll = register.bind(poll);
 
-// const register = poll.registerNewAnswers;
-// const registerPoll = register.bind(poll);
+// applying the function on the answer poll button
+const pollBtn = document.querySelector('.poll');
+pollBtn.addEventListener('click', registerPoll);
 
-// // applying the function on the answer poll button
-// const pollBtn = document.querySelector('.poll');
-// pollBtn.addEventListener('click', registerPoll);
-
-// // creating a displayResult method that should be called by the registerNewAnswer method.
-// poll.displayResults = function (type) {
-//   if (typeof type === 'string') {
-//     console.log(`Poll results are: ${type}`);
-//   } else {
-//     console.log(type);
-//   }
-// };
+// creating a displayResult method that should be called by the registerNewAnswer method.
+poll.displayResults = function (type) {
+  if (typeof type === 'string') {
+    console.log(`Poll results are: ${type}`);
+  } else {
+    console.log(type);
+  }
+};
 
 // JONAS' SOLUTION.
 // const poll = {
