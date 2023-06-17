@@ -223,6 +223,8 @@ const poll = {
         break;
       }
     }
+
+    // creating a displayResult method that should be called by the registerNewAnswer method.
     this.displayResults();
     this.displayResults('string');
   },
@@ -235,13 +237,9 @@ const poll = {
   }
 };
 
-
-
 // applying the function on the answer poll button
 const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
-
-// creating a displayResult method that should be called by the registerNewAnswer method.
 
 
 // JONAS' SOLUTION.
