@@ -257,13 +257,21 @@ const poll = {
         `${this.question}\n${this.options.join('\n')}\n(Write Option Number)`
       )
     );
-    console.log(answer);
+
     // Registering the answer
     typeof answer === 'number' &&
       answer < this.answers.length &&
       this.answers[answer]++;
     console.log(this.answers);
   },
+
+  displayResults(type = 'array'){
+    if (type === 'array') {
+      console.log(this.answers);
+    } else if (type === 'string'){
+      console.log(`Poll results are ${this.answers.join(', ')}`);
+    }
+  }
 };
 
 document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll))
