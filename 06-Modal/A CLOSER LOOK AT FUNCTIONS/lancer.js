@@ -228,10 +228,8 @@ poll.registerAnswers = function () {
 };
 const register = poll.registerAnswers;
 const registerPoll = register.bind(poll);
-// registerPoll();
 
 const pollBtn = document.querySelector('.poll');
-
 pollBtn.addEventListener('click', registerPoll)
 
 
