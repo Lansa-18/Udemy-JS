@@ -202,7 +202,7 @@ const poll = {
   answers: new Array(4).fill(0),
 };
 
-poll.registerAnswers = function () {
+poll.registerNewAnswers = function () {
   // displaying the prompt
   const registerPrompt = Number(
     prompt(
@@ -225,14 +225,18 @@ poll.registerAnswers = function () {
       break;
     }
   }
+
+  poll.displayResults()
 };
-const register = poll.registerAnswers;
+
+const register = poll.registerNewAnswers;
 const registerPoll = register.bind(poll);
 
 // applying the function on the answer poll button
 const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', registerPoll);
 
+// creating a displayResult method that should be called by the registerNewAnswer method.
 poll.displayResults = function(type){
  if (typeof type === 'string') {
   console.log(`Poll results are: ${type}`);
@@ -242,8 +246,8 @@ poll.displayResults = function(type){
 
 }
 
-poll.displayResults('1,2,3')
-poll.displayResults([1,2,3])
+// poll.displayResults('1,2,3')
+// poll.displayResults([1,2,3])
 
 // console.log(poll);
 
