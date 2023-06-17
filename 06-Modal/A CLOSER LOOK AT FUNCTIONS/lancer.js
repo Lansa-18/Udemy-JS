@@ -234,8 +234,17 @@ const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', registerPoll);
 
 poll.displayResults = function(type){
+  switch (key) {
+    case value:
+      
+      break;
   
+    default:
+      break;
+  }
 }
+
+// console.log(poll);
 
 
 
