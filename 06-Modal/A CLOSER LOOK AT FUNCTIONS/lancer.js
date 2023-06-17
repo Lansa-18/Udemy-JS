@@ -217,16 +217,17 @@ const poll = {
         (registerPrompt === 3 && registerPrompt <= 3)
       ) {
         this.answers[registerPrompt]++;
-        this.displayResults();
         break;
       } else {
         alert('Conditions are not satisfied');
         break;
       }
     }
+    this.displayResults();
+    this.displayResults('string');
   },
   displayResults(type = 'array') {
-    if (typeof type === 'array') {
+    if ( type === 'array') {
       console.log(this.answers);
     } else if (type === 'string') {
       console.log(`Poll results are ${this.answers.join(', ')}`);
