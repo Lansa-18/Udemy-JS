@@ -262,7 +262,9 @@ const poll = {
     typeof answer === 'number' &&
       answer < this.answers.length &&
       this.answers[answer]++;
-    console.log(this.answers);
+      
+    this.displayResults();
+    this.displayResults('string');
   },
 
   displayResults(type = 'array'){
