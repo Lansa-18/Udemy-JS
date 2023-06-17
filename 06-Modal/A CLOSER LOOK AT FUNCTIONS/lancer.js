@@ -262,18 +262,20 @@ const poll = {
     typeof answer === 'number' &&
       answer < this.answers.length &&
       this.answers[answer]++;
-      
+
     this.displayResults();
     this.displayResults('string');
   },
 
-  displayResults(type = 'array'){
+  displayResults(type = 'array') {
     if (type === 'array') {
       console.log(this.answers);
-    } else if (type === 'string'){
+    } else if (type === 'string') {
       console.log(`Poll results are ${this.answers.join(', ')}`);
     }
-  }
+  },
 };
 
-document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll))
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
