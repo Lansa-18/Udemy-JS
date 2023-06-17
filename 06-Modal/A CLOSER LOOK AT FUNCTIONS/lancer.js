@@ -219,7 +219,7 @@ poll.registerNewAnswers = function () {
       (registerPrompt === 3 && registerPrompt <= 3)
     ) {
       this.answers[registerPrompt] = 0 + 1;
-      poll.displayResults([2, 4, 5]);
+      poll.displayResults([5, 2, 3].concat([1,5,3,9,6,1]));
       poll.displayResults(this.answers);
       break;
     } else {
