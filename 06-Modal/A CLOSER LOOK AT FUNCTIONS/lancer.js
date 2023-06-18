@@ -279,4 +279,3 @@ pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
 
 //   poll.displayResults.call({answers: [5,2,3]}, 'string')
 //   poll.displayResults.call({answers: [5,2,3,9,6,1]}, 'string')
-
