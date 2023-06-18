@@ -200,14 +200,14 @@ const poll = {
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
 
   answers: new Array(4).fill(0),
-  registerNewAnswers() {
+  registerNewAnswers(){
     // displaying the prompt
     const registerPrompt = Number(
       prompt(
         'What is your favorite programming language? \n 0: JavaScript \n 1: Python \n 2: Rust \n 3: C++'
       )
     );
-
+  
     // looping through the answers array
     for (const [i, answer] of this.answers.entries()) {
       if (
@@ -229,17 +229,18 @@ const poll = {
     this.displayResults('string');
   },
   displayResults(type = 'array') {
-    if (type === 'array') {
+    if ( type === 'array') {
       console.log(this.answers);
     } else if (type === 'string') {
       console.log(`Poll results are ${this.answers.join(', ')}`);
     }
-  },
+  }
 };
 
 // applying the function on the answer poll button
 const pollBtn = document.querySelector('.poll');
 pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
+
 
 // JONAS' SOLUTION.
 // const poll = {
