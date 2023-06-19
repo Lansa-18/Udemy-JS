@@ -309,3 +309,9 @@ const secureBooking = function(){
   }
 } 
 
+const booker = secureBooking();
+
+let sum = 0
+const sumNum = function(a,b) {
+  return sum += a + b;
+}
