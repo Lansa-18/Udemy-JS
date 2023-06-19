@@ -320,3 +320,4 @@ booker();
 // A closure takes priority before the global scope.
 
 // A closure is the closed over VARIABLE ENVIRONMENT of the execution context in which a function was created, even after the execution context is gone.
+// A closure gives a function access to all the variables of it's PARENT FUNCTION, even after that parent function has returned. The function keeps a reference to it's outer scop, which preserves the scope chain throughout time.
