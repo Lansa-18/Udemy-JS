@@ -296,3 +296,4 @@ runOnce();
 
 // Using arrow functions
 (() => console.log('This will ALSO never run again'))();
+
