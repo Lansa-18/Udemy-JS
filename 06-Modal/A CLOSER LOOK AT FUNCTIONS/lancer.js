@@ -290,6 +290,7 @@ const runOnce = function(){
 
 runOnce();
 
+// The IIFE (IMMEDIATELY INVOKED FUNCTION EXPRESSION) expression. I.E this is how it's written
 (function(){
   console.log('This will never run again');
 })()
