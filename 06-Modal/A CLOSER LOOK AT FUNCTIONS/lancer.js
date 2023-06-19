@@ -282,4 +282,8 @@ pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
 
 
 //////////////////////////// --------------- IMMEDIATELY INVOKED FUNCTION EXPRESSIONS ---------------------- ///////////////////////////////
-//
+// VERY USEFUL WHEN IT COMES TO ASYNC & AWAIT.
+
+const runOnce = function(){
+  console.log('This will never run again');
+}
