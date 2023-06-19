@@ -326,7 +326,8 @@ booker();
 // A closure is like a backpack that a function carries around wherever it goes. This backpack has all the variables that were present in the environment where thr function was created.
 
 // WE DON'T MANUALLY CREATE CLOSURES, IT IS A JAVASCRIPT FEATURE THAT HAPPENS AUTOMATICALLY, AS IT'S AN INTERNAL PROPERTY OF A FUNCTION. IT IS NOT A TANGIBLE JAVASCRIPT OBJECT.
-// HOWEVER WE CAN TAKE A LOOK AT THESE INTERNAL PROPERTIES THROUGH THE CONSOLE using (console.dir)
+// HOWEVER WE CAN TAKE A LOOK AT THESE INTERNAL PROPERTIES THROUGH THE CONSOLE using (console.dir).
+// Double brackets like ([[]]) refers to internal properties in javascript that we cannot explicitly access and make use of in our codes.
 
 // Accessing the internal properties of a closure through the CONSOLE.
 console.dir(booker)
