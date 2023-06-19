@@ -317,4 +317,6 @@ booker();
 
 //  A function has access to the variable environment of the execution context in which it was created.
 // In a closure, the Variable Environment is then attached to a function, exactly as it was at the time and place the function was created.
-// A closure takes priority before the global scope
+// A closure takes priority before the global scope.
+
+// A closure is the closed over VARIABLE ENVIRONMENT of the execution context in which a function was created, even after the execution context is gone.
