@@ -283,17 +283,20 @@ pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
 //////////////////////////// --------------- IMMEDIATELY INVOKED FUNCTION EXPRESSIONS ---------------------- ///////////////////////////////
 // VERY USEFUL WHEN IT COMES TO ASYNC & AWAIT.
 
-const runOnce = function () {
-  console.log('This will never run again');
-};
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
 
-runOnce();
+// runOnce();
 
-// The IIFE (IMMEDIATELY INVOKED FUNCTION EXPRESSION) expression. I.E this is how it's written
-(function () {
-  console.log('This will never run again');
-})();
+// // The IIFE (IMMEDIATELY INVOKED FUNCTION EXPRESSION) expression. I.E this is how it's written
+// (function () {
+//   console.log('This will never run again');
+// })();
 
-// Using arrow functions
-(() => console.log('This will ALSO never run again'))();
+// // Using arrow functions
+// (() => console.log('This will ALSO never run again'))();
+
+
+// CLOSURES
 
