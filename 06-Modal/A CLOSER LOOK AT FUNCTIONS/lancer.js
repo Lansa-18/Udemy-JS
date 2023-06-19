@@ -324,3 +324,6 @@ booker();
 // A closure makes sure that a function doesn't loose connection to variables that existed at the function's birth place.
 
 // A closure is like a backpack that a function carries around wherever it goes. This backpack has all the variables that were present in the environment where thr function was created.
+
+// WE DON'T MANUALLY CREATE CLOSURES, IT IS A JAVASCRIPT FEATURE THAT HAPPENS AUTOMATICALLY, AS IT'S AN INTERNAL PROPERTY OF A FUNCTION. IT IS NOT A TANGIBLE JAVASCRIPT OBJECT.
+// HOWEVER WE CAN TAKE A LOOK AT THESE INTERNAL PROPERTIES THROUGH THE CONSOLE.
