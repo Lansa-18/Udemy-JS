@@ -287,3 +287,9 @@ pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
 const runOnce = function(){
   console.log('This will never run again');
 }
+
+runOnce();
+
+function(){
+  console.log('This will never run again');
+}
