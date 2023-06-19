@@ -280,19 +280,19 @@ pollBtn.addEventListener('click', poll.registerNewAnswers.bind(poll));
 //   poll.displayResults.call({answers: [5,2,3]}, 'string')
 //   poll.displayResults.call({answers: [5,2,3,9,6,1]}, 'string')
 
-
 //////////////////////////// --------------- IMMEDIATELY INVOKED FUNCTION EXPRESSIONS ---------------------- ///////////////////////////////
 // VERY USEFUL WHEN IT COMES TO ASYNC & AWAIT.
 
-const runOnce = function(){
+const runOnce = function () {
   console.log('This will never run again');
-}
+};
 
 runOnce();
 
 // The IIFE (IMMEDIATELY INVOKED FUNCTION EXPRESSION) expression. I.E this is how it's written
-(function(){
+(function () {
   console.log('This will never run again');
 })()
-
-(() => { console.log('This will ALSO never run again') })()
+(() => {
+  console.log('This will ALSO never run again');
+})();
