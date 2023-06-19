@@ -331,3 +331,8 @@ booker();
 
 // Accessing the internal properties of a closure through the CONSOLE.
 console.dir(booker)
+
+let arr = [];
+arr[4] = 'JavaScript';
+console.log(arr.length);
+console.log(arr);
