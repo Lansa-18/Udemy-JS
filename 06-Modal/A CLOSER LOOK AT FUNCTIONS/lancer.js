@@ -367,3 +367,11 @@ const boardPassengers = function(n, wait){
 
   console.log(`Will start boarding in ${wait} seconds`);
 }
+
+setTimeout(function(){
+  console.log('TIMER');
+}, 1000)
+
+setTimeout(function(){
+  console.log('SECOND TIMER');
+}, 1000)
