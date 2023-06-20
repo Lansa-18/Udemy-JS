@@ -334,6 +334,7 @@ const booker = secureBooking();
 
 // MORE CLOSURE EXAMPLES.
 
+// Example 1
 let f;
 const g = function(){
   const a = 23;
@@ -356,5 +357,7 @@ console.dir(f)
 // Re-assigning the (f) function.
 h();
 f();
-
 console.dir(f);
+
+// Example 2
+
