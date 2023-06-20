@@ -342,3 +342,5 @@ const g = function(){
   }
 }
 
+g();
+f()
