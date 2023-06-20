@@ -332,5 +332,13 @@ const booker = secureBooking();
 // Accessing the internal properties of a closure through the CONSOLE.
 // console.dir(booker)
 
+// MORE CLOSURE EXAMPLES.
 
+let f;
+const g = function(){
+  const a = 23;
+  f = function(){
+    console.log(a * 2);
+  }
+}
 
