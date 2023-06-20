@@ -311,9 +311,9 @@ const secureBooking = function(){
 
 const booker = secureBooking();
 
-booker();
-booker();
-booker();
+// booker();
+// booker();
+// booker();
 
 //  A function has access to the variable environment of the execution context in which it was created.
 // In a closure, the Variable Environment is then attached to a function, exactly as it was at the time and place the function was created.
@@ -330,9 +330,7 @@ booker();
 // Double brackets like ([[]]) refers to internal properties in javascript that we cannot explicitly access and make use of in our codes.
 
 // Accessing the internal properties of a closure through the CONSOLE.
-console.dir(booker)
+// console.dir(booker)
 
-let arr = [];
-arr[4] = 'JavaScript';
-console.log(arr.length);
-console.log(arr);
+
+
