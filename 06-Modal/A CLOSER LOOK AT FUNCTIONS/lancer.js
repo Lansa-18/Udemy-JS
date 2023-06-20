@@ -348,5 +348,8 @@ const h = function(){
     console.log(b * 2);
   }
 }
+
 g();
+f();
+h();
 f();
