@@ -351,5 +351,10 @@ const h = function(){
 
 g();
 f();
+console.dir(f)
+
+// Re-assigning the (f) function.
 h();
 f();
+
+console.dir(f);
