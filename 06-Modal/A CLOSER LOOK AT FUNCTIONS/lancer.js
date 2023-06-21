@@ -388,4 +388,9 @@ const h = function(){
 
 (function () {
   const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.body.addEventListener('click', ()=>{
+    console.log('The body has been clicked');
+  })
 })();
