@@ -381,4 +381,4 @@ const boardPassengers = function(n, wait){
 
 // THE CLOSURE HAS PRIORITY OVER THE SCOPE CHAIN.
 const perGroup = 1000
-boardPassengers(240, 3)
+// boardPassengers(240, 3)
