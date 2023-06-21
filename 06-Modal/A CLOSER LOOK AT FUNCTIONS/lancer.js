@@ -348,7 +348,7 @@ const h = function(){
   f = function(){
     console.log(b * 2);
   }
-}
+};
 
 // g();
 // f();
@@ -386,7 +386,6 @@ const h = function(){
 
 // CODING CHALLENGE #2
 
-(function (){
+(function () {
   const header = document.querySelector('h1');
-  header.style.color = 'red';
 })();
