@@ -379,5 +379,6 @@ const boardPassengers = function(n, wait){
 //   console.log('SECOND TIMER');
 // }, 1000)
 
+// THE CLOSURE HAS PRIORITY OVER THE SCOPE CHAIN.
 const perGroup = 1000
 boardPassengers(240, 3)
