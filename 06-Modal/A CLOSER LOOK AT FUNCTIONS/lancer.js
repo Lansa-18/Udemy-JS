@@ -379,5 +379,5 @@ const boardPassengers = function(n, wait){
 //   console.log('SECOND TIMER');
 // }, 1000)
 
-
+const perGroup = 1000
 boardPassengers(240, 3)
