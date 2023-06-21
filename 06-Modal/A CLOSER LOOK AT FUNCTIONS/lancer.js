@@ -379,3 +379,5 @@ setTimeout(function(){
   console.log('SECOND TIMER');
 }, 1000)
 
+
+boardPassengers(180, 3)
