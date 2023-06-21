@@ -391,6 +391,6 @@ const h = function(){
   header.style.color = 'red';
 
   document.body.addEventListener('click', ()=>{
-    console.log('The body has been clicked');
+    header.style.color = 'blue';
   })
 })();
