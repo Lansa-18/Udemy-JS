@@ -386,11 +386,11 @@ const h = function(){
 
 // CODING CHALLENGE #2
 
-(function () {
-  const header = document.querySelector('h1');
-  header.style.color = 'red';
+// (function () {
+//   const header = document.querySelector('h1');
+//   header.style.color = 'red';
 
-  document.body.addEventListener('click', ()=>{
-    header.style.color = 'blue';
-  })
-})();
+//   document.body.addEventListener('click', ()=>{
+//     header.style.color = 'blue';
+//   })
+// })();
