@@ -297,8 +297,6 @@ console.log(okayFoods);
 const dogsSorted = dogs.slice().sort((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
 
-
-
 // TASK 2
 const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
 console.log(
