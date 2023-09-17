@@ -30,97 +30,97 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-//////////// LECTURES ///////////////////////
+/// SELECTING ELEMENTS ///
 
-// SELECTING ELEMENTS //
-// console.log(document.documentElement);
-// console.log(document.head);
-// console.log(document.body);
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
 
-const header = document.querySelector('.header');
-// const allSections = document.querySelectorAll('.section');
-// console.log(allSections);
+btnScrollTo.addEventListener('click', e => {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+  console.log(e.target.getBoundingClientRect());
+  console.log(
+    'Current Scroll (X/Y) position:',
+    window.pageXOffset,
+    pageYOffset
+  );
+  console.log(
+    'Height/Width Viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
 
-// document.getElementById('section-1');
-// const allButtons = document.getElementsByTagName('button'); // This returns an HTML Collection
-// console.log(allButtons);
-// console.log(document.getElementsByClassName('btn'));
+  // Scrolling
+  //   window.scrollTo(
+  //     s1coords.left + window.pageXOffset, // Calculating the absolute position of the element relative to the document i.e the entire page.
+  //     s1coords.top + window.pageYOffset   // Calculating the absolute position of the element relative to the document i.e the entire page.
+  //   );
 
-// CREATING AND INSERTING ELEMENTS (PROGRAMMATICALY)//
-// .insertAdjacentHTML
-// const message = document.createElement('div');
-// message.classList.add('cookie-message');
-// // message.textContent = 'We use cookies for improved functionality and analytics';
-// message.innerHTML =
-//   'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
+  // Old Method of implementing the scroll functionality
+  //   window.scrollTo({
+  //     left: s1coords.left + window.pageXOffset, // Calculating the absolute position of the element relative to the document i.e the entire page.
+  //     top: s1coords.top + window.pageYOffset, // Calculating the absolute position of the element relative to the document i.e the entire page.
+  //     behavior: 'smooth',
+  //   });
 
-// header.append(message);
+  // Newer method of implementing it.
+  section1.scrollIntoView({
+    behavior: 'smooth',
+  });
+});
 
-// If we wanted to insert multiple copies of the same element. what we do is to copy the original copy.
-// header.append(message.cloneNode(true));  // Like this
+/// EVENTS AND EVENT HANDLERS ///
 
-// header.before(message);
-// header.after(message);
+const h1 = document.querySelector('h1');
+const alertH1 = e => {
+  alert('addEventListener: Great! You are reading the heading :D');
+};
 
-// DELETING ELEMENTS //
-// document.querySelector('.btn--close-cookie').addEventListener('click', () => {
-//   message.remove(); // The much newer method of deleting elements
-//   // message.parentElement.removeChild(message); // The previous way of deleting elements
-// });
+// FIRST WAY OF HANDLING AN EVENTS
+h1.addEventListener('mouseenter', alertH1);
 
-//// STYLES, ATTRIBUTES AND CLASSES ////
+setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
-// STYLES //
-// message.style.backgroundColor = '#37383d';
-// message.style.width = '120%';
+// SECOND WAY OF HANDLING AN EVENTS
+// h1.onmouseenter = e => {
+//   alert('onmouseenter: Great! You are reading the heading :D');
+// };
 
-// console.log(message.style.backgroundColor);
-// console.log(getComputedStyle(message).height);
+// THIRD WAY OF HANDLING EVENTS
+// - This method actually involves you handling the event in the HTML markup by passing it as an attribute to the HTML element.
+// - This method was used in the early days and should not be used in mordern day JavaScript Coding.
+//  <h1 onclick="alert('HTML alert')"></h1>
 
-// message.style.height =
-//   Number.parseFloat(getComputedStyle(message).height) + 30 + 'px';
+/// EVENT PROPAGATION: BUBBLING AND CAPTURING ///
 
-// document.documentElement.style.setProperty('--color-primary', 'orangered');  // changing the value of custom css properties.
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
 
-// ATTRIBUTES //
-// const logo = document.querySelector('.nav__logo');
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
 
-// standard attributes
-// console.log(logo.alt);
-// console.log(logo.className);
-// console.log(logo.src);
-// NB: The above would have the attributes created as properties on the LOGO OBJECT in the DOM because it is a standard attribute of the image element.
+const featureLink = document.querySelector('.nav__link');
+const navLinks = document.querySelector('.nav__links');
 
-// logo.alt = 'Beautiful minimalist logo';
+featureLink.addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log('LINK', e.target, e.currentTarget);
 
-// non standard
-// console.log(logo.designer); // the attribute would not get created as a property because it's not a standard attribute
-// console.log(logo.getAttribute('designer'));
-// logo.setAttribute('company', 'Bankist');
+  // Stopping the event propagation
+  // e.stopPropagation();
+});
 
-// console.log(logo.src); // This returns the absolute URL path of the image
-// console.log(logo.getAttribute('src')); // This returns the relative URL of the image.
+navLinks.addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log('CONTAINER', e.target, e.currentTarget);
+});
 
-// const link = document.querySelector('.nav__link--btn');
-// console.log(link.href);
-// console.log(link.getAttribute('href'));
-
-// DATA ATTRIBUTES //
-// - These are special kind of attributes that starts with the word data.
-// - these kind of attributes are stored in the dataset objects
-// - to access such kind of attributes, this is how it's done
-
-// console.log(logo.dataset.versionNumber);
-
-// CLASSES //
-// - These are basically the 4 main class methods you need to know of.
-
-// logo.classList.add('cl');
-// logo.classList.remove('cl');
-// logo.classList.toggle('cl');
-// logo.classList.contains('cl');
-
-// NB: The reason why it is bad to use this method of adding class names is because 
-// - It overides all previously set class names on that particular element
-// - It only allows you to have one class on that particular element as well
-// logo.className = 'lancer';
+// Passing in true as a third parameter in the addEventListener method enables it to handle events in the capturing phase instead of the bubbling phase.
+// document.querySelector('.nav').addEventListener(
+//   'click',
+//   function (e) {
+//     this.style.backgroundColor = randomColor();
+//     console.log('NAV', e.target, e.currentTarget);
+//   },
+//   true
+// );
