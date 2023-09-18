@@ -32,8 +32,8 @@ document.addEventListener('keydown', function (e) {
 
 /// SELECTING ELEMENTS ///
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+// const btnScrollTo = document.querySelector('.btn--scroll-to');
+// const section1 = document.querySelector('#section--1');
 
 btnScrollTo.addEventListener('click', e => {
   const s1coords = section1.getBoundingClientRect();
@@ -71,15 +71,15 @@ btnScrollTo.addEventListener('click', e => {
 
 /// EVENTS AND EVENT HANDLERS ///
 
-const h1 = document.querySelector('h1');
-const alertH1 = e => {
-  alert('addEventListener: Great! You are reading the heading :D');
-};
+// const h1 = document.querySelector('h1');
+// const alertH1 = e => {
+//   alert('addEventListener: Great! You are reading the heading :D');
+// };
 
 // FIRST WAY OF HANDLING AN EVENTS
-h1.addEventListener('mouseenter', alertH1);
+// h1.addEventListener('mouseenter', alertH1);
 
-setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+// setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 // SECOND WAY OF HANDLING AN EVENTS
 // h1.onmouseenter = e => {
@@ -93,27 +93,27 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 /// EVENT PROPAGATION: BUBBLING AND CAPTURING ///
 
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1) + min);
 
-const randomColor = () =>
-  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+// const randomColor = () =>
+//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
 
-const featureLink = document.querySelector('.nav__link');
-const navLinks = document.querySelector('.nav__links');
+// const featureLink = document.querySelector('.nav__link');
+// const navLinks = document.querySelector('.nav__links');
 
-featureLink.addEventListener('click', function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log('LINK', e.target, e.currentTarget);
+// featureLink.addEventListener('click', function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log('LINK', e.target, e.currentTarget);
 
-  // Stopping the event propagation
-  // e.stopPropagation();
-});
+//   // Stopping the event propagation
+//   // e.stopPropagation();
+// });
 
-navLinks.addEventListener('click', function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log('CONTAINER', e.target, e.currentTarget);
-});
+// navLinks.addEventListener('click', function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log('CONTAINER', e.target, e.currentTarget);
+// });
 
 // Passing in true as a third parameter in the addEventListener method enables it to handle events in the capturing phase instead of the bubbling phase.
 // document.querySelector('.nav').addEventListener(
@@ -124,3 +124,37 @@ navLinks.addEventListener('click', function (e) {
 //   },
 //   true
 // );
+
+
+/// DOM TRAVERSING ///
+
+const h1 = document.querySelector('h1');
+
+// going down the DOM: child
+console.log(h1.querySelectorAll('.highlight'));
+console.log(h1.childNodes);
+console.log(h1.children); // Works only for direct children
+h1.firstElementChild.style.color = 'white';
+h1.lastElementChild.style.color = 'orangered';
+
+// going up the DOM: Parents
+console.log(h1.parentNode);
+console.log(h1.parentElement);
+
+h1.closest('.header').style.background = 'var(--gradient-secondary)';
+h1.closest('h1').style.background = 'var(--gradient-primary)';
+
+// going sideways: Siblings
+// - It is important to note that we can only access direct siblings i.e either the previous or the next one.
+console.log(h1.previousElementSibling);
+console.log(h1.nextElementSibling);
+console.log(h1.previousSibling);
+console.log(h1.nextSibling);
+
+// If we need all the siblings, a trick that can be used is to move up to the parent element, then read all the children from there.
+console.log(h1.parentElement.children);
+[...h1.parentElement.children].forEach(el => {
+  if (el !== h1) {
+    el.style.transform = 'scale(0.5)';
+  }
+});
