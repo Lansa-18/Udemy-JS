@@ -1,13 +1,20 @@
 'use strict';
-
-///////////////////////////////////////
-// Modal window
+/// SELECTING ELEMENTS //
 
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+const nav = document.querySelector('nav');
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');  
 
+///////////////////////////// FUNCTIONS /////////////////////////////
+
+// MODAL WINDOW //
 const openModal = function (e) {
   e.preventDefault();
   modal.classList.remove('hidden');
@@ -30,25 +37,21 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-/// SELECTING ELEMENTS ///
-
-// const btnScrollTo = document.querySelector('.btn--scroll-to');
-// const section1 = document.querySelector('#section--1');
-
+// BUTTON SCROLLING //
 btnScrollTo.addEventListener('click', e => {
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
-  console.log(e.target.getBoundingClientRect());
-  console.log(
-    'Current Scroll (X/Y) position:',
-    window.pageXOffset,
-    pageYOffset
-  );
-  console.log(
-    'Height/Width Viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-  );
+  //   const s1coords = section1.getBoundingClientRect();
+  //   console.log(s1coords);
+  //   console.log(e.target.getBoundingClientRect());
+  //   console.log(
+  //     'Current Scroll (X/Y) position:',
+  //     window.pageXOffset,
+  //     pageYOffset
+  //   );
+  //   console.log(
+  //     'Height/Width Viewport',
+  //     document.documentElement.clientHeight,
+  //     document.documentElement.clientWidth
+  //   );
 
   // Scrolling
   //   window.scrollTo(
@@ -69,92 +72,87 @@ btnScrollTo.addEventListener('click', e => {
   });
 });
 
-/// EVENTS AND EVENT HANDLERS ///
+// PAGE NAVIGATION
 
-// const h1 = document.querySelector('h1');
-// const alertH1 = e => {
-//   alert('addEventListener: Great! You are reading the heading :D');
-// };
+// WITHOUT EVENT DELEGATION
+// document.querySelectorAll('.nav__link').forEach((link, i) => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     console.log(`LINK-${i + 1}`);
 
-// FIRST WAY OF HANDLING AN EVENTS
-// h1.addEventListener('mouseenter', alertH1);
+//     // Implementing the smooth scrolling
+//     const id = this.getAttribute('href');
+//     console.log(id);
 
-// setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
-
-// SECOND WAY OF HANDLING AN EVENTS
-// h1.onmouseenter = e => {
-//   alert('onmouseenter: Great! You are reading the heading :D');
-// };
-
-// THIRD WAY OF HANDLING EVENTS
-// - This method actually involves you handling the event in the HTML markup by passing it as an attribute to the HTML element.
-// - This method was used in the early days and should not be used in mordern day JavaScript Coding.
-//  <h1 onclick="alert('HTML alert')"></h1>
-
-/// EVENT PROPAGATION: BUBBLING AND CAPTURING ///
-
-// const randomInt = (min, max) =>
-//   Math.floor(Math.random() * (max - min + 1) + min);
-
-// const randomColor = () =>
-//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-
-// const featureLink = document.querySelector('.nav__link');
-// const navLinks = document.querySelector('.nav__links');
-
-// featureLink.addEventListener('click', function (e) {
-//   this.style.backgroundColor = randomColor();
-//   console.log('LINK', e.target, e.currentTarget);
-
-//   // Stopping the event propagation
-//   // e.stopPropagation();
+//     document.querySelector(id).scrollIntoView({
+//       behavior: 'smooth',
+//     });
+//   });
 // });
 
-// navLinks.addEventListener('click', function (e) {
-//   this.style.backgroundColor = randomColor();
-//   console.log('CONTAINER', e.target, e.currentTarget);
-// });
+// WITH EVENT DELEGATION
+// - Add the event listener to the common parent element
+// - Determine what element originated the event
 
-// Passing in true as a third parameter in the addEventListener method enables it to handle events in the capturing phase instead of the bubbling phase.
-// document.querySelector('.nav').addEventListener(
-//   'click',
-//   function (e) {
-//     this.style.backgroundColor = randomColor();
-//     console.log('NAV', e.target, e.currentTarget);
-//   },
-//   true
-// );
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+});
+
+// Tabbed Component
+tabsContainer.addEventListener('click', e => {
+  e.preventDefault();
+
+  // Getting the Matching strategy
+  const clicked = e.target.closest('.operations__tab');
+
+  // Guard Clause
+  if (!clicked) return;
+
+  // removing active classes
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+
+  // Active tab
+  clicked.classList.add('operations__tab--active');
+
+  // Activating Content Area/Information
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
 
 
-/// DOM TRAVERSING ///
+//   MENU FADE ANIMATION
+nav.addEventListener('mouseover',function(e){
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
 
-const h1 = document.querySelector('h1');
+    siblings.forEach((el => {
+      if (el !== link) el.style.opacity = 0.5;
+    }))
+    logo.style.opacity = 0.5;
+  }
+});
 
-// going down the DOM: child
-console.log(h1.querySelectorAll('.highlight'));
-console.log(h1.childNodes);
-console.log(h1.children); // Works only for direct children
-h1.firstElementChild.style.color = 'white';
-h1.lastElementChild.style.color = 'orangered';
+nav.addEventListener('mouseout',function(e){
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
 
-// going up the DOM: Parents
-console.log(h1.parentNode);
-console.log(h1.parentElement);
-
-h1.closest('.header').style.background = 'var(--gradient-secondary)';
-h1.closest('h1').style.background = 'var(--gradient-primary)';
-
-// going sideways: Siblings
-// - It is important to note that we can only access direct siblings i.e either the previous or the next one.
-console.log(h1.previousElementSibling);
-console.log(h1.nextElementSibling);
-console.log(h1.previousSibling);
-console.log(h1.nextSibling);
-
-// If we need all the siblings, a trick that can be used is to move up to the parent element, then read all the children from there.
-console.log(h1.parentElement.children);
-[...h1.parentElement.children].forEach(el => {
-  if (el !== h1) {
-    el.style.transform = 'scale(0.5)';
+    siblings.forEach((el => {
+      if (el !== link) el.style.opacity = 1;
+    }))
+    logo.style.opacity = 1;
   }
 });
