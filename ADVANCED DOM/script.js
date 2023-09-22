@@ -183,5 +183,5 @@ nav.addEventListener('mouseout', function (e) {
 
 // }
 
-// const observer = new IntersectionObserver(observerCallBack, observerOptions);
-// observer.observe(section1);
+const observer = new IntersectionObserver(observerCallBack, observerOptions);
+observer.observe(section1);
