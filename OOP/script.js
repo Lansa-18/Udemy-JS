@@ -3,11 +3,12 @@
 const Person = function(firstName, birthYear){
     // Instance properties.
     this.firstName = firstName,
-    this.birthYear = birthYear,
-
-    this.calcAge = function(){
-        console.log(2023 - this.birthYear);
-    }
+    this.birthYear = birthYear
+    
+    // Never create a method inside a constructor function.
+    // this.calcAge = function(){
+    //     console.log(2023 - this.birthYear);
+    // }
 }
 
 const lansa = new Person('Lancer', 2004);
