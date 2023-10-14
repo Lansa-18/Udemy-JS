@@ -38,5 +38,5 @@ Person.prototype.calcAge = function(){
     console.log(2023 - this.birthYear);
 }
 
-
+// The reason why we have access to this calcAge function is because of PROTOTYPAL INHERITANCE
 lansa.calcAge();
