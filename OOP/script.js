@@ -39,4 +39,9 @@ Person.prototype.calcAge = function(){
 }
 
 // The reason why we have access to this calcAge function is because of PROTOTYPAL INHERITANCE
+// This is the correct way of applying methods on objects created from constructor functions.
 lansa.calcAge();
+mummyKay.calcAge();
+
+console.log(lansa.__proto__);
+console.log(lansa.__proto__ === Person.prototype);
