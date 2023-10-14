@@ -45,3 +45,8 @@ mummyKay.calcAge();
 
 console.log(lansa.__proto__);
 console.log(lansa.__proto__ === Person.prototype);
+
+console.log(Person.prototype.isPrototypeOf(Person));
+
+Person.prototype.species = 'HomoSapiens';
+console.log(lansa.species, matilda.species);
