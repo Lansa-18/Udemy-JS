@@ -50,3 +50,7 @@ console.log(Person.prototype.isPrototypeOf(Person));
 
 Person.prototype.species = 'HomoSapiens';
 console.log(lansa.species, matilda.species);
+
+// Checking if an object property originally belongs to it
+console.log(lansa.hasOwnProperty('firstName'));
+console.log(lansa.hasOwnProperty('species'));
