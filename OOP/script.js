@@ -4,7 +4,7 @@ const Person = function(firstName, birthYear){
     // Instance properties.
     this.firstName = firstName,
     this.birthYear = birthYear
-    
+
     // Never create a method inside a constructor function.
     // this.calcAge = function(){
     //     console.log(2023 - this.birthYear);
@@ -30,3 +30,13 @@ console.log(mummyKay, matilda, faiq, faiza, aliyah);
 
 console.log(matilda instanceof Person);
 console.log(jonas instanceof Person);
+
+
+// PROTOTYPES
+console.log(Person.prototype);
+Person.prototype.calcAge = function(){
+    console.log(2023 - this.birthYear);
+}
+
+
+lansa.calcAge();
