@@ -86,13 +86,13 @@ const car = function(make, speed){
 
 // 2. Implementing the accelerate method
 car.prototype.accelerate = function(){
-   const accelSpeed = this.speed + 10;
+   const accelSpeed = this.speed += 10;
    console.log(`${accelSpeed}Km/hr`);
 }
 
 // 3. Implementing the brake method.
 car.prototype.brake = function(){
-    const decelSpeed = this.speed - 5;
+    const decelSpeed = this.speed -= 5;
     console.log(`${decelSpeed}Km/hr`);
 }
 
@@ -101,6 +101,7 @@ const car2 = new car('Mercedes', 95)
 console.log(car1, car2);
 
 car1.accelerate()
+car1.brake()
 car1.brake()
 car2.accelerate()
 car2.brake()
