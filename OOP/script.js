@@ -62,5 +62,13 @@ console.log(lansa.__proto__.__proto__.__proto__);
 
 console.dir(Person.prototype.constructor);
 
-const arr = [2,4,6,8,10,12]
+const arr = [1,1,1,2,2,2,4,5,6,10,12,23,23,24,54,45,22,22,4,6,8,10,12]
 console.log(arr.__proto__ === Array.prototype);
+
+console.log(arr.__proto__.__proto__);
+
+Array.prototype.unique = function(){
+   return [...new Set(this)]
+}
+
+console.log(arr.unique());
