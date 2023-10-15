@@ -81,14 +81,20 @@ console.dir(x => x + 1 )
 // 1.
 const car = function(make, speed){
     this.make = make,
-    this.speed = `${speed}km/hr`
+    this.speed = speed
 }
 
 // 2. Implementing the accelerate method
 car.prototype.accelerate = function(){
-   const accelSpeed = Number(this.speed) + 10;
+   const accelSpeed = this.speed + 10;
    console.log(accelSpeed);
+}
+
+car.prototype.brake = function(){
+    
 }
 
 const car1 = new car('BMW', 120)
 console.log(car1);
+
+car1.accelerate()
