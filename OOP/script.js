@@ -54,3 +54,13 @@ console.log(lansa.species, matilda.species);
 // Checking if an object property originally belongs to it
 console.log(lansa.hasOwnProperty('firstName'));
 console.log(lansa.hasOwnProperty('species'));
+
+
+console.log(lansa.__proto__);
+console.log(lansa.__proto__.__proto__);
+console.log(lansa.__proto__.__proto__.__proto__);
+
+console.dir(Person.prototype.constructor);
+
+const arr = [2,4,6,8,10,12]
+console.log(arr.__proto__ === Array.prototype);
