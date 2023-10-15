@@ -77,6 +77,18 @@ const h1 = document.querySelector('h1')
 console.dir(x => x + 1 )
 
 // CODING CHALLENGE 1
-const car = function(make, speed){
 
+// 1.
+const car = function(make, speed){
+    this.make = make,
+    this.speed = `${speed}km/hr`
 }
+
+// 2. Implementing the accelerate method
+car.prototype.accelerate = function(){
+   const accelSpeed = Number(this.speed) + 10;
+   console.log(accelSpeed);
+}
+
+const car1 = new car('BMW', 120)
+console.log(car1);
