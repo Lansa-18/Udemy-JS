@@ -91,10 +91,15 @@ car.prototype.accelerate = function(){
 }
 
 car.prototype.brake = function(){
-    
+    const decelSpeed = this.speed - 5;
+    console.log(decelSpeed);
 }
 
 const car1 = new car('BMW', 120)
-console.log(car1);
+const car2 = new car('Mercedes', 95)
+console.log(car1, car2);
 
 car1.accelerate()
+car1.brake()
+car2.accelerate()
+car2.brake()
