@@ -121,11 +121,25 @@ class PersonCl {
         this.birthYear = birthYear
     }
 
+    // Methods will be added to the .prototype property.
     calcAge(){
         console.log(2023 - this.birthYear);
+    }
+
+    greet(){
+        console.log(`Hey there ${this.firstName}, how are you doing?`);
     }
 }
 
 const tobi = new PersonCl('Taheer', 2003);
 console.log(tobi);
 tobi.calcAge()
+tobi.greet();
+
+console.log(tobi.__proto__ === PersonCl.prototype);
+
+// Manually adding the method to the prototype property.
+// PersonCl.prototype.greet = function (){
+//     console.log(`Hey ${this.firstName}`);
+// }
+// tobi.greet();
