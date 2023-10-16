@@ -120,6 +120,12 @@ class PersonCl {
         this.firstName = firstName,
         this.birthYear = birthYear
     }
+
+    calcAge(){
+        console.log(2023 - this.birthYear);
+    }
 }
 
-const tobi = new PersonCl('Taheer', 2003)
+const tobi = new PersonCl('Taheer', 2003);
+console.log(tobi);
+tobi.calcAge()
