@@ -109,9 +109,17 @@ car2.brake()
 
 // ES6 CLASSES //
 
-// 
+// Class Expressions
+// const PersonCl = class {
+
+// }
 
 // Class declaration
 class PersonCl {
-
+    constructor(firstName, birthYear){
+        this.firstName = firstName,
+        this.birthYear = birthYear
+    }
 }
+
+const tobi = new PersonCl('Taheer', 2003)
