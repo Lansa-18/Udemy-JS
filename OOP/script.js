@@ -143,3 +143,15 @@ console.log(tobi.__proto__ === PersonCl.prototype);
 //     console.log(`Hey ${this.firstName}`);
 // }
 // tobi.greet();
+
+// Some important things to take note of when making use of classes.
+// 1. Classes are not hoisted
+// 2. Classes are first-class citizens
+// 3. Classes are executed in strict mode.
+
+
+// SETTERS AND GETTERS
+const account = {
+    owner: 'Jonas',
+    movements: [200, 300, 400, 230, 119]
+}
