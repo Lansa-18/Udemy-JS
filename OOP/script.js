@@ -105,3 +105,13 @@ car1.brake()
 car1.brake()
 car2.accelerate()
 car2.brake()
+
+
+// ES6 CLASSES //
+
+// 
+
+// Class declaration
+class PersonCl {
+
+}
