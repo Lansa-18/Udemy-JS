@@ -129,12 +129,18 @@ class PersonCl {
     greet(){
         console.log(`Hey there ${this.firstName}, how are you doing?`);
     }
+
+    get age(){
+        return 2023 - this.birthYear;
+    }
 }
 
 const tobi = new PersonCl('Taheer', 2003);
 console.log(tobi);
 tobi.calcAge()
 tobi.greet();
+console.log(tobi.age);
+
 
 console.log(tobi.__proto__ === PersonCl.prototype);
 
@@ -153,5 +159,16 @@ console.log(tobi.__proto__ === PersonCl.prototype);
 // SETTERS AND GETTERS
 const account = {
     owner: 'Jonas',
-    movements: [200, 300, 400, 230, 119]
+    movements: [200, 300, 400, 230, 119],
+
+    get latest() {
+        return this.movements.slice(-1).pop();
+    },
+    set latest(mov){
+        this.movements.push(mov);
+    }
 }
+
+console.log(account.latest);
+account.latest = 450;
+console.log(account.movements);
