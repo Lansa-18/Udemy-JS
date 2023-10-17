@@ -116,8 +116,8 @@ car2.brake()
 
 // Class declaration
 class PersonCl {
-    constructor(firstName, birthYear){
-        this.firstName = firstName,
+    constructor(fullName, birthYear){
+        this.fullName = fullName,
         this.birthYear = birthYear
     }
 
@@ -133,9 +133,15 @@ class PersonCl {
     get age(){
         return 2023 - this.birthYear;
     }
+
+    set fullName(name){
+        console.log(name);
+        if (name.includes(' ')) this.fullName = name;
+        else alert(`${name} is not a full name!`)
+    }
 }
 
-const tobi = new PersonCl('Taheer', 2003);
+const tobi = new PersonCl('Taheer Tobi', 2003);
 console.log(tobi);
 tobi.calcAge()
 tobi.greet();
