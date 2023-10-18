@@ -213,3 +213,7 @@ steven.name = 'Steven';
 steven.birthYear = 2002;
 console.log(steven);
 steven.calcAge()
+
+console.log(steven.__proto__ === PersonProto);
+
+const sarah = Object.create(PersonProto);
