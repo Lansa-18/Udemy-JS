@@ -134,6 +134,7 @@ class PersonCl {
         return 2023 - this.birthYear;
     }
 
+    // Pattern for setting a property that already exists.
     set fullName(name){
         console.log(name);
         if (name.includes(' ')) this._fullName = name;
@@ -150,8 +151,6 @@ console.log(tobi);
 tobi.calcAge()
 tobi.greet();
 console.log(tobi.age);
-
-
 console.log(tobi.__proto__ === PersonCl.prototype);
 
 // Manually adding the method to the prototype property.
@@ -165,6 +164,8 @@ console.log(tobi.__proto__ === PersonCl.prototype);
 // 2. Classes are first-class citizens
 // 3. Classes are executed in strict mode.
 
+
+const tolani = new PersonCl('Baba Coffee', 1990);
 
 // SETTERS AND GETTERS
 const account = {
