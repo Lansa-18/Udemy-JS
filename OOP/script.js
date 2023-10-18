@@ -35,7 +35,7 @@ Person.hey = function(){
     console.log(this);
 }
 
-Person.hey();
+// Person.hey();
 // lansa.hey();
 
 
@@ -127,6 +127,7 @@ class PersonCl {
     (this.fullName = fullName), (this.birthYear = birthYear);
   }
 
+  /// INSTANXE METHIDS ///
   // Methods will be added to the .prototype property.
   calcAge() {
     console.log(2023 - this.birthYear);
@@ -158,6 +159,7 @@ class PersonCl {
   }
 }
 
+// PersonCl.hey()
 
 const tobi = new PersonCl('Taheer Tobi', 2003);
 // console.log(tobi);
@@ -196,4 +198,18 @@ const account = {
 account.latest = 450;
 // console.log(account.movements);
 
-// UNDERSTANDING STATIC METHODS
+
+// Object.Create()
+
+// Creating the object that would serve as the prototype for all the object we'll be creating
+const PersonProto = {
+    calcAge(){
+        console.log(2023 - this.birthYear);
+    }
+}
+
+const steven = Object.create(PersonProto);
+steven.name = 'Steven';
+steven.birthYear = 2002;
+console.log(steven);
+steven.calcAge()
