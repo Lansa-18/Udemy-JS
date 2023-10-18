@@ -205,6 +205,11 @@ account.latest = 450;
 const PersonProto = {
     calcAge(){
         console.log(2023 - this.birthYear);
+    },
+    
+    init(firstName, birthYear){
+        this.firstName = firstName;
+        this.birthYear = birthYear;
     }
 }
 
@@ -217,3 +222,5 @@ steven.calcAge()
 console.log(steven.__proto__ === PersonProto);
 
 const sarah = Object.create(PersonProto);
+sarah.init('Sarah', 2000);
+sarah.calcAge();
