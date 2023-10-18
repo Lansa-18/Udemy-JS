@@ -30,6 +30,15 @@ const jonas = 'jonas';
 // console.log(matilda instanceof Person);
 // console.log(jonas instanceof Person);
 
+Person.hey = function(){
+    console.log('Hey there (❁´◡`❁)(❁´◡`❁)');
+    console.log(this);
+}
+
+Person.hey();
+// lansa.hey();
+
+
 // PROTOTYPES
 // console.log(Person.prototype);
 Person.prototype.calcAge = function () {
@@ -141,7 +150,14 @@ class PersonCl {
   get fullName() {
     return this._fullName;
   }
+
+  // Static Methods
+  static hey(){
+    console.log('Hello there 😊😊');
+    console.log(this);
+  }
 }
+
 
 const tobi = new PersonCl('Taheer Tobi', 2003);
 // console.log(tobi);
