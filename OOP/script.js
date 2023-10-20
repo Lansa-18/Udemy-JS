@@ -229,6 +229,11 @@ sarah.calcAge();
 
 class CarCl{
   constructor(make, speed){
+    (this.make = make), (this.speed = speed)
+  }
 
+  get speedUS(){
+    const speedInMilesPerHour = (this.speed * 1.6);
+    console.log(`${speedInMilesPerHour}mi/h`);
   }
 }
