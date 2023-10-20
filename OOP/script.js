@@ -237,3 +237,7 @@ class CarCl{
     console.log(`${speedInMilesPerHour}mi/h`);
   }
 }
+
+const ford = new CarCl('Ford', 120);
+// console.log(ford);
+ford.speedUS
