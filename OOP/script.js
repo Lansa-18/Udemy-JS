@@ -233,11 +233,17 @@ class CarCl{
   }
 
   get speedUS(){
-    const speedInMilesPerHour = (this.speed * 1.6);
+    const speedInMilesPerHour = (this.speed / 1.6);
     console.log(`${speedInMilesPerHour}mi/h`);
+    return speedInMilesPerHour;
+  }
+
+  set speedUS(curSpeed){
+    curSpeed = ford.speedUS * 1.6;
+    console.log(curSpeed);
   }
 }
 
 const ford = new CarCl('Ford', 120);
 // console.log(ford);
-ford.speedUS
+// ford.speedUS;
