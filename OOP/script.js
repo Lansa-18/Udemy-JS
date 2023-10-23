@@ -341,6 +341,9 @@ EV.prototype.accelerate = function(){
   console.log(`Tesla going at ${this.speed}km/hr, with a charge of ${this.charge * 100}%`);
 }
 
+// Step 4
 tesla.accelerate()
 console.log(tesla);
-// Step 4
+
+tesla.chargeBattery(0.9)
+tesla.accelerate()
