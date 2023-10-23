@@ -286,3 +286,10 @@ Student.prototype.introduce = function(){
 
 const mike = new Student ('Mike', 2003, 'Computer Science');
 mike.introduce()
+mike.calcAge()
+
+console.log(mike.__proto__);
+console.log(mike.__proto__.__proto__);
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
