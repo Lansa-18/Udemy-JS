@@ -272,21 +272,21 @@ const Person = function (firstName, birthYear) {
 };
 
 // creating a class that would be a child class from the parent class.
-const Student = function(firstName, birthYear, course){
-  Person.call(this, firstName, birthYear)
-  this.course = course
-}
+const Student = function (firstName, birthYear, course) {
+  Person.call(this, firstName, birthYear);
+  this.course = course;
+};
 
 // Linking Prototypes
 Student.prototype = Object.create(Person.prototype);
 
-Student.prototype.introduce = function(){
+Student.prototype.introduce = function () {
   console.log(`My name is ${this.firstName} and I study ${this.course}.`);
-}
+};
 
-const mike = new Student ('Mike', 2003, 'Computer Science');
-mike.introduce()
-mike.calcAge()
+const mike = new Student('Mike', 2003, 'Computer Science');
+mike.introduce();
+mike.calcAge();
 
 console.log(mike.__proto__);
 console.log(mike.__proto__.__proto__);
@@ -297,8 +297,6 @@ console.log(mike instanceof Object);
 
 Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
-
-
 
 //////////////////// CODING CHALLENGE NO3  /////////////////////////////////////////////
 
@@ -319,31 +317,33 @@ Car.prototype.brake = function () {
   console.log(`${decelSpeed}Km/hr`);
 };
 
-const EV = function(make, speed, charge){
-  Car.call(this, make, speed)
-  this.charge = charge
-}
+const EV = function (make, speed, charge) {
+  Car.call(this, make, speed);
+  this.charge = charge;
+};
 
-EV.prototype = Object.create(Car.prototype)
+EV.prototype = Object.create(Car.prototype);
 
 // Step 2
-EV.prototype.chargeBattery = function(chargeTo){
-  this.charge = chargeTo
-}
+EV.prototype.chargeBattery = function (chargeTo) {
+  this.charge = chargeTo;
+};
 
-const tesla = new EV ('Tesla', 120, 0.23)
+const tesla = new EV('Tesla', 120, 0.23);
 console.log(tesla);
 
 // Step 3
-EV.prototype.accelerate = function(){
-  this.speed += 20
-  this.charge -= 0.01
-  console.log(`Tesla going at ${this.speed}km/hr, with a charge of ${this.charge * 100}%`);
-}
+EV.prototype.accelerate = function () {
+  this.speed += 20;
+  this.charge -= 0.01;
+  console.log(
+    `Tesla going at ${this.speed}km/hr, with a charge of ${this.charge * 100}%`
+  );
+};
 
 // Step 4 - (EXPERIMENTING!!!)
-tesla.accelerate()
+tesla.accelerate();
 console.log(tesla);
 
-tesla.chargeBattery(0.9)
-tesla.accelerate()
+tesla.chargeBattery(0.9);
+tesla.accelerate();
