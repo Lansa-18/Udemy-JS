@@ -1,16 +1,16 @@
 'use strict';
 
-const Person = function (firstName, birthYear) {
-  // Instance properties.
-  (this.firstName = firstName), (this.birthYear = birthYear);
+// const Person = function (firstName, birthYear) {
+//   // Instance properties.
+//   (this.firstName = firstName), (this.birthYear = birthYear);
 
-  // Never create a method inside a constructor function.
-  // this.calcAge = function(){
-  //     console.log(2023 - this.birthYear);
-  // }
-};
+//   // Never create a method inside a constructor function.
+//   // this.calcAge = function(){
+//   //     console.log(2023 - this.birthYear);
+//   // }
+// };
 
-const lansa = new Person('Lancer', 2004);
+// const lansa = new Person('Lancer', 2004);
 // console.log(lansa);
 // when a function is called with the (new) keyworrd, 4 things happens behind the scene.
 // 1. A new {} is created
@@ -18,31 +18,31 @@ const lansa = new Person('Lancer', 2004);
 // 3. {} linked to prototype
 // 4. function automatically returns the {}
 
-const mummyKay = new Person('Shaakirah', 1973);
-const faiq = new Person('Faiq', 2005);
-const faiza = new Person('Faiza', 2006);
-const aliyah = new Person('Aliyah', 2017);
-const matilda = new Person('Mathilda', 2017);
-const jonas = 'jonas';
+// const mummyKay = new Person('Shaakirah', 1973);
+// const faiq = new Person('Faiq', 2005);
+// const faiza = new Person('Faiza', 2006);
+// const aliyah = new Person('Aliyah', 2017);
+// const matilda = new Person('Mathilda', 2017);
+// const jonas = 'jonas';
 
 // console.log(mummyKay, matilda, faiq, faiza, aliyah);
 
 // console.log(matilda instanceof Person);
 // console.log(jonas instanceof Person);
 
-Person.hey = function () {
-  // console.log('Hey there (❁´◡`❁)(❁´◡`❁)');
-  // console.log(this);
-};
+// Person.hey = function () {
+//   // console.log('Hey there (❁´◡`❁)(❁´◡`❁)');
+//   // console.log(this);
+// };
 
 // Person.hey();
 // lansa.hey();
 
 // PROTOTYPES
 // console.log(Person.prototype);
-Person.prototype.calcAge = function () {
-  // console.log(2023 - this.birthYear);
-};
+// Person.prototype.calcAge = function () {
+//   // console.log(2023 - this.birthYear);
+// };
 
 // The reason why we have access to this calcAge function is because of PROTOTYPAL INHERITANCE
 // This is the correct way of applying methods on objects created from constructor functions.
@@ -54,7 +54,7 @@ Person.prototype.calcAge = function () {
 
 // console.log(Person.prototype.isPrototypeOf(Person));
 
-Person.prototype.species = 'HomoSapiens';
+// Person.prototype.species = 'HomoSapiens';
 // console.log(lansa.species, matilda.species);
 
 // Checking if an object property originally belongs to it
@@ -87,24 +87,24 @@ const h1 = document.querySelector('h1');
 // CODING CHALLENGE 1
 
 // 1.
-const car = function (make, speed) {
-  (this.make = make), (this.speed = speed);
-};
+// const car = function (make, speed) {
+//   (this.make = make), (this.speed = speed);
+// };
 
-// 2. Implementing the accelerate method
-car.prototype.accelerate = function () {
-  const accelSpeed = (this.speed += 10);
-  // console.log(`${accelSpeed}Km/hr`);
-};
+// // 2. Implementing the accelerate method
+// car.prototype.accelerate = function () {
+//   const accelSpeed = (this.speed += 10);
+//   // console.log(`${accelSpeed}Km/hr`);
+// };
 
-// 3. Implementing the brake method.
-car.prototype.brake = function () {
-  const decelSpeed = (this.speed -= 5);
-  // console.log(`${decelSpeed}Km/hr`);
-};
+// // 3. Implementing the brake method.
+// car.prototype.brake = function () {
+//   const decelSpeed = (this.speed -= 5);
+//   // console.log(`${decelSpeed}Km/hr`);
+// };
 
-const car1 = new car('BMW', 120);
-const car2 = new car('Mercedes', 95);
+// const car1 = new car('BMW', 120);
+// const car2 = new car('Mercedes', 95);
 // console.log(car1, car2);
 
 // car1.accelerate()
@@ -259,3 +259,15 @@ ford.decelerate2();
 
 ford.speedUS = 50;
 // console.log(ford);
+
+
+// INHERITANCE BETWEEN CLASSES
+
+const Person = function (firstName, birthYear) {
+  // Instance properties.
+  (this.firstName = firstName), (this.birthYear = birthYear);
+
+  Person.prototype.calcAge = function(){
+    console.log(2023 - this.birthYear);
+  }
+};
