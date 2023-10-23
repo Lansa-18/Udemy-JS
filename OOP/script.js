@@ -232,6 +232,10 @@ class CarCl{
     (this.make = make), (this.speed = speed)
   }
 
+  accelerate2(){
+    this.speed += 10
+  }
+
   get speedUS(){
     const speedInMilesPerHour = (this.speed / 1.6);
     console.log(`${speedInMilesPerHour}mi/h`);
