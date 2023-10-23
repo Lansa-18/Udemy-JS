@@ -273,10 +273,11 @@ const Person = function (firstName, birthYear) {
 
 // creating a class that would be a child class from the parent class.
 const Student = function(firstName, birthYear, course){
-  this.firstName = firstName,
-  this.birthYear = birthYear,
+  Person.call(this, firstName, birthYear)
   this.course = course
 }
+
+
 
 Student.prototype.introduce = function(){
   console.log(`My name is ${this.firstName} and I study ${this.course}.`);
