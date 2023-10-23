@@ -243,9 +243,7 @@ class CarCl{
   }
 
   get speedUS(){
-    const speedInMilesPerHour = (this.speed / 1.6);
-    console.log(`${speedInMilesPerHour}mi/h`);
-    return speedInMilesPerHour;
+    return (this.speed / 1.6);
   }
 
   set speedUS(curSpeed){
