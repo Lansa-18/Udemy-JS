@@ -243,12 +243,11 @@ class CarCl{
   }
 
   get speedUS(){
-    return (this.speed / 1.6);
+    return (`${this.speed / 1.6}mi/hr`);
   }
 
   set speedUS(curSpeed){
-    curSpeed = ford.speedUS * 1.6;
-    console.log(`${curSpeed}km/hr`);
+    this.speed = curSpeed * 1.6;
   }
 }
 
@@ -260,5 +259,6 @@ console.log(ford.speedUS);
 ford.accelerate2()
 ford.decelerate2()
 
-ford.speedUS = ''
+ford.speedUS = 50
+console.log(ford);
 
