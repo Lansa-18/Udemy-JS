@@ -338,7 +338,7 @@ EV.prototype.accelerate = function () {
   this.speed += 20;
   this.charge -= 0.01;
   console.log(
-    `Tesla going at ${this.speed}km/hr, with a charge of ${this.charge * 100}%`
+    `Tesla going at ${this.speed}km/hr, with a charge of ${Math.round(this.charge * 100)}%`
   );
 };
 
@@ -348,4 +348,35 @@ tesla.accelerate();
 console.log(tesla);
 
 tesla.chargeBattery(0.9);
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
+tesla.accelerate();
 tesla.accelerate();
