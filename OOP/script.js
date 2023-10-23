@@ -260,14 +260,27 @@ ford.decelerate2();
 ford.speedUS = 50;
 // console.log(ford);
 
-
 // INHERITANCE BETWEEN CLASSES
 
 const Person = function (firstName, birthYear) {
   // Instance properties.
   (this.firstName = firstName), (this.birthYear = birthYear);
 
-  Person.prototype.calcAge = function(){
+  Person.prototype.calcAge = function () {
     console.log(2023 - this.birthYear);
-  }
+  };
 };
+
+// creating a class that would be a child class from the parent class.
+const Student = function(firstName, birthYear, course){
+  this.firstName = firstName,
+  this.birthYear = birthYear,
+  this.course = course
+}
+
+Student.prototype.introduce = function(){
+  console.log(`My name is ${this.firstName} and I study ${this.course}.`);
+}
+
+const mike = new Student ('Mike', 2003, 'Computer Science');
+mike.introduce()
