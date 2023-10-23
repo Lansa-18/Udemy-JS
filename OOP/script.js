@@ -302,6 +302,7 @@ console.dir(Student.prototype.constructor);
 
 //////////////////// CODING CHALLENGE NO3  /////////////////////////////////////////////
 
+// Step 1
 const Car = function (make, speed) {
   (this.make = make), (this.speed = speed);
 };
@@ -309,10 +310,24 @@ const Car = function (make, speed) {
 const EV = function(make, speed, charge){
   Car.call(this, make, speed)
   this.charge = charge
+  // this.charge = `${charge * 100}%`
 }
 
 EV.prototype = Object.create(Car.prototype)
 
+// Step 2
 EV.prototype.chargeBattery = function(chargeTo){
-
+  this.charge = chargeTo
 }
+
+const tesla = new EV ('Tesla', 120, 0.23)
+console.log(tesla);
+
+// Step 3
+EV.prototype.accelerate = function(){
+  this.speed += 20
+  this.charge -= 0.01
+  console.log(`Tesla going at ${this.speed}km/hr, with a charge of ${this.charge * 100}%`);
+}
+
+tesla.accelerate()
