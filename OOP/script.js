@@ -307,10 +307,21 @@ const Car = function (make, speed) {
   (this.make = make), (this.speed = speed);
 };
 
+// 2. Implementing the accelerate method
+Car.prototype.accelerate = function () {
+  const accelSpeed = (this.speed += 10);
+  console.log(`${accelSpeed}Km/hr`);
+};
+
+// 3. Implementing the brake method.
+Car.prototype.brake = function () {
+  const decelSpeed = (this.speed -= 5);
+  console.log(`${decelSpeed}Km/hr`);
+};
+
 const EV = function(make, speed, charge){
   Car.call(this, make, speed)
   this.charge = charge
-  // this.charge = `${charge * 100}%`
 }
 
 EV.prototype = Object.create(Car.prototype)
@@ -331,3 +342,5 @@ EV.prototype.accelerate = function(){
 }
 
 tesla.accelerate()
+console.log(tesla);
+// Step 4
