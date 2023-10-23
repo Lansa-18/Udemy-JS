@@ -255,13 +255,10 @@ class CarCl{
 const ford = new CarCl('Ford', 120);
 // console.log(ford);
 
+console.log(ford.speedUS);
+
 ford.accelerate2()
-ford.accelerate2()
-ford.accelerate2()
-ford.decelerate2()
-ford.decelerate2()
 ford.decelerate2()
 
-ford.speedUS;
 ford.speedUS = ''
 
