@@ -30,14 +30,13 @@ const jonas = 'jonas';
 // console.log(matilda instanceof Person);
 // console.log(jonas instanceof Person);
 
-Person.hey = function(){
-    console.log('Hey there (❁´◡`❁)(❁´◡`❁)');
-    console.log(this);
-}
+Person.hey = function () {
+  console.log('Hey there (❁´◡`❁)(❁´◡`❁)');
+  console.log(this);
+};
 
 // Person.hey();
 // lansa.hey();
-
 
 // PROTOTYPES
 // console.log(Person.prototype);
@@ -153,7 +152,7 @@ class PersonCl {
   }
 
   // Static Methods
-  static hey(){
+  static hey() {
     console.log('Hello there 😊😊');
     console.log(this);
   }
@@ -198,26 +197,25 @@ const account = {
 account.latest = 450;
 // console.log(account.movements);
 
-
 // Object.Create()
 
 // Creating the object that would serve as the prototype for all the object we'll be creating
 const PersonProto = {
-    calcAge(){
-        console.log(2023 - this.birthYear);
-    },
-    
-    init(firstName, birthYear){
-        this.firstName = firstName;
-        this.birthYear = birthYear;
-    }
-}
+  calcAge() {
+    console.log(2023 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
 
 const steven = Object.create(PersonProto);
 steven.name = 'Steven';
 steven.birthYear = 2002;
 console.log(steven);
-steven.calcAge()
+steven.calcAge();
 
 console.log(steven.__proto__ === PersonProto);
 
@@ -227,26 +225,26 @@ sarah.calcAge();
 
 // CODING CHALLENGE NO2
 
-class CarCl{
-  constructor(make, speed){
-    (this.make = make), (this.speed = speed)
+class CarCl {
+  constructor(make, speed) {
+    (this.make = make), (this.speed = speed);
   }
 
-  accelerate2(){
+  accelerate2() {
     const accelSpeed2 = (this.speed += 10);
-    console.log(`${accelSpeed2}km/hr`)
+    console.log(`${accelSpeed2}km/hr`);
   }
 
-  decelerate2(){
-    const decelSpeed2 = (this.speed -= 5)
-    console.log(`${decelSpeed2}km/hr`)
+  decelerate2() {
+    const decelSpeed2 = (this.speed -= 5);
+    console.log(`${decelSpeed2}km/hr`);
   }
 
-  get speedUS(){
-    return (`${this.speed / 1.6}mi/hr`);
+  get speedUS() {
+    return `${this.speed / 1.6}mi/hr`;
   }
 
-  set speedUS(curSpeed){
+  set speedUS(curSpeed) {
     this.speed = curSpeed * 1.6;
   }
 }
@@ -256,9 +254,8 @@ const ford = new CarCl('Ford', 120);
 
 console.log(ford.speedUS);
 
-ford.accelerate2()
-ford.decelerate2()
+ford.accelerate2();
+ford.decelerate2();
 
-ford.speedUS = 50
+ford.speedUS = 50;
 console.log(ford);
-
