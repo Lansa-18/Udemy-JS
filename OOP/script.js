@@ -260,7 +260,7 @@ ford.decelerate2();
 ford.speedUS = 50;
 // console.log(ford);
 
-// INHERITANCE BETWEEN CLASSES
+//////////////////////////////////////////// INHERITANCE BETWEEN CLASSES /////////////////////////////////////
 
 const Person = function (firstName, birthYear) {
   // Instance properties.
@@ -291,5 +291,13 @@ mike.calcAge()
 console.log(mike.__proto__);
 console.log(mike.__proto__.__proto__);
 
+console.log(mike instanceof Student);
+console.log(mike instanceof Person);
+console.log(mike instanceof Object);
+
 Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
+
+
+
+//////////////////// CODING CHALLENGE NO3  /////////////////////////////////////////////
