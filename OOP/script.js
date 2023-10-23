@@ -234,12 +234,12 @@ class CarCl{
 
   accelerate2(){
     const accelSpeed2 = (this.speed += 10);
-    console.log(accelSpeed2)
+    console.log(`${accelSpeed2}km/hr`)
   }
 
   decelerate2(){
     const decelSpeed2 = (this.speed -= 5)
-    console.log(decelSpeed2);
+    console.log(`${decelSpeed2}km/hr`)
   }
 
   get speedUS(){
@@ -250,14 +250,12 @@ class CarCl{
 
   set speedUS(curSpeed){
     curSpeed = ford.speedUS * 1.6;
-    console.log(curSpeed);
+    console.log(`${curSpeed}km/hr`);
   }
 }
 
 const ford = new CarCl('Ford', 120);
 // console.log(ford);
-// ford.speedUS;
-
 
 ford.accelerate2()
 ford.accelerate2()
@@ -265,3 +263,7 @@ ford.accelerate2()
 ford.decelerate2()
 ford.decelerate2()
 ford.decelerate2()
+
+ford.speedUS;
+ford.speedUS = ''
+
