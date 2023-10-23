@@ -233,7 +233,8 @@ class CarCl{
   }
 
   accelerate2(){
-    this.speed += 10
+    const accelSpeed2 = (this.speed += 10);
+    console.log(accelSpeed2)
   }
 
   get speedUS(){
@@ -251,4 +252,8 @@ class CarCl{
 const ford = new CarCl('Ford', 120);
 // console.log(ford);
 // ford.speedUS;
-ford.speedUS = '';
+ford.accelerate2()
+ford.accelerate2()
+ford.accelerate2()
+ford.accelerate2()
+ford.accelerate2()
