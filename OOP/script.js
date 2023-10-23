@@ -322,6 +322,7 @@ const EV = function (make, speed, charge) {
   this.charge = charge;
 };
 
+// Linking the Prototype Properties
 EV.prototype = Object.create(Car.prototype);
 
 // Step 2
@@ -342,6 +343,7 @@ EV.prototype.accelerate = function () {
 };
 
 // Step 4 - (EXPERIMENTING!!!)
+EV.prototype.constructor = EV;
 tesla.accelerate();
 console.log(tesla);
 
