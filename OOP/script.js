@@ -31,8 +31,8 @@ const jonas = 'jonas';
 // console.log(jonas instanceof Person);
 
 Person.hey = function () {
-  console.log('Hey there (❁´◡`❁)(❁´◡`❁)');
-  console.log(this);
+  // console.log('Hey there (❁´◡`❁)(❁´◡`❁)');
+  // console.log(this);
 };
 
 // Person.hey();
@@ -41,7 +41,7 @@ Person.hey = function () {
 // PROTOTYPES
 // console.log(Person.prototype);
 Person.prototype.calcAge = function () {
-  console.log(2023 - this.birthYear);
+  // console.log(2023 - this.birthYear);
 };
 
 // The reason why we have access to this calcAge function is because of PROTOTYPAL INHERITANCE
@@ -94,13 +94,13 @@ const car = function (make, speed) {
 // 2. Implementing the accelerate method
 car.prototype.accelerate = function () {
   const accelSpeed = (this.speed += 10);
-  console.log(`${accelSpeed}Km/hr`);
+  // console.log(`${accelSpeed}Km/hr`);
 };
 
 // 3. Implementing the brake method.
 car.prototype.brake = function () {
   const decelSpeed = (this.speed -= 5);
-  console.log(`${decelSpeed}Km/hr`);
+  // console.log(`${decelSpeed}Km/hr`);
 };
 
 const car1 = new car('BMW', 120);
@@ -129,11 +129,11 @@ class PersonCl {
   /// INSTANXE METHIDS ///
   // Methods will be added to the .prototype property.
   calcAge() {
-    console.log(2023 - this.birthYear);
+    // console.log(2023 - this.birthYear);
   }
 
   greet() {
-    console.log(`Hey there ${this.firstName}, how are you doing?`);
+    // console.log(`Hey there ${this.firstName}, how are you doing?`);
   }
 
   get age() {
@@ -153,8 +153,8 @@ class PersonCl {
 
   // Static Methods
   static hey() {
-    console.log('Hello there 😊😊');
-    console.log(this);
+    // console.log('Hello there 😊😊');
+    // console.log(this);
   }
 }
 
@@ -202,7 +202,7 @@ account.latest = 450;
 // Creating the object that would serve as the prototype for all the object we'll be creating
 const PersonProto = {
   calcAge() {
-    console.log(2023 - this.birthYear);
+    // console.log(2023 - this.birthYear);
   },
 
   init(firstName, birthYear) {
@@ -214,10 +214,10 @@ const PersonProto = {
 const steven = Object.create(PersonProto);
 steven.name = 'Steven';
 steven.birthYear = 2002;
-console.log(steven);
+// console.log(steven);
 steven.calcAge();
 
-console.log(steven.__proto__ === PersonProto);
+// console.log(steven.__proto__ === PersonProto);
 
 const sarah = Object.create(PersonProto);
 sarah.init('Sarah', 2000);
@@ -232,12 +232,12 @@ class CarCl {
 
   accelerate2() {
     const accelSpeed2 = (this.speed += 10);
-    console.log(`${accelSpeed2}km/hr`);
+    // console.log(`${accelSpeed2}km/hr`);
   }
 
   decelerate2() {
     const decelSpeed2 = (this.speed -= 5);
-    console.log(`${decelSpeed2}km/hr`);
+    // console.log(`${decelSpeed2}km/hr`);
   }
 
   get speedUS() {
@@ -252,10 +252,10 @@ class CarCl {
 const ford = new CarCl('Ford', 120);
 // console.log(ford);
 
-console.log(ford.speedUS);
+// console.log(ford.speedUS);
 
 ford.accelerate2();
 ford.decelerate2();
 
 ford.speedUS = 50;
-console.log(ford);
+// console.log(ford);
