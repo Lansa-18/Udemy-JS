@@ -160,7 +160,7 @@ const h1 = document.querySelector('h1');
 
 // PersonCl.hey()
 
-const tobi = new PersonCl('Taheer Tobi', 2003);
+// const tobi = new PersonCl('Taheer Tobi', 2003);
 // console.log(tobi);
 // tobi.calcAge()
 // tobi.greet();
@@ -178,7 +178,7 @@ const tobi = new PersonCl('Taheer Tobi', 2003);
 // 2. Classes are first-class citizens
 // 3. Classes are executed in strict mode.
 
-const tolani = new PersonCl('Baba Coffee', 1990);
+// const tolani = new PersonCl('Baba Coffee', 1990);
 
 // SETTERS AND GETTERS
 const account = {
@@ -389,7 +389,7 @@ class PersonCl {
     (this.fullName = fullName), (this.birthYear = birthYear);
   }
 
-  /// INSTANXE METHIDS ///
+  /// INSTANCE METHODS ///
   // Methods will be added to the .prototype property.
   calcAge() {
     // console.log(2023 - this.birthYear);
