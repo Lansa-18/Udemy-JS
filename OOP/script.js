@@ -392,7 +392,7 @@ class PersonCl {
   /// INSTANCE METHODS ///
   // Methods will be added to the .prototype property.
   calcAge() {
-    // console.log(2023 - this.birthYear);
+    console.log(2023 - this.birthYear);
   }
 
   greet() {
@@ -427,7 +427,16 @@ class StudentCl extends PersonCl{
     super(fullName, birthYear);
     this.course = course;
   }
+
+  introduce(){
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+
+  calcAge(){
+    console.log(`I am ${2023 - this.birthYear} years old, but as a student, i feel more like I'm ${2023 - this.birthYear + 10} years`);
+  }
 }
 
 const martha = new StudentCl('Martha Jones', 1989, 'Computer Science')
-// const martha = new StudentCl('Martha Jones', 1989)
+martha.introduce()
+martha.calcAge()
