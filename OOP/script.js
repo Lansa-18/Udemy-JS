@@ -420,3 +420,7 @@ class PersonCl {
     // console.log(this);
   }
 }
+
+class StudentCl extends PersonCl{
+
+}
