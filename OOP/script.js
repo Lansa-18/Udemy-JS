@@ -121,42 +121,42 @@ const h1 = document.querySelector('h1');
 // }
 
 // Class declaration
-class PersonCl {
-  constructor(fullName, birthYear) {
-    (this.fullName = fullName), (this.birthYear = birthYear);
-  }
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     (this.fullName = fullName), (this.birthYear = birthYear);
+//   }
 
-  /// INSTANXE METHIDS ///
-  // Methods will be added to the .prototype property.
-  calcAge() {
-    // console.log(2023 - this.birthYear);
-  }
+//   /// INSTANXE METHIDS ///
+//   // Methods will be added to the .prototype property.
+//   calcAge() {
+//     // console.log(2023 - this.birthYear);
+//   }
 
-  greet() {
-    // console.log(`Hey there ${this.firstName}, how are you doing?`);
-  }
+//   greet() {
+//     // console.log(`Hey there ${this.firstName}, how are you doing?`);
+//   }
 
-  get age() {
-    return 2023 - this.birthYear;
-  }
+//   get age() {
+//     return 2023 - this.birthYear;
+//   }
 
-  // Pattern for setting a property that already exists.
-  set fullName(name) {
-    // console.log(name);
-    if (name.includes(' ')) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
+//   // Pattern for setting a property that already exists.
+//   set fullName(name) {
+//     // console.log(name);
+//     if (name.includes(' ')) this._fullName = name;
+//     else alert(`${name} is not a full name!`);
+//   }
 
-  get fullName() {
-    return this._fullName;
-  }
+//   get fullName() {
+//     return this._fullName;
+//   }
 
-  // Static Methods
-  static hey() {
-    // console.log('Hello there 😊😊');
-    // console.log(this);
-  }
-}
+//   // Static Methods
+//   static hey() {
+//     // console.log('Hello there 😊😊');
+//     // console.log(this);
+//   }
+// }
 
 // PersonCl.hey()
 
@@ -262,121 +262,161 @@ ford.speedUS = 50;
 
 //////////////////////////////////////////// INHERITANCE BETWEEN CLASSES /////////////////////////////////////
 
-const Person = function (firstName, birthYear) {
-  // Instance properties.
-  (this.firstName = firstName), (this.birthYear = birthYear);
+// const Person = function (firstName, birthYear) {
+//   // Instance properties.
+//   (this.firstName = firstName), (this.birthYear = birthYear);
 
-  Person.prototype.calcAge = function () {
-    console.log(2023 - this.birthYear);
-  };
-};
+//   Person.prototype.calcAge = function () {
+//     console.log(2023 - this.birthYear);
+//   };
+// };
 
-// creating a class that would be a child class from the parent class.
-const Student = function (firstName, birthYear, course) {
-  Person.call(this, firstName, birthYear);
-  this.course = course;
-};
+// // creating a class that would be a child class from the parent class.
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear);
+//   this.course = course;
+// };
 
 // Linking Prototypes
-Student.prototype = Object.create(Person.prototype);
+// Student.prototype = Object.create(Person.prototype);
 
-Student.prototype.introduce = function () {
-  console.log(`My name is ${this.firstName} and I study ${this.course}.`);
-};
+// Student.prototype.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}.`);
+// };
 
-const mike = new Student('Mike', 2003, 'Computer Science');
-mike.introduce();
-mike.calcAge();
+// const mike = new Student('Mike', 2003, 'Computer Science');
+// mike.introduce();
+// mike.calcAge();
 
-console.log(mike.__proto__);
-console.log(mike.__proto__.__proto__);
+// console.log(mike.__proto__);
+// console.log(mike.__proto__.__proto__);
 
-console.log(mike instanceof Student);
-console.log(mike instanceof Person);
-console.log(mike instanceof Object);
+// console.log(mike instanceof Student);
+// console.log(mike instanceof Person);
+// console.log(mike instanceof Object);
 
-Student.prototype.constructor = Student;
-console.dir(Student.prototype.constructor);
+// Student.prototype.constructor = Student;
+// console.dir(Student.prototype.constructor);
 
 //////////////////// CODING CHALLENGE NO3  /////////////////////////////////////////////
 
 // Step 1
-const Car = function (make, speed) {
-  (this.make = make), (this.speed = speed);
-};
+// const Car = function (make, speed) {
+//   (this.make = make), (this.speed = speed);
+// };
 
 // 2. Implementing the accelerate method
-Car.prototype.accelerate = function () {
-  const accelSpeed = (this.speed += 10);
-  console.log(`${accelSpeed}Km/hr`);
-};
+// Car.prototype.accelerate = function () {
+//   const accelSpeed = (this.speed += 10);
+//   console.log(`${accelSpeed}Km/hr`);
+// };
 
 // 3. Implementing the brake method.
-Car.prototype.brake = function () {
-  const decelSpeed = (this.speed -= 5);
-  console.log(`${decelSpeed}Km/hr`);
-};
+// Car.prototype.brake = function () {
+//   const decelSpeed = (this.speed -= 5);
+//   console.log(`${decelSpeed}Km/hr`);
+// };
 
-const EV = function (make, speed, charge) {
-  Car.call(this, make, speed);
-  this.charge = charge;
-};
+// const EV = function (make, speed, charge) {
+//   Car.call(this, make, speed);
+//   this.charge = charge;
+// };
 
 // Linking the Prototype Properties
-EV.prototype = Object.create(Car.prototype);
+// EV.prototype = Object.create(Car.prototype);
 
 // Step 2
-EV.prototype.chargeBattery = function (chargeTo) {
-  this.charge = chargeTo;
-};
+// EV.prototype.chargeBattery = function (chargeTo) {
+//   this.charge = chargeTo;
+// };
 
-const tesla = new EV('Tesla', 120, 0.23);
-console.log(tesla);
+// const tesla = new EV('Tesla', 120, 0.23);
+// console.log(tesla);
 
 // Step 3
-EV.prototype.accelerate = function () {
-  this.speed += 20;
-  this.charge -= 0.01;
-  console.log(
-    `Tesla going at ${this.speed}km/hr, with a charge of ${Math.round(this.charge * 100)}%`
-  );
-};
+// EV.prototype.accelerate = function () {
+//   this.speed += 20;
+//   this.charge -= 0.01;
+//   console.log(
+//     `Tesla going at ${this.speed}km/hr, with a charge of ${Math.round(this.charge * 100)}%`
+//   );
+// };
 
 // Step 4 - (EXPERIMENTING!!!)
-EV.prototype.constructor = EV;
-tesla.accelerate();
-console.log(tesla);
+// EV.prototype.constructor = EV;
+// tesla.accelerate();
+// console.log(tesla);
 
-tesla.chargeBattery(0.9);
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
-tesla.accelerate();
+// tesla.chargeBattery(0.9);
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+// tesla.accelerate();
+
+
+////////////////// INHERITANCE BETWEEN CLASSES : ES6 CLASSES ///////////////////////////
+
+class PersonCl {
+  constructor(fullName, birthYear) {
+    (this.fullName = fullName), (this.birthYear = birthYear);
+  }
+
+  /// INSTANXE METHIDS ///
+  // Methods will be added to the .prototype property.
+  calcAge() {
+    // console.log(2023 - this.birthYear);
+  }
+
+  greet() {
+    // console.log(`Hey there ${this.firstName}, how are you doing?`);
+  }
+
+  get age() {
+    return 2023 - this.birthYear;
+  }
+
+  // Pattern for setting a property that already exists.
+  set fullName(name) {
+    // console.log(name);
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // Static Methods
+  static hey() {
+    // console.log('Hello there 😊😊');
+    // console.log(this);
+  }
+}
