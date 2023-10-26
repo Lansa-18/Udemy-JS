@@ -491,6 +491,14 @@ class Account{
     this.movements.push(val)
   }
 
+  approveLoan(val){
+    return true
+  }
+
+  depositLoan(val){
+    
+  }
+
   withdrawal(val){
     this.deposit(-val)
   }
