@@ -471,3 +471,14 @@ jay.init('Jay', 2010, 'MicroBiology');
 
 jay.introduce()
 jay.calcAge()
+
+
+//////////////////////////////// OTHER CLASS EXAMPLES ////////////////////////////////////
+
+class Account{
+  constructor(owner, currency, pin){
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+  }
+}
