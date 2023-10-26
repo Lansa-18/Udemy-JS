@@ -485,11 +485,21 @@ class Account{
 
     console.log(`Thanks for opening an account ${owner}!!`);
   }
+
+  deposit(val){
+    this.movements.push(val)
+  }
+
+  withdrawal(val){
+    this.deposit(-val)
+  }
 }
 
 const acc1 = new Account('Lansa', 'EUR', 2830);
 
 // NOTE IT IS BAD TO INTERACT WITH AN OBJECT LIKE THIS IN OOP
-acc1.movements.push(250);
-acc1.movements.push(-100)
+// acc1.movements.push(250);
+// acc1.movements.push(-100);
+
+// It is a lot better to create methods that interacts with these properties.
 console.log(acc1);
