@@ -440,3 +440,6 @@ class StudentCl extends PersonCl{
 const martha = new StudentCl('Martha Jones', 1989, 'Computer Science')
 martha.introduce()
 martha.calcAge()
+
+
+/////// INHERITANCE BETWEEN CLASSES : OBJECT.CREATE ////////////
