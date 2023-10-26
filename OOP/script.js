@@ -486,6 +486,7 @@ class Account{
     console.log(`Thanks for opening an account ${owner}!!`);
   }
 
+  // The Public Interface of our object.
   deposit(val){
     this.movements.push(val)
   }
