@@ -502,4 +502,6 @@ const acc1 = new Account('Lansa', 'EUR', 2830);
 // acc1.movements.push(-100);
 
 // It is a lot better to create methods that interacts with these properties.
+acc1.deposit(250);
+acc1.withdrawal(140)
 console.log(acc1);
