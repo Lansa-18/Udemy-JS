@@ -488,4 +488,8 @@ class Account{
 }
 
 const acc1 = new Account('Lansa', 'EUR', 2830);
+
+// NOTE IT IS BAD TO INTERACT WITH AN OBJECT LIKE THIS IN OOP
+acc1.movements.push(250);
+acc1.movements.push(-100)
 console.log(acc1);
