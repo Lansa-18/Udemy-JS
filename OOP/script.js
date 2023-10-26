@@ -446,7 +446,7 @@ martha.calcAge()
 
 const PersonProto = {
   calcAge() {
-    // console.log(2023 - this.birthYear);
+    console.log(2023 - this.birthYear);
   },
 
   init(firstName, birthYear) {
@@ -469,3 +469,5 @@ StudentProto.introduce = function(){
 const jay = Object.create(StudentProto);
 jay.init('Jay', 2010, 'MicroBiology');
 
+jay.introduce()
+jay.calcAge()
