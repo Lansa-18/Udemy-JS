@@ -200,28 +200,28 @@ account.latest = 450;
 // Object.Create()
 
 // Creating the object that would serve as the prototype for all the object we'll be creating
-const PersonProto = {
-  calcAge() {
-    // console.log(2023 - this.birthYear);
-  },
+// const PersonProto = {
+//   calcAge() {
+//     // console.log(2023 - this.birthYear);
+//   },
 
-  init(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  },
-};
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
 
-const steven = Object.create(PersonProto);
-steven.name = 'Steven';
-steven.birthYear = 2002;
+// const steven = Object.create(PersonProto);
+// steven.name = 'Steven';
+// steven.birthYear = 2002;
 // console.log(steven);
-steven.calcAge();
+// steven.calcAge();
 
 // console.log(steven.__proto__ === PersonProto);
 
-const sarah = Object.create(PersonProto);
-sarah.init('Sarah', 2000);
-sarah.calcAge();
+// const sarah = Object.create(PersonProto);
+// sarah.init('Sarah', 2000);
+// sarah.calcAge();
 
 // CODING CHALLENGE NO2
 
@@ -443,3 +443,14 @@ martha.calcAge()
 
 
 /////// INHERITANCE BETWEEN CLASSES : OBJECT.CREATE ////////////
+
+const PersonProto = {
+  calcAge() {
+    // console.log(2023 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
