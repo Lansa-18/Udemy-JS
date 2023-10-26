@@ -495,8 +495,11 @@ class Account{
     return true
   }
 
-  depositLoan(val){
-    
+  requestLoan(val){
+    if(this.approveLoan(val)){
+      this.deposit(val);
+      console.log(`Loan Successfully Approved`);
+    }
   }
 
   withdrawal(val){
@@ -513,4 +516,5 @@ const acc1 = new Account('Lansa', 'EUR', 2830);
 // It is a lot better to create methods that interacts with these properties.
 acc1.deposit(250);
 acc1.withdrawal(140)
+acc1.requestLoan(2000)
 console.log(acc1);
