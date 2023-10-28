@@ -480,6 +480,8 @@ class Account{
     this.owner = owner;
     this.currency = currency;
     this.pin = pin;
+
+    // Protected Property (This is just a convention as the data isn't truly Private.)
     this._movements = [];
     this.locale = navigator.language;
 
