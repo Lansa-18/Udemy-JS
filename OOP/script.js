@@ -480,7 +480,7 @@ class Account{
     this.owner = owner;
     this.currency = currency;
     this.pin = pin;
-    this.movements = [];
+    this._movements = [];
     this.locale = navigator.language;
 
     console.log(`Thanks for opening an account ${owner}!!`);
@@ -488,7 +488,7 @@ class Account{
 
   // The Public Interface of our object.
   deposit(val){
-    this.movements.push(val)
+    this._movements.push(val)
   }
 
   approveLoan(val){
@@ -518,3 +518,5 @@ acc1.deposit(250);
 acc1.withdrawal(140)
 acc1.requestLoan(2000)
 console.log(acc1);
+
+// ENCAPSULATION: PROTECTED PROPERTIES AND METHODS.
