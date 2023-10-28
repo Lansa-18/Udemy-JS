@@ -483,15 +483,14 @@ class Account{
   
   // 2. Private Fields 
   #movements = [];
-
-
+  #pin;
 
   constructor(owner, currency, pin){
     this.owner = owner;
     this.currency = currency;
     
     // Protected Property (This is just a convention as the data isn't truly Private.)
-    this._pin = pin;
+    this.#pin = pin;
     // this._movements = [];
     // this.locale = navigator.language;
 
@@ -535,7 +534,7 @@ acc1.withdrawal(140)
 acc1.requestLoan(2000)
 console.log(acc1);
 console.log(acc1.getMovements());
-console.log(acc1.#movement);
+// console.log(acc1.#movement);
 
 // ENCAPSULATION: PROTECTED PROPERTIES AND METHODS.
 
