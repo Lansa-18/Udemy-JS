@@ -475,15 +475,21 @@ jay.calcAge()
 
 //////////////////////////////// OTHER CLASS EXAMPLES ////////////////////////////////////
 
+
+
 class Account{
+  // Public Fields
+  locale = navigator.language;
+  _movements = [];
+
   constructor(owner, currency, pin){
     this.owner = owner;
     this.currency = currency;
     
     // Protected Property (This is just a convention as the data isn't truly Private.)
     this._pin = pin;
-    this._movements = [];
-    this.locale = navigator.language;
+    // this._movements = [];
+    // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account ${owner}!!`);
   }
@@ -529,3 +535,10 @@ console.log(acc1.getMovements());
 // ENCAPSULATION: PROTECTED PROPERTIES AND METHODS.
 
 // ENCAPSULATION: PRIVATE CLASS FIELDS AND METHODS.
+// The 4 fieds we'll be focusing on
+
+// Public Fields
+// Private Fields
+// Public Methods
+// Private Methods
+
