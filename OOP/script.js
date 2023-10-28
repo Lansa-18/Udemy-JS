@@ -480,10 +480,10 @@ jay.calcAge()
 class Account{
   // 1. Public Fields (INSTANCES)
   locale = navigator.language;
-  _movements = [];
-
-  // 2. Private Fields 
   
+  // 2. Private Fields 
+  #movements = [];
+
 
 
   constructor(owner, currency, pin){
@@ -500,11 +500,11 @@ class Account{
 
   // The Public Interface of our object.
   getMovements(){
-    return this._movements
+    return this.#movements
   }
 
   deposit(val){
-    this._movements.push(val)
+    this.#movements.push(val)
   }
 
   _approveLoan(val){
@@ -535,6 +535,7 @@ acc1.withdrawal(140)
 acc1.requestLoan(2000)
 console.log(acc1);
 console.log(acc1.getMovements());
+console.log(acc1.#movement);
 
 // ENCAPSULATION: PROTECTED PROPERTIES AND METHODS.
 
