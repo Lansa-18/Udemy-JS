@@ -542,8 +542,9 @@ console.log(acc1.getMovements());
 // ENCAPSULATION: PRIVATE CLASS FIELDS AND METHODS.
 // The 4 fieds we'll be focusing on
 
-// Public Fields
-// Private Fields
-// Public Methods
-// Private Methods
+// 1. Public Fields
+// 2. Private Fields
+// 3. Public Methods
+// 4. Private Methods
+// (there is also the static version of the above 4): They are majorly used for helper functions as they would not be available on all the instances, only on the class itself.
 
