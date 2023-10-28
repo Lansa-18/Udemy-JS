@@ -479,9 +479,9 @@ class Account{
   constructor(owner, currency, pin){
     this.owner = owner;
     this.currency = currency;
-    this.pin = pin;
-
+    
     // Protected Property (This is just a convention as the data isn't truly Private.)
+    this._pin = pin;
     this._movements = [];
     this.locale = navigator.language;
 
@@ -497,12 +497,12 @@ class Account{
     this._movements.push(val)
   }
 
-  approveLoan(val){
+  _approveLoan(val){
     return true
   }
 
   requestLoan(val){
-    if(this.approveLoan(val)){
+    if(this._approveLoan(val)){
       this.deposit(val);
       console.log(`Loan Successfully Approved`);
     }
@@ -527,3 +527,5 @@ console.log(acc1);
 console.log(acc1.getMovements());
 
 // ENCAPSULATION: PROTECTED PROPERTIES AND METHODS.
+
+// ENCAPSULATION: PRIVATE CLASS FIELDS AND METHODS.
