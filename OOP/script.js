@@ -478,9 +478,13 @@ jay.calcAge()
 
 
 class Account{
-  // Public Fields
+  // 1. Public Fields (INSTANCES)
   locale = navigator.language;
   _movements = [];
+
+  // 2. Private Fields 
+  
+
 
   constructor(owner, currency, pin){
     this.owner = owner;
