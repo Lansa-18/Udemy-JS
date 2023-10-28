@@ -489,6 +489,10 @@ class Account{
   }
 
   // The Public Interface of our object.
+  getMovements(){
+    return this._movements
+  }
+
   deposit(val){
     this._movements.push(val)
   }
@@ -520,5 +524,6 @@ acc1.deposit(250);
 acc1.withdrawal(140)
 acc1.requestLoan(2000)
 console.log(acc1);
+console.log(acc1.getMovements());
 
 // ENCAPSULATION: PROTECTED PROPERTIES AND METHODS.
