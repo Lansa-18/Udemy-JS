@@ -497,7 +497,7 @@ class Account{
     console.log(`Thanks for opening an account ${owner}!!`);
   }
 
-  // The Public Interface of our object.
+  // The Public Interface of our object. (3. PUBLIC METHODS)
   getMovements(){
     return this.#movements
   }
@@ -506,12 +506,8 @@ class Account{
     this.#movements.push(val)
   }
 
-  _approveLoan(val){
-    return true
-  }
-
   requestLoan(val){
-    if(this._approveLoan(val)){
+    if(this.#approveLoan(val)){
       this.deposit(val);
       console.log(`Loan Successfully Approved`);
     }
@@ -519,6 +515,11 @@ class Account{
 
   withdrawal(val){
     this.deposit(-val)
+  }
+
+  // 4. PRIVATE METHODS
+  #approveLoan(val){
+    return true
   }
 }
 
@@ -534,7 +535,7 @@ acc1.withdrawal(140)
 acc1.requestLoan(2000)
 console.log(acc1);
 console.log(acc1.getMovements());
-// console.log(acc1.#movement);
+// console.log(acc1.#pin);
 
 // ENCAPSULATION: PROTECTED PROPERTIES AND METHODS.
 
