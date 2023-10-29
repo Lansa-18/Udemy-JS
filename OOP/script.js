@@ -551,4 +551,4 @@ console.log(acc1.getMovements());
 
 /////// CHAINING METHODS //////////////
 
-acc1.deposit(300).deposit(500).wi
+acc1.deposit(300).deposit(500).withdrawal(50).requestLoan(25000).withdrawal(4000)
