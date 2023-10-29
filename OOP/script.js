@@ -548,3 +548,7 @@ console.log(acc1.getMovements());
 // 4. Private Methods
 // (there is also the static version of the above 4): They are majorly used for helper functions as they would not be available on all the instances, only on the class itself.
 
+
+/////// CHAINING METHODS //////////////
+
+acc1.deposit(300).deposit(500).wi
