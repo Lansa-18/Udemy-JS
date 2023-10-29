@@ -596,12 +596,12 @@ class EVCL extends CarCl{
   }
 
   chargeBattery (chargeTo) {
-  this.#charge = chargeTo;
+  this.#charge = chargeTo / 100;
   return this;
 };
 
 }
 
 const rivian = new EVCL('Rivian', 120, 0.23)
-console.log(rivian.accelerate2().brake());
+console.log(rivian.accelerate2().brake().chargeBattery(50));
 // console.log(rivian);
