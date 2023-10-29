@@ -503,7 +503,8 @@ class Account{
   }
 
   deposit(val){
-    this.#movements.push(val)
+    this.#movements.push(val);
+    return this;
   }
 
   requestLoan(val){
@@ -511,15 +512,17 @@ class Account{
       this.deposit(val);
       console.log(`Loan Successfully Approved`);
     }
+    return this;
   }
 
   withdrawal(val){
-    this.deposit(-val)
+    this.deposit(-val);
+    return this;
   }
 
   // 4. PRIVATE METHODS
   #approveLoan(val){
-    return true
+    return true;
   }
 }
 
