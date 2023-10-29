@@ -554,4 +554,7 @@ console.log(acc1.getMovements());
 
 /////// CHAINING METHODS //////////////
 
-acc1.deposit(300).deposit(500).withdrawal(50).requestLoan(25000).withdrawal(4000)
+acc1.deposit(300).deposit(500).withdrawal(50).requestLoan(25000).withdrawal(4000);
+
+// CODING CHALLENGE NO 4
+
