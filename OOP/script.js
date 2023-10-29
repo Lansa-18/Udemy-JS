@@ -558,3 +558,52 @@ acc1.deposit(300).deposit(500).withdrawal(50).requestLoan(25000).withdrawal(4000
 
 // CODING CHALLENGE NO 4
 
+// references
+
+// Step 1
+// const Car = function (make, speed) {
+//   (this.make = make), (this.speed = speed);
+// };
+
+// 2. Implementing the accelerate method
+// Car.prototype.accelerate = function () {
+//   const accelSpeed = (this.speed += 10);
+//   console.log(`${accelSpeed}Km/hr`);
+// };
+
+// 3. Implementing the brake method.
+// Car.prototype.brake = function () {
+//   const decelSpeed = (this.speed -= 5);
+//   console.log(`${decelSpeed}Km/hr`);
+// };
+
+// const EV = function (make, speed, charge) {
+//   Car.call(this, make, speed);
+//   this.charge = charge;
+// };
+
+// Linking the Prototype Properties
+// EV.prototype = Object.create(Car.prototype);
+
+// Step 2
+// EV.prototype.chargeBattery = function (chargeTo) {
+//   this.charge = chargeTo;
+// };
+
+// const tesla = new EV('Tesla', 120, 0.23);
+// console.log(tesla);
+
+// Step 3
+// EV.prototype.accelerate = function () {
+//   this.speed += 20;
+//   this.charge -= 0.01;
+//   console.log(
+//     `Tesla going at ${this.speed}km/hr, with a charge of ${Math.round(this.charge * 100)}%`
+//   );
+// };
+
+// Step 4 - (EXPERIMENTING!!!)
+// EV.prototype.constructor = EV;
+// tesla.accelerate();
+// console.log(tesla);
+
