@@ -593,8 +593,12 @@ class EVCL extends CarCl{
   constructor(make, speed, charge){
     super(make, speed);
     this.#charge = charge;
-
   }
+
+  chargeBattery (chargeTo) {
+  this.#charge = chargeTo;
+  return this;
+};
 
 }
 
