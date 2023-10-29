@@ -225,39 +225,39 @@ account.latest = 450;
 
 // CODING CHALLENGE NO2
 
-class CarCl {
-  constructor(make, speed) {
-    (this.make = make), (this.speed = speed);
-  }
+// class CarCl {
+//   constructor(make, speed) {
+//     (this.make = make), (this.speed = speed);
+//   }
 
-  accelerate2() {
-    const accelSpeed2 = (this.speed += 10);
-    // console.log(`${accelSpeed2}km/hr`);
-  }
+//   accelerate2() {
+//     const accelSpeed2 = (this.speed += 10);
+//     // console.log(`${accelSpeed2}km/hr`);
+//   }
 
-  decelerate2() {
-    const decelSpeed2 = (this.speed -= 5);
-    // console.log(`${decelSpeed2}km/hr`);
-  }
+//   decelerate2() {
+//     const decelSpeed2 = (this.speed -= 5);
+//     // console.log(`${decelSpeed2}km/hr`);
+//   }
 
-  get speedUS() {
-    return `${this.speed / 1.6}mi/hr`;
-  }
+//   get speedUS() {
+//     return `${this.speed / 1.6}mi/hr`;
+//   }
 
-  set speedUS(curSpeed) {
-    this.speed = curSpeed * 1.6;
-  }
-}
+//   set speedUS(curSpeed) {
+//     this.speed = curSpeed * 1.6;
+//   }
+// }
 
-const ford = new CarCl('Ford', 120);
+// const ford = new CarCl('Ford', 120);
 // console.log(ford);
 
 // console.log(ford.speedUS);
 
-ford.accelerate2();
-ford.decelerate2();
+// ford.accelerate2();
+// ford.decelerate2();
+// ford.speedUS = 50;
 
-ford.speedUS = 50;
 // console.log(ford);
 
 //////////////////////////////////////////// INHERITANCE BETWEEN CLASSES /////////////////////////////////////
@@ -560,50 +560,44 @@ acc1.deposit(300).deposit(500).withdrawal(50).requestLoan(25000).withdrawal(4000
 
 // references
 
-// Step 1
-// const Car = function (make, speed) {
-//   (this.make = make), (this.speed = speed);
-// };
+class CarCl {
+  constructor(make, speed) {
+    (this.make = make), (this.speed = speed);
+  }
 
-// 2. Implementing the accelerate method
-// Car.prototype.accelerate = function () {
-//   const accelSpeed = (this.speed += 10);
-//   console.log(`${accelSpeed}Km/hr`);
-// };
+  accelerate2() {
+    const accelSpeed2 = (this.speed += 10);
+    console.log(`${accelSpeed2}km/hr`);
+    return this;
+  }
 
-// 3. Implementing the brake method.
-// Car.prototype.brake = function () {
-//   const decelSpeed = (this.speed -= 5);
-//   console.log(`${decelSpeed}Km/hr`);
-// };
+  brake() {
+    const decelSpeed2 = (this.speed -= 5);
+    console.log(`${decelSpeed2}km/hr`);
+    return this;
+  }
 
-// const EV = function (make, speed, charge) {
-//   Car.call(this, make, speed);
-//   this.charge = charge;
-// };
+  get speedUS() {
+    return `${this.speed / 1.6}mi/hr`;
+  }
 
-// Linking the Prototype Properties
-// EV.prototype = Object.create(Car.prototype);
+  set speedUS(curSpeed) {
+    this.speed = curSpeed * 1.6;
+  }
+}
 
-// Step 2
-// EV.prototype.chargeBattery = function (chargeTo) {
-//   this.charge = chargeTo;
-// };
 
-// const tesla = new EV('Tesla', 120, 0.23);
-// console.log(tesla);
+// STEP 1
+class EVCL extends CarCl{
+  #charge;
+  constructor(make, speed, charge){
+    super(make, speed);
+    this.#charge = charge;
 
-// Step 3
-// EV.prototype.accelerate = function () {
-//   this.speed += 20;
-//   this.charge -= 0.01;
-//   console.log(
-//     `Tesla going at ${this.speed}km/hr, with a charge of ${Math.round(this.charge * 100)}%`
-//   );
-// };
+  }
 
-// Step 4 - (EXPERIMENTING!!!)
-// EV.prototype.constructor = EV;
-// tesla.accelerate();
-// console.log(tesla);
+}
 
+const rivian = new EVCL('Rivian', 120, 0.23)
+console.log(rivian.accelerate2().brake());
+// console.log(rivian);
