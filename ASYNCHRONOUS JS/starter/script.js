@@ -42,9 +42,9 @@ const countriesContainer = document.querySelector('.countries');
 // getCountryData('portugal');
 // getCountryData('france');
 
-const renderCountry = function (data) {
+const renderCountry = function (data, className = '') {
   const html = `
-    <article class="country">
+    <article class="country ${className}">
         <img class="country__img" src="${data.flag}" />
         <div class="country__data">
         <h3 class="country__name">${data.name}</h3>
@@ -80,6 +80,20 @@ const getCountryAndNeighbor = function (country) {
 
     // Get neighbor country 2
     const neighbor = data.borders?.[0];
+    // if (!neighbor) return;
+
+    // AJAX call country 2
+    const request2 = new XMLHttpRequest();
+    request2.open(
+      'GET',
+      `https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`
+    );
+    request2.send();
+
+    request2.addEventListener('load', function () {
+        const data2 = JSON.parse(this.responseText);
+        renderCountry(data2, 'neighbour');
+    });
   });
 };
 getCountryAndNeighbor('Argentina');
