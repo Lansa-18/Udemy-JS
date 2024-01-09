@@ -61,41 +61,47 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 
-const getCountryAndNeighbor = function (country) {
-  // AJAX call country 1
-  const request = new XMLHttpRequest();
-  request.open(
-    'GET',
-    `https://countries-api-836d.onrender.com/countries/name/${country}`
-  );
-  request.send();
+// const getCountryAndNeighbor = function (country) {
+//   // AJAX call country 1
+//   const request = new XMLHttpRequest();
+//   request.open(
+//     'GET',
+//     `https://countries-api-836d.onrender.com/countries/name/${country}`
+//   );
+//   request.send();
 
-  request.addEventListener('load', function () {
-    // console.log(this.responseText);
-    const [data] = JSON.parse(this.responseText);
-    console.log(data);
+//   request.addEventListener('load', function () {
+//     // console.log(this.responseText);
+//     const [data] = JSON.parse(this.responseText);
+//     console.log(data);
 
-    // Render country 1
-    renderCountry(data);
+//     // Render country 1
+//     renderCountry(data);
 
-    // Get neighbor country 2
-    const neighbor = data.borders?.[0];
-    // if (!neighbor) return;
+//     // Get neighbor country 2
+//     const neighbor = data.borders?.[0];
+//     // if (!neighbor) return;
 
-    // AJAX call country 2
-    const request2 = new XMLHttpRequest();
-    request2.open(
-      'GET',
-      `https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`
-    );
-    request2.send();
+//     // AJAX call country 2
+//     const request2 = new XMLHttpRequest();
+//     request2.open(
+//       'GET',
+//       `https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`
+//     );
+//     request2.send();
 
-    request2.addEventListener('load', function () {
-        const data2 = JSON.parse(this.responseText);
-        console.log(data2);
-        renderCountry(data2, 'neighbour');
-    });
-  });
-};
+//     request2.addEventListener('load', function () {
+//         const data2 = JSON.parse(this.responseText);
+//         console.log(data2);
+//         renderCountry(data2, 'neighbour');
+//     });
+//   });
+// };
 // getCountryAndNeighbor('Argentina');
-getCountryAndNeighbor('usa');
+// getCountryAndNeighbor('usa');
+
+// The Modern Way: Fetch API
+const request = fetch('https://countries-api-836d.onrender.com/countries/name/Argentina')  // Making a simple GET request. 
+// The fetch function can take a second argument, an object with options.
+
+
