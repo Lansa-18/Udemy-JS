@@ -105,15 +105,34 @@ const renderCountry = function (data, className = '') {
 // // The fetch function can take a second argument, an object with options.
 // console.log(request);
 
+// const getCountryData = function (country) {
+//   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
+//     .then(function (response) {
+//       console.log(response);
+//       return response.json();
+//     })
+//     .then(function (data) {
+//       console.log(data);
+//       renderCountry(data[0]);
+//     });
+// };
+
+// const getCountryData = function (country) {
+//   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
+//     .then(function (response) {
+//       console.log(response);
+//       return response.json();
+//     })
+//     .then(function (data) {
+//       console.log(data);
+//       renderCountry(data[0]);
+//     });
+// };
+
+// Much Simpler with Arrow Functions
 const getCountryData = function (country) {
   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
-    .then(function (response) {
-      console.log(response);
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      renderCountry(data[0]);
-    });
+    .then(response => response.json())
+    .then(data => renderCountry(data[0]));
 };
 getCountryData('Argentina');
