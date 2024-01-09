@@ -101,17 +101,19 @@ const renderCountry = function (data, className = '') {
 // getCountryAndNeighbor('usa');
 
 // The Modern Way: Fetch API
-// const request = fetch('https://countries-api-836d.onrender.com/countries/name/Argentina')  // Making a simple GET request. 
+// const request = fetch('https://countries-api-836d.onrender.com/countries/name/Argentina')  // Making a simple GET request.
 // // The fetch function can take a second argument, an object with options.
 // console.log(request);
 
 const getCountryData = function (country) {
-    fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`).then(function (response) {
-        console.log(response);
-        return response.json();
-    }).then(function (data) {
-        console.log(data);
-        renderCountry(data[0]);
+  fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
+    .then(function (response) {
+      console.log(response);
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      renderCountry(data[0]);
     });
-}
+};
 getCountryData('Argentina');
