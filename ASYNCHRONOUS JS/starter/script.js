@@ -111,6 +111,7 @@ const getCountryData = function (country) {
         return response.json();
     }).then(function (data) {
         console.log(data);
+        renderCountry(data[0]);
     });
 }
 getCountryData('Argentina');
