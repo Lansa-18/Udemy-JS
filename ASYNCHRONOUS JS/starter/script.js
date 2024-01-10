@@ -131,11 +131,15 @@ const renderCountry = function (data, className = '') {
 
 // Much Simpler with Arrow Functions
 const getCountryData = function (country) {
+  // Country 1
   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
     .then(response => response.json())
     .then(data => {
       renderCountry(data[0]);
       const neighbor = data[0].borders?.[0];
+
+      // Country 2
+      fetch(`https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`)
     });
 };
 getCountryData('Argentina');
