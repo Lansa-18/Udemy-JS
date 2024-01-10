@@ -139,7 +139,8 @@ const getCountryData = function (country) {
       const neighbor = data[0].borders?.[0];
 
       // Country 2
-      fetch(`https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`)
+      return fetch(`https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`)
+      
     });
 };
 getCountryData('Argentina');
