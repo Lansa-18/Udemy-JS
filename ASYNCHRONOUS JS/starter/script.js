@@ -140,7 +140,8 @@ const getCountryData = function (country) {
 
       // Country 2
       return fetch(`https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`)
-      
-    });
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data, 'neighbour'));
 };
 getCountryData('Argentina');
