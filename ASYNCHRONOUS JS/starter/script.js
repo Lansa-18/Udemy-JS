@@ -142,7 +142,8 @@ const getCountryData = function (country) {
       return fetch(`https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`)
     })
     .then(response => response.json())
-    .then(data => renderCountry(data, 'neighbour'));
+    .then(data => renderCountry(data, 'neighbour'))
+    .catch(err => alert(err))
 };
 
 btn.addEventListener('click', function () {
