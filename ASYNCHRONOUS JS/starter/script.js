@@ -133,6 +133,9 @@ const renderCountry = function (data, className = '') {
 const getCountryData = function (country) {
   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data[0]);
+      const neighbor = data[0].borders?.[0];
+    });
 };
 getCountryData('Argentina');
