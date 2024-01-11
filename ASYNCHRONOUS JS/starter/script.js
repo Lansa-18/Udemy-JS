@@ -132,6 +132,15 @@ const renderCountry = function (data, className = '') {
 //     });
 // };
 
+// const getJSON = function(url, errorMsg = 'Something went wrong'){
+//   return fetch(url).then(response => {
+//     if(!response.ok){
+//       throw new Error(`${errorMsg} (${response.status})`)
+//     }
+//     return response.json()
+//   })
+// }
+
 // Much Simpler with Arrow Functions
 const getCountryData = function (country) {
   // Country 1
@@ -145,19 +154,18 @@ const getCountryData = function (country) {
     })
     .then(data => {
       renderCountry(data[0]);
-      // const neighbor = data[0].borders?.[0];
-      const neighbor = 'sdfdsf';
+      const neighbour = data[0].borders?.[0];
 
       // Country 2
       return fetch(
-        `https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`
-      );
+        `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`
+      )
     })
     .then(response => {
       if(!response.ok){
         throw new Error(`Country not found (${response.status})`)
       }
-      response.json()
+      return response.json()
     })
     .then(data => renderCountry(data, 'neighbour'))
     .catch(err => {
@@ -170,6 +178,5 @@ const getCountryData = function (country) {
 };
 
 btn.addEventListener('click', function () {
-  // getCountryData('hfdkslhshfdlfhsz');
-  getCountryData('Argentina');
+  getCountryData('France');
 });
