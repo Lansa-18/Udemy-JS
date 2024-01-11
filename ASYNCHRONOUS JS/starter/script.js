@@ -152,6 +152,8 @@ const getCountryData = function (country) {
       renderCountry(data[0]);
       const neighbour = data[0].borders?.[0];
 
+      if (!neighbour) throw new Error('No neighbour found!')
+
       // Country 2
       return getJSON(`https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`,
       'Country not found')
@@ -167,5 +169,7 @@ const getCountryData = function (country) {
 };
 
 btn.addEventListener('click', function () {
-  getCountryData('France');
+  getCountryData('Argentina');
 });
+getCountryData('Australia');
+
