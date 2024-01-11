@@ -132,40 +132,29 @@ const renderCountry = function (data, className = '') {
 //     });
 // };
 
-// const getJSON = function(url, errorMsg = 'Something went wrong'){
-//   return fetch(url).then(response => {
-//     if(!response.ok){
-//       throw new Error(`${errorMsg} (${response.status})`)
-//     }
-//     return response.json()
-//   })
-// }
+const getJSON = function (url, errorMsg = 'Something went wrong') {
+  return fetch(url).then(response => {
+    if (!response.ok) {
+      throw new Error(`${errorMsg} (${response.status})`);
+    }
+    return response.json();
+  });
+};
 
 // Much Simpler with Arrow Functions
 const getCountryData = function (country) {
   // Country 1
-  fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
-    .then(response => {
-      console.log(response);
-      if(!response.ok){
-        throw new Error(`Country not found (${response.status})`)
-      }
-      return response.json()
-    })
+  getJSON(
+    `https://countries-api-836d.onrender.com/countries/name/${country}`,
+    'Country not found'
+  )
     .then(data => {
       renderCountry(data[0]);
       const neighbour = data[0].borders?.[0];
 
       // Country 2
-      return fetch(
-        `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`
-      )
-    })
-    .then(response => {
-      if(!response.ok){
-        throw new Error(`Country not found (${response.status})`)
-      }
-      return response.json()
+      return getJSON(`https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`,
+      'Country not found')
     })
     .then(data => renderCountry(data, 'neighbour'))
     .catch(err => {
@@ -174,7 +163,7 @@ const getCountryData = function (country) {
     })
     .finally(() => {
       countriesContainer.style.opacity = 1;
-    })
+    });
 };
 
 btn.addEventListener('click', function () {
