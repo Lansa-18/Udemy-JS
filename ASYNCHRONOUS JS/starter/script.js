@@ -136,17 +136,29 @@ const renderCountry = function (data, className = '') {
 const getCountryData = function (country) {
   // Country 1
   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
-    .then(response => response.json())
+    .then(response => {
+      console.log(response);
+      if(!response.ok){
+        throw new Error(`Country not found (${response.status})`)
+      }
+      return response.json()
+    })
     .then(data => {
       renderCountry(data[0]);
-      const neighbor = data[0].borders?.[0];
+      // const neighbor = data[0].borders?.[0];
+      const neighbor = 'sdfdsf';
 
       // Country 2
       return fetch(
         `https://countries-api-836d.onrender.com/countries/alpha/${neighbor}`
       );
     })
-    .then(response => response.json())
+    .then(response => {
+      if(!response.ok){
+        throw new Error(`Country not found (${response.status})`)
+      }
+      response.json()
+    })
     .then(data => renderCountry(data, 'neighbour'))
     .catch(err => {
       console.error(`${err} 💥💥💥`);
@@ -158,6 +170,6 @@ const getCountryData = function (country) {
 };
 
 btn.addEventListener('click', function () {
+  // getCountryData('hfdkslhshfdlfhsz');
   getCountryData('Argentina');
 });
-// getCountryData('Argentina');
