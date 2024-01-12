@@ -318,4 +318,4 @@ wait(2)
 
   
 Promise.resolve('abc').then(x => console.log(x));
-Promise.reject('abc').catch(error => console.error(error));
+Promise.reject(new Error('Problem!')).catch(error => console.error(error));
