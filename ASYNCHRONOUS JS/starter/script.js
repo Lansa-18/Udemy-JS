@@ -300,6 +300,12 @@ const lottertyPromise = new Promise(function (resolve, reject){
 
 lottertyPromise.then(response => console.log(response)).catch(err => console.error(err));
 
+// Promisifying setTimeout
+const wait = function(seconds) {
+  return new Promise(function(resolve){
+    setTimeout(resolve, seconds * 1000)
+  })
+}
 
 
 
