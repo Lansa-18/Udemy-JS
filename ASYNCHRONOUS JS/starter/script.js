@@ -293,7 +293,9 @@ const lottertyPromise = new Promise(function (resolve, reject){
   } else{
   reject(new Error('You lost your money!💩'));
   }
-})
+});
+
+lottertyPromise.then(response => console.log(response)).catch(err => console.error(err));
 
 
 
