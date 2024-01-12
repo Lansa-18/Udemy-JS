@@ -245,7 +245,7 @@ const checkResponse = function (response, errorMsg) {
     throw new Error(`${errorMsg}, ${response.status}`);
   }
   return response.json();
-}
+};
 
 const whereAmI = function (lat, lng) {
   fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
@@ -255,19 +255,20 @@ const whereAmI = function (lat, lng) {
       console.log(`You are in ${data.city}, ${data.country}`);
 
       // Getting the country from the coordinates
-      return fetch(`https://countries-api-836d.onrender.com/countries/name/${data.country}`)
+      return fetch(
+        `https://countries-api-836d.onrender.com/countries/name/${data.country}`
+      );
     })
     .then(response => checkResponse(response, `Country not found`))
     .then(data => renderCountry(data[0]))
     .catch(err => {
       console.error(`${err.message} 💥💥`);
-    })
+    });
 };
 
 // whereAmI(52.508, 13.381);
 // whereAmI(19.037, 72.873);
 // whereAmI(-33.933, 18.474);
-
 
 ////////////////////////////////
 // EVENT LOOPS IN PRACTICE
@@ -283,34 +284,34 @@ const whereAmI = function (lat, lng) {
 
 // console.log('Test End');
 
-
 //////////////////////////////////////
 // BUILDING A SIMPLE PROMISE
 
-const lottertyPromise = new Promise(function (resolve, reject){
+const lottertyPromise = new Promise(function (resolve, reject) {
   console.log(`Lottery draw is happening 🔮`);
   setTimeout(() => {
-    if(Math.random() >= 0.5){
+    if (Math.random() >= 0.5) {
       resolve('You WIN! 💰');
-    } else{
-    reject(new Error('You lost your money!💩'));
+    } else {
+      reject(new Error('You lost your money!💩'));
     }
-  }, 2000)
+  }, 2000);
 });
 
-lottertyPromise.then(response => console.log(response)).catch(err => console.error(err));
+lottertyPromise
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
 
 // Promisifying setTimeout
-const wait = function(seconds) {
-  return new Promise(function(resolve){
-    setTimeout(resolve, seconds * 1000)
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+wait(2)
+  .then(() => {
+    console.log('I waited for 2 seconds');
+    return wait(1);
   })
-}
-
-wait(2).then(() => {
-  console.log('I waited for 2 seconds');
-  return wait(1);
-}).then(() => console.log('I waited for 1 second'));
-
-
-
+  .then(() => console.log('I waited for 1 second'));
