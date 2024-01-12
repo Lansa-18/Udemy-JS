@@ -315,3 +315,7 @@ wait(2)
     return wait(1);
   })
   .then(() => console.log('I waited for 1 second'));
+
+  
+Promise.resolve('abc').then(x => console.log(x));
+Promise.reject('abc').catch(error => console.error(error));
