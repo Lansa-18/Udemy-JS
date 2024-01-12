@@ -288,14 +288,18 @@ const whereAmI = function (lat, lng) {
 // BUILDING A SIMPLE PROMISE
 
 const lottertyPromise = new Promise(function (resolve, reject){
-  if(Math.random() >= 0.5){
-    resolve('You WIN! 💰');
-  } else{
-  reject(new Error('You lost your money!💩'));
-  }
+  console.log(`Lottery draw is happening 🔮`);
+  setTimeout(() => {
+    if(Math.random() >= 0.5){
+      resolve('You WIN! 💰');
+    } else{
+    reject(new Error('You lost your money!💩'));
+    }
+  }, 2000)
 });
 
 lottertyPromise.then(response => console.log(response)).catch(err => console.error(err));
+
 
 
 
