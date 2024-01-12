@@ -23,6 +23,7 @@ const renderCountry = function (data, className = '') {
   </article>    
     `;
   countriesContainer.insertAdjacentHTML('beforeend', html);
+  countriesContainer.style.opacity = 1;
 };
 
 ///////////////////////////////////////
@@ -257,18 +258,12 @@ const whereAmI = function (lat, lng) {
       return fetch(`https://countries-api-836d.onrender.com/countries/name/${data.country}`)
     })
     .then(response => checkResponse(response, `Country not found`))
-    .then(data => {
-      // console.log(data[0]);
-      return renderCountry(data[0]);
-    })
+    .then(data => renderCountry(data[0]))
     .catch(err => {
-      console.error(`${err.message} 💥💥💥`);
+      console.error(`${err.message} 💥💥`);
     })
-    .finally(() => {
-      countriesContainer.style.opacity = 1;
-    });
 };
 
-// whereAmI(52.508, 13.381);
-// whereAmI(19.037, 72.873);
-// whereAmI(-33.933, 18.474);
+whereAmI(52.508, 13.381);
+whereAmI(19.037, 72.873);
+whereAmI(-33.933, 18.474);
