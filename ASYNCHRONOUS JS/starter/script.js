@@ -173,7 +173,7 @@ const getCountryData = function (country) {
 
 btn.addEventListener('click', function () {
   // getCountryData('Argentina');
-  whereAmI(52.508, 13.381);
+  whereAmI();
 });
 // getCountryData('Australia');
 
@@ -247,24 +247,24 @@ const checkResponse = function (response, errorMsg) {
   return response.json();
 };
 
-const whereAmI = function (lat, lng) {
-  fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
-    .then(response => checkResponse(response, `Timeout Error`))
-    .then(data => {
-      console.log(data);
-      console.log(`You are in ${data.city}, ${data.country}`);
+// const whereAmI = function (lat, lng) {
+//   fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
+//     .then(response => checkResponse(response, `Timeout Error`))
+//     .then(data => {
+//       console.log(data);
+//       console.log(`You are in ${data.city}, ${data.country}`);
 
-      // Getting the country from the coordinates
-      return fetch(
-        `https://countries-api-836d.onrender.com/countries/name/${data.country}`
-      );
-    })
-    .then(response => checkResponse(response, `Country not found`))
-    .then(data => renderCountry(data[0]))
-    .catch(err => {
-      console.error(`${err.message} 💥💥`);
-    });
-};
+//       // Getting the country from the coordinates
+//       return fetch(
+//         `https://countries-api-836d.onrender.com/countries/name/${data.country}`
+//       );
+//     })
+//     .then(response => checkResponse(response, `Country not found`))
+//     .then(data => renderCountry(data[0]))
+//     .catch(err => {
+//       console.error(`${err.message} 💥💥`);
+//     });
+// };
 
 // whereAmI(52.508, 13.381);
 // whereAmI(19.037, 72.873);
@@ -316,10 +316,8 @@ const whereAmI = function (lat, lng) {
 //   })
 //   .then(() => console.log('I waited for 1 second'));
 
-  
 // Promise.resolve('abc').then(x => console.log(x));
 // Promise.reject(new Error('Problem!')).catch(error => console.error(error));
-
 
 //////////////////////////////////////////////////////
 // PROMISIFYING THE GEOLOCATION API
@@ -327,11 +325,35 @@ const whereAmI = function (lat, lng) {
 // navigator.geolocation.getCurrentPosition(position => console.log(position), err => console.error(err))
 // console.log('Getting position...');
 
-const getPosition = function (){
-  return new Promise(function(resolve, reject){
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
     // navigator.geolocation.getCurrentPosition(position => resolve(position), err => reject(err))
     navigator.geolocation.getCurrentPosition(resolve, reject);
-  })
-}
+  });
+};
 
-getPosition().then(position => console.log(position));
+// getPosition().then(position => console.log(position));
+
+const whereAmI = function () {
+  getPosition()
+    .then(position => {
+      console.log(position.coords);
+      const { latitude: lat, longitude: lng } = position.coords;
+      return fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+    })
+    .then(response => checkResponse(response, `Timeout Error`))
+    .then(data => {
+      console.log(data);
+      console.log(`You are in ${data.city}, ${data.country}`);
+
+      // Getting the country from the coordinates
+      return fetch(
+        `https://countries-api-836d.onrender.com/countries/name/${data.country}`
+      );
+    })
+    .then(response => checkResponse(response, `Country not found`))
+    .then(data => renderCountry(data[0]))
+    .catch(err => {
+      console.error(`${err.message} 💥💥`);
+    });
+};
