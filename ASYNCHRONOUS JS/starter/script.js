@@ -171,7 +171,8 @@ const getCountryData = function (country) {
 };
 
 btn.addEventListener('click', function () {
-  getCountryData('Argentina');
+  // getCountryData('Argentina');
+  whereAmI(52.508, 13.381);
 });
 // getCountryData('Australia');
 
@@ -238,32 +239,36 @@ TEST COORDINATES 2: -33.933, 18.474
 
 GOOD LUCK 😀
 */
+const checkResponse = function (response, errorMsg) {
+  if (!response.ok) {
+    throw new Error(`${errorMsg}, ${response.status}`);
+  }
+  return response.json();
+}
 
-const whereAmI = function (lat, lng, country) {
+const whereAmI = function (lat, lng) {
   fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Timeout Error ${response.status}`);
-      }
-      return response.json();
-    })
+    .then(response => checkResponse(response, `Timeout Error`))
     .then(data => {
       console.log(data);
       console.log(`You are in ${data.city}, ${data.country}`);
+
       // Getting the country from the coordinates
       return fetch(`https://countries-api-836d.onrender.com/countries/name/${data.country}`)
     })
-    .then(response => response.json())
+    .then(response => checkResponse(response, `Country not found`))
     .then(data => {
       // console.log(data[0]);
       return renderCountry(data[0]);
     })
     .catch(err => {
-      console.error(`${err} 💥💥💥`);
+      console.error(`${err.message} 💥💥💥`);
     })
     .finally(() => {
       countriesContainer.style.opacity = 1;
     });
 };
 
-whereAmI(52.508, 13.381, 'Argentina');
+// whereAmI(52.508, 13.381);
+// whereAmI(19.037, 72.873);
+// whereAmI(-33.933, 18.474);
