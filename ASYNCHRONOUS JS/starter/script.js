@@ -3,6 +3,7 @@
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 const imgContainer = document.querySelector('.images');
+const mainImg = document.getElementsByTagName('img');
 
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
@@ -304,11 +305,11 @@ const checkResponse = function (response, errorMsg) {
 //   .catch(err => console.error(err));
 
 // Promisifying setTimeout
-// const wait = function (seconds) {
-//   return new Promise(function (resolve) {
-//     setTimeout(resolve, seconds * 1000);
-//   });
-// };
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
 
 // wait(2)
 //   .then(() => {
@@ -382,14 +383,14 @@ TEST DATA: Images in the img folder. Test the error handler by passing a wrong i
 
 GOOD LUCK 😀
 */
-
+let img;
 const createImage = function (imgPath) {
   return new Promise(function (resolve, reject) {
-    const img = document.createElement('img');
-    console.log(img);
+    img = document.createElement('img');
     img.src = imgPath;
-
+    
     img.addEventListener('load', function () {
+      console.log(img);
       console.log('Image Loaded');
       imgContainer.append(img);
       resolve(img);
@@ -401,12 +402,26 @@ const createImage = function (imgPath) {
   });
 };
 
-createImage('img/img-1.jpg')
-  .then(img => {
-    wait(2);
-    img.style.display = 'none';
-    img.src = 'img/img-2.jpg';
-    wait(2);
-  })
-  .then(img => (img.style.display = 'none'))
-  .catch(err => console.error(err));
+createImage('img/img-1.jpg').then(resImg => {
+  img = resImg;
+  return wait(2);
+}).then(() => {
+  img.style.display = 'none';
+  img.src = 'img/img-2.jpg';
+  return wait(2)
+}).then(() => {
+  img.style.display = 'block';
+  return wait(2);
+}).then(() => img.style.display = 'none').catch(err => console.error(err))
+
+// createImage('img/img-1.jpg')
+//   .then(img => {
+//     wait(2);
+//     img.classList.add('not-active');
+//     imgPath = 'img/img-2.jpg';
+//     wait(2);
+//   })
+//   .then(img => {
+//     return img.classList.remove('not-active');
+//   })
+//   .catch(err => console.error(err));
