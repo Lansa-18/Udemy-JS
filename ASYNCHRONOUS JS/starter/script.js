@@ -335,29 +335,32 @@ const getPosition = function () {
 };
 // getPosition().then(position => console.log(position));
 
-const whereAmI = function () {
-  getPosition()
-    .then(position => {
-      console.log(position.coords);
-      const { latitude: lat, longitude: lng } = position.coords;
-      return fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
-    })
-    .then(response => checkResponse(response, `Timeout Error`))
-    .then(data => {
-      console.log(data);
-      console.log(`You are in ${data.city}, ${data.country}`);
+// const whereAmI = function () {
+//   getPosition()
+//     .then(position => {
+//       console.log(position.coords);
+//       const { latitude: lat, longitude: lng } = position.coords;
+//       return fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+//     })
+//     .then(response => checkResponse(response, `Timeout Error`))
+//     .then(data => {
+//       console.log(data);
+//       console.log(`You are in ${data.city}, ${data.country}`);
 
-      // Getting the country from the coordinates
-      return fetch(
-        `https://countries-api-836d.onrender.com/countries/name/${data.country}`
-      );
-    })
-    .then(response => checkResponse(response, `Country not found`))
-    .then(data => renderCountry(data[0]))
-    .catch(err => {
-      console.error(`${err.message} 💥💥`);
-    });
-};
+//       // Getting the country from the coordinates
+//       return fetch(
+//         `https://countries-api-836d.onrender.com/countries/name/${data.country}`
+//       );
+//     })
+//     .then(response => checkResponse(response, `Country not found`))
+//     .then(data => {
+//       // console.log(data[0]);
+//       renderCountry(data[0])
+//     })
+//     .catch(err => {
+//       console.error(`${err.message} 💥💥`);
+//     });
+// };
 
 ///////////////////////////////////////
 // Coding Challenge #2
@@ -423,40 +426,54 @@ GOOD LUCK 😀
 
 // JONAS SOLUTION
 
-const createImage = function (imgPath) {
-  return new Promise(function (resolve, reject) {
-    const img = document.createElement('img');
-    img.src = imgPath;
+// const createImage = function (imgPath) {
+//   return new Promise(function (resolve, reject) {
+//     const img = document.createElement('img');
+//     img.src = imgPath;
 
-    img.addEventListener('load', function () {
-      imgContainer.append(img);
-      resolve(img);
-    });
+//     img.addEventListener('load', function () {
+//       imgContainer.append(img);
+//       resolve(img);
+//     });
 
-    img.addEventListener('error', function () {
-      reject(new Error('Image not Found'));
-    });
-  });
-};
+//     img.addEventListener('error', function () {
+//       reject(new Error('Image not Found'));
+//     });
+//   });
+// };
 
-let currentImg;
+// let currentImg;
 
-createImage('img/img-1.jpg')
-  .then(resImg => {
-    currentImg = resImg
-    console.log('Img1 Loaded');
-    return wait(2);
-  })
-  .then(() => {
-    currentImg.style.display = 'none';
-    return createImage('img/img-2.jpg')
-  })
-  .then(resImg => {
-    currentImg = resImg;
-    console.log('Image 2 Loaded');
-    return wait(2);
-  })
-  .then(() => {
-    currentImg.style.display = 'none'
-  })
-  .catch(err => console.error(err));
+// createImage('img/img-1.jpg')
+//   .then(resImg => {
+//     currentImg = resImg
+//     console.log('Img1 Loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-2.jpg')
+//   })
+//   .then(resImg => {
+//     currentImg = resImg;
+//     console.log('Image 2 Loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none'
+//   })
+//   .catch(err => console.error(err));
+
+
+////////////////////////////////////////////////
+// CONSUMING PROMISES WITH ASYNC AND AWAIT
+
+const whereAmI = async function(country){
+  const res = await fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`);
+  console.log(res);
+  const data = await res.json();
+  console.log(data[0]);
+  renderCountry(data[0]);
+}
+whereAmI('Argentina');
+console.log('FIRST');
