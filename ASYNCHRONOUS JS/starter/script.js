@@ -388,7 +388,7 @@ const createImage = function (imgPath) {
   return new Promise(function (resolve, reject) {
     img = document.createElement('img');
     img.src = imgPath;
-    
+
     img.addEventListener('load', function () {
       console.log(img);
       console.log('Image Loaded');
@@ -402,17 +402,22 @@ const createImage = function (imgPath) {
   });
 };
 
-createImage('img/img-1.jpg').then(resImg => {
-  img = resImg;
-  return wait(2);
-}).then(() => {
-  img.style.display = 'none';
-  img.src = 'img/img-2.jpg';
-  return wait(2)
-}).then(() => {
-  img.style.display = 'block';
-  return wait(2);
-}).then(() => img.style.display = 'none').catch(err => console.error(err))
+createImage('img/img-1.jpg')
+  .then(resImg => {
+    img = resImg;
+    return wait(2);
+  })
+  .then(() => {
+    img.style.display = 'none';
+    img.src = 'img/img-2.jpg';
+    return wait(2);
+  })
+  .then(() => {
+    img.style.display = 'block';
+    return wait(2);
+  })
+  .then(() => (img.style.display = 'none'))
+  .catch(err => console.error(err));
 
 // createImage('img/img-1.jpg')
 //   .then(img => {
