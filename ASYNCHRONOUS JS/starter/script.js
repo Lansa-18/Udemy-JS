@@ -421,21 +421,42 @@ GOOD LUCK 😀
 //   .then(() => (img.style.display = 'none'))
 //   .catch(err => console.error(err));
 
-
 // JONAS SOLUTION
 
-const createImage = function(imgPath){
-  return new Promise(function(resolve, reject){
-    const img = document.createElement('img')
+const createImage = function (imgPath) {
+  return new Promise(function (resolve, reject) {
+    const img = document.createElement('img');
     img.src = imgPath;
 
-    img.addEventListener('load', function(){
+    img.addEventListener('load', function () {
       imgContainer.append(img);
       resolve(img);
-    })
+    });
 
-    img.addEventListener('error', function() {
-      reject(new Error('Image not Found'))
-    })
+    img.addEventListener('error', function () {
+      reject(new Error('Image not Found'));
+    });
+  });
+};
+
+let currentImg;
+
+createImage('img/img-1.jpg')
+  .then(resImg => {
+    currentImg = resImg
+    console.log('Img1 Loaded');
+    return wait(2);
   })
-}
+  .then(() => {
+    currentImg.style.display = 'none';
+    return createImage('img/img-2.jpg')
+  })
+  .then(resImg => {
+    currentImg = resImg;
+    console.log('Image 2 Loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none'
+  })
+  .catch(err => console.error(err));
