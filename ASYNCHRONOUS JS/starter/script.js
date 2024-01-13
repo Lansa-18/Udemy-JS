@@ -389,16 +389,24 @@ const createImage = function (imgPath) {
     console.log(img);
     img.src = imgPath;
 
-    img.addEventListener('load', function(){
+    img.addEventListener('load', function () {
       console.log('Image Loaded');
       imgContainer.append(img);
-      resolve(img)
+      resolve(img);
     });
 
-    img.addEventListener('error', function(){
-      reject(new Error('Image not founf'))
-    })
+    img.addEventListener('error', function () {
+      reject(new Error('Image not found'));
+    });
   });
 };
 
-createImage('img/img-1.jpg');
+createImage('img/img-1.jpg')
+  .then(img => {
+    wait(2);
+    img.style.display = 'none';
+    img.src = 'img/img-2.jpg';
+    wait(2);
+  })
+  .then(img => (img.style.display = 'none'))
+  .catch(err => console.error(err));
