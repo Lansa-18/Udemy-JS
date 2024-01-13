@@ -383,50 +383,59 @@ TEST DATA: Images in the img folder. Test the error handler by passing a wrong i
 
 GOOD LUCK 😀
 */
-let img;
-const createImage = function (imgPath) {
-  return new Promise(function (resolve, reject) {
-    img = document.createElement('img');
-    img.src = imgPath;
 
-    img.addEventListener('load', function () {
-      console.log(img);
-      console.log('Image Loaded');
-      imgContainer.append(img);
-      resolve(img);
-    });
+// MY SOLUTION
+// let img;
+// const createImage = function (imgPath) {
+//   return new Promise(function (resolve, reject) {
+//     img = document.createElement('img');
+//     img.src = imgPath;
 
-    img.addEventListener('error', function () {
-      reject(new Error('Image not found'));
-    });
-  });
-};
+//     img.addEventListener('load', function () {
+//       console.log(img);
+//       console.log('Image Loaded');
+//       imgContainer.append(img);
+//       resolve(img);
+//     });
 
-createImage('img/img-1.jpg')
-  .then(resImg => {
-    img = resImg;
-    return wait(2);
-  })
-  .then(() => {
-    img.style.display = 'none';
-    img.src = 'img/img-2.jpg';
-    return wait(2);
-  })
-  .then(() => {
-    img.style.display = 'block';
-    return wait(2);
-  })
-  .then(() => (img.style.display = 'none'))
-  .catch(err => console.error(err));
+//     img.addEventListener('error', function () {
+//       reject(new Error('Image not found'));
+//     });
+//   });
+// };
 
 // createImage('img/img-1.jpg')
-//   .then(img => {
-//     wait(2);
-//     img.classList.add('not-active');
-//     imgPath = 'img/img-2.jpg';
-//     wait(2);
+//   .then(resImg => {
+//     img = resImg;
+//     return wait(2);
 //   })
-//   .then(img => {
-//     return img.classList.remove('not-active');
+//   .then(() => {
+//     img.style.display = 'none';
+//     img.src = 'img/img-2.jpg';
+//     return wait(2);
 //   })
+//   .then(() => {
+//     img.style.display = 'block';
+//     return wait(2);
+//   })
+//   .then(() => (img.style.display = 'none'))
 //   .catch(err => console.error(err));
+
+
+// JONAS SOLUTION
+
+const createImage = function(imgPath){
+  return new Promise(function(resolve, reject){
+    const img = document.createElement('img')
+    img.src = imgPath;
+
+    img.addEventListener('load', function(){
+      imgContainer.append(img);
+      resolve(img);
+    })
+
+    img.addEventListener('error', function() {
+      reject(new Error('Image not Found'))
+    })
+  })
+}
