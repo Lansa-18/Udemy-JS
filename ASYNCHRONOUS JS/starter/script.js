@@ -633,27 +633,46 @@ const createImage = function (imgPath) {
 //   })
 //   .catch(err => console.error(err));
 
-let currentImg;
-console.log(currentImg);
+// MY SOLUTION
+// let currentImg;
+// console.log(currentImg);
+// const loadNPause = async function(){
+//   try {
+//     // Loading the first Image
+//     const img1 = await createImage('img/img-1.jpg')
+//     currentImg = img1;
+//     console.log('Image 1 loaded');   
+//     await wait(2);
+//     currentImg.style.display = 'none';
+
+//     // Loading the second Image
+//     const img2 = await createImage('img/img-2.jpg')
+//     currentImg = img2;
+//     console.log('Image 2 loaded');
+//     await wait(2);
+//     currentImg.style.display = 'none';
+//   } catch(err){
+//     console.error(err);
+//   }
+// }
+// loadNPause();
+
+// JONAS SOLUTION
 const loadNPause = async function(){
   try {
     // Loading the first Image
-    const img1 = await createImage('img/img-1.jpg')
-    currentImg = img1;
+    let img = await createImage('img/img-1.jpg')
     console.log('Image 1 loaded');   
     await wait(2);
-    currentImg.style.display = 'none';
+    img.style.display = 'none';
 
     // Loading the second Image
-    const img2 = await createImage('img/img-2.jpg')
-    currentImg = img2;
+    img = await createImage('img/img-2.jpg')
     console.log('Image 2 loaded');
     await wait(2);
-    currentImg.style.display = 'none';
+    img.style.display = 'none';
   } catch(err){
     console.error(err);
   }
-  
 }
-
 loadNPause();
