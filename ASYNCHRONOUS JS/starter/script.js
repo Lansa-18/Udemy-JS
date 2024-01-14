@@ -658,3 +658,9 @@ const loadAll = async function(imgArr){
 }
 loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 
+let x = 10;
+function check(){
+  console.log(x);
+  let x = 20;
+}
+check();
