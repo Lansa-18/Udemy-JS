@@ -642,19 +642,18 @@ GOOD LUCK 😀
 // loadNPause();
 
 // PART 2
+// MY SOLUTION
 const loadAll = async function(imgArr){
   try{
-    const resImg = await imgArr.map(function(imgs){
-      // console.log(imgs);
-      createImage(imgs);
-      imgs.classList.add('parallel');
-    });
-    console.log(resImg); // It's not as i expected
-    const allImages = await Promise.allSettled(imgArr);
-    console.log(allImages); // This is what i expected
-    // allImages.forEach(img => img.classList.add('parallel'));
+    const imgs = imgArr.map(async img => createImage(img));
+    console.log(imgs); // It's not as i expected
+
+    const imgEl = await Promise.all(imgs);
+
+    console.log(imgEl); // This is what i expected
   } catch (err){
     console.error(err);
   }
 }
 loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
+
