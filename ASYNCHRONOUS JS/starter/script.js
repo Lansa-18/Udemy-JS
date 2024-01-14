@@ -249,7 +249,7 @@ const checkResponse = function (response, errorMsg) {
   return response.json();
 };
 
-// const whereAmI = function (lat, lng) {
+// const whereAmII = function (lat, lng) {
 //   fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
 //     .then(response => checkResponse(response, `Timeout Error`))
 //     .then(data => {
@@ -514,24 +514,146 @@ const whereAmI = async function () {
 //   console.log('3: Finished getting location');
 // })();
 
-
 // Running Promises in Parallel
-const get3Countries = async function(c1, c2, c3){
-  try{
-    // const [data1] = await getJSON(`https://countries-api-836d.onrender.com/countries/name/${c1}`);
-    // const [data2] = await getJSON(`https://countries-api-836d.onrender.com/countries/name/${c2}`);
-    // const [data3] = await getJSON(`https://countries-api-836d.onrender.com/countries/name/${c3}`);
-    // console.log([data1.capital, data2.capital, data3.capital]);
+// const get3Countries = async function(c1, c2, c3){
+//   try{
+//     // const [data1] = await getJSON(`https://countries-api-836d.onrender.com/countries/name/${c1}`);
+//     // const [data2] = await getJSON(`https://countries-api-836d.onrender.com/countries/name/${c2}`);
+//     // const [data3] = await getJSON(`https://countries-api-836d.onrender.com/countries/name/${c3}`);
+//     // console.log([data1.capital, data2.capital, data3.capital]);
 
-    const data = await Promise.all([
-      getJSON(`https://countries-api-836d.onrender.com/countries/name/${c1}`),
-      getJSON(`https://countries-api-836d.onrender.com/countries/name/${c2}`),
-      getJSON(`https://countries-api-836d.onrender.com/countries/name/${c3}`)
-    ]);
-    console.log(data.map(d => d[0].capital));
+//     const data = await Promise.all([
+//       getJSON(`https://countries-api-836d.onrender.com/countries/name/${c1}`),
+//       getJSON(`https://countries-api-836d.onrender.com/countries/name/${c2}`),
+//       getJSON(`https://countries-api-836d.onrender.com/countries/name/${c3}`)
+//     ]);
+//     console.log(data.map(d => d[0].capital));
+//   } catch(err){
+//     console.error(err);
+//   }
+// }
+
+// get3Countries('Argentina', 'Nigeria', 'France');
+
+// THE 3 OTHER PROMISE COMBINATORS (RACE, ALLSETTLED & ANY)
+// Promise.race - Returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
+
+// (async function () {
+//   const res = await Promise.race([
+//     getJSON(`https://countries-api-836d.onrender.com/countries/name/Argentina`),
+//     getJSON(`https://countries-api-836d.onrender.com/countries/name/Nigeria`),
+//     getJSON(`https://countries-api-836d.onrender.com/countries/name/Mexico`),
+//   ]);
+//   console.log(res);
+//   console.log(res[0]);
+// })();
+
+const timeout = function (seconds) {
+  return new Promise(function (_, reject) {
+    setTimeout(
+      () => reject(new Error('Request took too long!')),
+      seconds * 1000
+    );
+  });
+};
+
+// Promise.race([
+//   getJSON(`https://countries-api-836d.onrender.com/countries/name/Sweden`),
+//   timeout(0.9),
+// ])
+//   .then(data => console.log(data[0]))
+//   .catch(err => console.error(err));
+
+// Promise.allSettled - Returns a promise that resolves after all of the given promises have either fulfilled or rejected, with an array of objects that each describes the outcome of each promise.
+// Promise.any - Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an AggregateError, a new subclass of Error that groups together individual errors.
+
+// Promise.any([
+//   Promise.resolve('Success'),
+//   Promise.reject('ERROR'),
+//   Promise.resolve('Another Success'),
+// ])
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err));
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/* 
+PART 1
+Write an async function 'loadNPause' that recreates Coding Challenge #2, this time using async/await (only the part where the promise is consumed). Compare the two versions, think about the big differences, and see which one you like more.
+Don't forget to test the error handler, and to set the network speed to 'Fast 3G' in the dev tools Network tab.
+
+PART 2
+1. Create an async function 'loadAll' that receives an array of image paths 'imgArr';
+2. Use .map to loop over the array, to load all the images with the 'createImage' function (call the resulting array 'imgs')
+3. Check out the 'imgs' array in the console! Is it like you expected?
+4. Use a promise combinator function to actually get the images from the array 😉
+5. Add the 'paralell' class to all the images (it has some CSS styles).
+
+TEST DATA: ['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']. To test, turn off the 'loadNPause' function.
+
+GOOD LUCK 😀
+*/
+
+/// PART 1
+const createImage = function (imgPath) {
+  return new Promise(function (resolve, reject) {
+    const img = document.createElement('img');
+    img.src = imgPath;
+
+    img.addEventListener('load', function () {
+      imgContainer.append(img);
+      resolve(img);
+    });
+
+    img.addEventListener('error', function () {
+      reject(new Error('Image not Found'));
+    });
+  });
+};
+
+// let currentImg;
+// createImage('img/img-1.jpg')
+//   .then(resImg => {
+//     currentImg = resImg
+//     console.log('Img1 Loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-2.jpg')
+//   })
+//   .then(resImg => {
+//     currentImg = resImg;
+//     console.log('Image 2 Loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none'
+//   })
+//   .catch(err => console.error(err));
+
+let currentImg;
+console.log(currentImg);
+const loadNPause = async function(){
+  try {
+    // Loading the first Image
+    const img1 = await createImage('img/img-1.jpg')
+    currentImg = img1;
+    console.log('Image 1 loaded');   
+    await wait(2);
+    currentImg.style.display = 'none';
+
+    // Loading the second Image
+    const img2 = await createImage('img/img-2.jpg')
+    currentImg = img2;
+    console.log('Image 2 loaded');
+    await wait(2);
+    currentImg.style.display = 'none';
   } catch(err){
     console.error(err);
   }
+  
 }
 
-get3Countries('Argentina', 'Nigeria', 'France');
+loadNPause();
