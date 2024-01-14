@@ -10,10 +10,10 @@ console.log('Importing Module');
 // console.log(ShoppingCart.totalPrice, ShoppingCart.tq);
 
 // import add, {addToCart, totalPrice as price, tq} from './shoppingCart.js'; // Import default export from shoppingCart.js
-import add, {cart} from './shoppingCart.js'; // Import default export from shoppingCart.js
-add('pizza', 2)
-add('bread', 5)
-add('apples', 15)
+import add, { cart } from './shoppingCart.js'; // Import default export from shoppingCart.js
+add('pizza', 2);
+add('bread', 5);
+add('apples', 15);
 
 console.log(cart);
 
@@ -23,5 +23,14 @@ console.log(cart);
 // console.log(data[0]);
 // console.log('Something');
 
+const getLastPost = async function () {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const data = await res.json();
+//   console.log(data[0]);
+  return {title: data.at(-1).title, text: data.at(-1).body}
+};
+const lastPost = getLastPost();
+console.log(lastPost);
 
-
+const lastPost2 = await getLastPost(); 
+console.log(lastPost2);
