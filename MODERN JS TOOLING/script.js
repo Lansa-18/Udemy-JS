@@ -77,4 +77,10 @@ import 'core-js/stable/array/find';
 // Polyfilling async functions
 import 'regenerator-runtime/runtime.js'
 
+const a = [1, 4];
+const b = [1, 4];
+
+const equality = a === b;
+console.log(equality);
+
 

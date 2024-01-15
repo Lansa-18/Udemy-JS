@@ -645,6 +645,16 @@ const Lancer = new Person("Lancer");
 console.log("lancer" ?? null);
 console.log((0, _shoppingCartJs.cart).find((el)=>el.quantity >= 2));
 Promise.resolve("TEST").then((x)=>console.log(x));
+const a = [
+    1,
+    4
+];
+const b = [
+    1,
+    4
+];
+const equality = a === b;
+console.log(equality);
 
 },{"./shoppingCart.js":"l6bJl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./node_modules/lodash-es/cloneDeep.js":"dd5At"}],"l6bJl":[function(require,module,exports) {
 // Exporting Module: shoppingCart
